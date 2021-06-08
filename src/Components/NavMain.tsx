@@ -28,13 +28,13 @@ import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
 const projects = [
   {
     name: "Charles Dumeige Osteomeaux",
-    description: "A website for an osteopath.",
+    description: "A full stack responsive website for an osteopath.",
     href: "#",
     icon: ChartBarIcon,
   },
   {
     name: "Marss N30",
-    description: "A website for a hairdresser.",
+    description: "A fully responsive website for a hairdressing salon.",
     href: "#",
     icon: CursorClickIcon,
   },

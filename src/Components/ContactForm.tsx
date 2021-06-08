@@ -1,6 +1,27 @@
+import { useState } from "react";
+import { submitForm } from "../ApiHandlers/wufooApi";
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 
 export default function ContactForm() {
+  const [form, setForm] = useState<Record<string, any>>({});
+
+  function handleChange(e: Record<string, any>) {
+    const newForm: Record<string, any> = { ...form };
+    const value = e.target.value;
+    const key = e.target.name;
+    newForm[key] = value;
+    console.log(newForm);
+    setForm((form) => (form = newForm));
+  }
+
+  async function handleSubmit(
+    e: Record<string, any>
+  ): Promise<number | undefined> {
+    e.preventDefault();
+    const response = await submitForm(form);
+    console.log(response);
+    return response;
+  }
   return (
     <div className="bg-gray-100">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
@@ -205,9 +226,10 @@ export default function ContactForm() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="first_name"
+                      name="Field1"
                       id="first_name"
                       autoComplete="given-name"
+                      onChange={handleChange}
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
                   </div>
@@ -222,9 +244,10 @@ export default function ContactForm() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="last_name"
+                      name="Field2"
                       id="last_name"
                       autoComplete="family-name"
+                      onChange={handleChange}
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
                   </div>
@@ -239,9 +262,10 @@ export default function ContactForm() {
                   <div className="mt-1">
                     <input
                       id="email"
-                      name="email"
+                      name="Field3"
                       type="email"
                       autoComplete="email"
+                      onChange={handleChange}
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
                   </div>
@@ -261,9 +285,10 @@ export default function ContactForm() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="phone"
+                      name="Field10"
                       id="phone"
                       autoComplete="tel"
+                      onChange={handleChange}
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                       aria-describedby="phone-optional"
                     />
@@ -279,8 +304,9 @@ export default function ContactForm() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="subject"
+                      name="Field33"
                       id="subject"
+                      onChange={handleChange}
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
                   </div>
@@ -293,15 +319,13 @@ export default function ContactForm() {
                     >
                       Message
                     </label>
-                    <span id="message-max" className="text-sm text-gray-500">
-                      Max. 500 characters
-                    </span>
                   </div>
                   <div className="mt-1">
                     <textarea
                       id="message"
-                      name="message"
+                      name="Field27"
                       rows={4}
+                      onChange={handleChange}
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                       aria-describedby="message-max"
                       defaultValue={""}
@@ -311,6 +335,7 @@ export default function ContactForm() {
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
+                    onClick={handleSubmit}
                     className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
                   >
                     Submit
