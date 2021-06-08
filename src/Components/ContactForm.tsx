@@ -5,7 +5,7 @@ export default function ContactForm() {
     <div className="bg-gray-100">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="relative bg-white shadow-xl">
-          <h2 className="sr-only">Contact us</h2>
+          <h2 className="sr-only">Contact Me</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
             {/* Contact information */}
@@ -113,8 +113,9 @@ export default function ContactForm() {
                 Contact information
               </h3>
               <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                volutpat massa dictumst amet. Sapien tortor lacus arcu.
+                I would love to hear from you!
+                <br />
+                Feel free to contact me by email, phone or this form.
               </p>
               <dl className="mt-8 space-y-6">
                 <dt>
@@ -125,7 +126,9 @@ export default function ContactForm() {
                     className="flex-shrink-0 w-6 h-6 text-indigo-200"
                     aria-hidden="true"
                   />
-                  <span className="ml-3">+1 (555) 123-4567</span>
+                  <a href="tel:0698202959">
+                    <span className="ml-3">+33 (0) 6 98 20 29 59</span>
+                  </a>
                 </dd>
                 <dt>
                   <span className="sr-only">Email</span>
@@ -135,7 +138,9 @@ export default function ContactForm() {
                     className="flex-shrink-0 w-6 h-6 text-indigo-200"
                     aria-hidden="true"
                   />
-                  <span className="ml-3">support@workcation.com</span>
+                  <a href="mailto:maxjgruber@gmail.com">
+                    <span className="ml-3">maxjgruber@gmail.com</span>
+                  </a>
                 </dd>
               </dl>
               <ul className="mt-8 flex space-x-12" role="list">
@@ -177,32 +182,13 @@ export default function ContactForm() {
                     </svg>
                   </a>
                 </li>
-                <li>
-                  <a className="text-indigo-200 hover:text-indigo-100" href="#">
-                    <span className="sr-only">Twitter</span>
-                    <svg
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.548 22.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.02 10.02 0 0024 5.305a9.828 9.828 0 01-2.828.776 4.94 4.94 0 002.165-2.724 9.867 9.867 0 01-3.127 1.195 4.929 4.929 0 00-8.391 4.491A13.98 13.98 0 011.67 3.9a4.928 4.928 0 001.525 6.573A4.887 4.887 0 01.96 9.855v.063a4.926 4.926 0 003.95 4.827 4.917 4.917 0 01-2.223.084 4.93 4.93 0 004.6 3.42A9.88 9.88 0 010 20.289a13.941 13.941 0 007.548 2.209"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a>
-                </li>
               </ul>
             </div>
 
             {/* Contact form */}
             <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-lg font-medium text-gray-900">
-                Send us a message
+                Send me a message
               </h3>
               <form
                 action="#"

@@ -8,12 +8,12 @@ import {
 } from "@heroicons/react/outline";
 
 const features = [
-  { name: "Push to Deploy", icon: CloudUploadIcon },
-  { name: "SSL Certificates", icon: LockClosedIcon },
-  { name: "Simple Queues", icon: RefreshIcon },
-  { name: "Advanced Security", icon: ShieldCheckIcon },
-  { name: "Powerful API", icon: CogIcon },
-  { name: "Database Backups", icon: ServerIcon },
+  { name: "Responsive Design", icon: CloudUploadIcon },
+  { name: "Clean Code", icon: LockClosedIcon },
+  { name: "Search engine optimization", icon: RefreshIcon },
+  { name: "Constantly Learning & Improving", icon: ShieldCheckIcon },
+  { name: "Teamwork", icon: CogIcon },
+  { name: "Strong understanding of UX/UI", icon: ServerIcon },
 ];
 
 export default function MissionSection() {

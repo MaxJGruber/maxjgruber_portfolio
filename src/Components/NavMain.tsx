@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
@@ -22,37 +23,38 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
 import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
+import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
 
-const solutions = [
+const projects = [
   {
-    name: "Analytics",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    name: "Charles Dumeige Osteomeaux",
+    description: "A website for an osteopath.",
     href: "#",
     icon: ChartBarIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers in a more meaningful way.",
+    name: "Marss N30",
+    description: "A website for a hairdresser.",
     href: "#",
     icon: CursorClickIcon,
   },
   {
-    name: "Security",
-    description: "Your customers' data will be safe and secure.",
+    name: "Cosmousse",
+    description:
+      "A mobile web application designed to keep track of your favourite beers.",
     href: "#",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools that you're already using.",
+    name: "EKAM Games",
+    description: "A website where you can add video games to your wishlists.",
     href: "#",
     icon: ViewGridIcon,
   },
 ];
 const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "View All Products", href: "#", icon: CheckCircleIcon },
+  // { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "View All Projects", href: "/my-projects", icon: CheckCircleIcon },
   { name: "Contact Sales", href: "#", icon: PhoneIcon },
 ];
 const company = [
@@ -63,10 +65,23 @@ const company = [
   { name: "Privacy", href: "#", icon: ShieldCheckIcon },
 ];
 const resources = [
-  { name: "My GitHub", href: "#", icon: UserGroupIcon },
-  { name: "My LinkedIn", href: "#", icon: GlobeAltIcon },
-  { name: "My English CV", href: CVEn.default, icon: BookmarkAltIcon },
-  { name: "My French CV", href: CVFr.default, icon: DesktopComputerIcon },
+  {
+    name: "My GitHub",
+    href: "https://github.com/MaxJGruber",
+    icon: UserGroupIcon,
+  },
+  {
+    name: "My LinkedIn",
+    href: "https://www.linkedin.com/in/maximilian-j-gruber/",
+    icon: GlobeAltIcon,
+  },
+  { name: "My CV (English)", href: CVEn.default, icon: BookmarkAltIcon },
+  { name: "My CV (French)", href: CVFr.default, icon: DesktopComputerIcon },
+  {
+    name: "My Certificate",
+    href: certificate.default,
+    icon: DesktopComputerIcon,
+  },
 ];
 const blogPosts = [
   {
@@ -122,18 +137,19 @@ export default function Example() {
               </div>
               <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
                 <Popover.Group as="nav" className="flex space-x-10">
-                  <a
-                    href="#"
+                  <NavLink
+                    exact
+                    to="/"
                     className="text-base font-medium text-gray-500 hover:text-gray-900"
                   >
                     Home
-                  </a>
-                  <a
-                    href="#"
+                  </NavLink>
+                  <NavLink
+                    to="/about-me"
                     className="text-base font-medium text-gray-500 hover:text-gray-900"
                   >
                     About Me
-                  </a>
+                  </NavLink>
                   <Popover>
                     {({ open }) => (
                       <>
@@ -168,10 +184,10 @@ export default function Example() {
                             className="hidden md:block absolute z-10 top-full inset-x-0 transform shadow-lg bg-white"
                           >
                             <div className="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
-                              {solutions.map((item) => (
-                                <a
+                              {projects.map((item) => (
+                                <NavLink
                                   key={item.name}
-                                  href={item.href}
+                                  to={item.href}
                                   className="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50"
                                 >
                                   <div className="flex md:h-full lg:flex-col">
@@ -198,7 +214,7 @@ export default function Example() {
                                       </p>
                                     </div>
                                   </div>
-                                </a>
+                                </NavLink>
                               ))}
                             </div>
                             <div className="bg-gray-50">
@@ -369,12 +385,12 @@ export default function Example() {
                   </Popover>
                 </Popover.Group>
                 <div className="flex items-center md:ml-12">
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/contact-me"
                     className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                   >
                     Contact Me
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -415,7 +431,7 @@ export default function Example() {
                   <div className="mt-6 sm:mt-8">
                     <nav>
                       <div className="grid gap-7 sm:grid-cols-2 sm:gap-y-8 sm:gap-x-4">
-                        {solutions.map((item) => (
+                        {projects.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
