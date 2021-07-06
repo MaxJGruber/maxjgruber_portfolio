@@ -1,12 +1,12 @@
 import NavMain from "../Components/NavMain";
-import AboutMe from "../Components/AboutMeSection";
+import ProjectInfoSection from "../Components/ProjectInfoSection";
 import Footer from "../Components/Footer";
 
 const Projects = () => {
   return (
     <div>
       <NavMain />
-      <AboutMe />
+      <ProjectInfoSection />
       <Footer />
     </div>
   );

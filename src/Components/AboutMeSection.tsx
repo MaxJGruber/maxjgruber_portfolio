@@ -1,4 +1,5 @@
 import { CameraIcon } from "@heroicons/react/solid";
+import cvPhoto from "../Assets/Photo_CV.jpeg";
 
 export default function AboutMeSection() {
   return (
@@ -8,10 +9,10 @@ export default function AboutMeSection() {
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
-              Case Study
+              About
             </h2>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Meet Whitney
+              Meet Max
             </h3>
           </div>
         </div>
@@ -55,19 +56,12 @@ export default function AboutMeSection() {
                 <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                   <img
                     className="rounded-lg shadow-lg object-cover object-center"
-                    src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80"
-                    alt="Whitney leaning against a railing on a downtown street"
+                    src={cvPhoto}
+                    alt="CV Picture of Max Gruber"
                     width={1184}
                     height={1376}
                   />
                 </div>
-                <figcaption className="mt-3 flex text-sm text-gray-500">
-                  <CameraIcon
-                    className="flex-none w-5 h-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  <span className="ml-2">Photograph by Marcus O’Leary</span>
-                </figcaption>
               </figure>
             </div>
           </div>
