@@ -523,3 +523,6 @@ export default function Example() {
     </Popover>
   );
 }
+
+/* This example requires Tailwind CSS v2.0+ */
+
