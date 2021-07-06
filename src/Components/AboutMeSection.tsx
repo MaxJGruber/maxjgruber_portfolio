@@ -1,14 +1,13 @@
-import { CameraIcon } from "@heroicons/react/solid";
 import cvPhoto from "../Assets/Photo_CV.jpeg";
 
 export default function AboutMeSection() {
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-white overflow-hidden py-16">
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
-          <div>
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+          <div id="about">
+            <h2 className="text-base text-medium-logo-blue font-semibold tracking-wide uppercase">
               About
             </h2>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -58,38 +57,51 @@ export default function AboutMeSection() {
                     className="rounded-lg shadow-lg object-cover object-center"
                     src={cvPhoto}
                     alt="CV Picture of Max Gruber"
-                    width={1184}
-                    height={1376}
+                    width={500}
+                    height={700}
                   />
                 </div>
               </figure>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
-            <div className="text-base max-w-prose mx-auto lg:max-w-none">
+            {/* <div className="text-base max-w-prose mx-auto lg:max-w-none">
               <p className="text-lg text-gray-500">
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
+                I have graduated from Ironhack’s 9-week immersive Web
+                Development Bootcamp after having decided to retrain and make a
+                career change out of the hospitality industry due COVID-19 and I
+                am keen to start off my digital career using my new found skills
+                in MERN Stack.
               </p>
-            </div>
+            </div> */}
             <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
               <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat
-                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-                eu viverra donec ut volutpat donec laoreet quam urna.
+                I have graduated from Ironhack’s 9-week immersive Web
+                Development Bootcamp after having decided to retrain and make a
+                career change out of the hospitality industry due COVID-19 and I
+                am keen to start off my digital career using my new found skills
+                in MERN Stack.
               </p>
               <p>
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
-                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
-                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
-                a.
+                Given the right guidance, my goal is to become a successful Full
+                Stack Developer. For this, I feel your company’s singular
+                approach to employee training and work ethics are remarkable
+                cornerstones to assist me on my path.
               </p>
               <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
-                arcu, metus, egestas netus cursus. In.
+                Thanks to my past experiences in management within the
+                Hospitality sector and the fact that I am a tri-cultural person
+                fluent in English, French and German, I know what it is like to
+                have to learn things quickly, solve issues spontaneously yet
+                correctly and, most of all, how to work harmoniously with
+                coworkers whilst facing important tasks and deadlines.
               </p>
-              <ul>
+              <p>
+                Being able to combine my instincts from a past career and my new
+                found passion for web developing has enabled me to bring
+                strength, energy and determination to my recent projects.
+              </p>
+              {/* <ul>
                 <li>Quis elit egestas venenatis mattis dignissim.</li>
                 <li>
                   Cras cras lobortis vitae vivamus ultricies facilisis tempus.
@@ -115,7 +127,7 @@ export default function AboutMeSection() {
                 Sagittis scelerisque nulla cursus in enim consectetur quam.
                 Dictum urna sed consectetur neque tristique pellentesque.
                 Blandit amet, sed aenean erat arcu morbi.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

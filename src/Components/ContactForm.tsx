@@ -23,14 +23,14 @@ export default function ContactForm() {
     return response;
   }
   return (
-    <div className="bg-gray-100">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div id="contact-form" className="bg-gray-100">
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <div className="relative bg-white shadow-xl">
           <h2 className="sr-only">Contact Me</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
             {/* Contact information */}
-            <div className="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
+            <div className="relative overflow-hidden py-10 px-6 bg-dark-logo-blue sm:px-10 xl:p-12">
               <div
                 className="absolute inset-0 pointer-events-none sm:hidden"
                 aria-hidden="true"
@@ -336,7 +336,7 @@ export default function ContactForm() {
                   <button
                     type="submit"
                     onClick={handleSubmit}
-                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
                   >
                     Submit
                   </button>

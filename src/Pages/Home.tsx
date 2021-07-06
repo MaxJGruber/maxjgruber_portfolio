@@ -1,12 +1,7 @@
-import NavMain from "../Components/NavMain";
 import HeroSection from "../Components/HeroSection";
-import LogoClouds from "../Components/LogoClouds";
-import MissionSection from "../Components/MissionSection";
 import AboutMe from "../Components/AboutMeSection";
-import ProjectInfoSection from "../Components/ProjectInfoSection";
 import ContactForm from "../Components/ContactForm";
-import Footer from "../Components/Footer";
-
+import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
 import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
 import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
 import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
@@ -14,36 +9,28 @@ import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
 import { Fragment, useState } from "react";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import {
-  CalendarIcon,
-  BookmarkAltIcon,
+  DocumentDownloadIcon,
+  FolderOpenIcon,
   UserGroupIcon,
   GlobeAltIcon,
   FolderIcon,
   HomeIcon,
   DesktopComputerIcon,
   InboxIcon,
-  UsersIcon,
-  BriefcaseIcon,
-  ChartBarIcon,
-  CheckCircleIcon,
-  CursorClickIcon,
-  InformationCircleIcon,
+  UserIcon,
   MenuIcon,
-  NewspaperIcon,
-  OfficeBuildingIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  ViewGridIcon,
+  PaperAirplaneIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import Projects from "../Components/Projects";
+import BlogSection from "../Components/BlogSection";
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, current: true },
+  { name: "Home", href: "#home", icon: HomeIcon, current: true },
   {
     name: "About Me",
-    href: "#",
-    icon: UsersIcon,
+    href: "#about",
+    icon: UserIcon,
     current: false,
   },
   {
@@ -56,32 +43,37 @@ const navigation = [
         name: "Osteomeaux",
         description: "A full stack responsive website for an osteopath.",
         href: "#",
-        icon: ChartBarIcon,
+        icon: FolderOpenIcon,
       },
       {
         name: "Marss N30",
         description: "A fully responsive website for a hairdressing salon.",
         href: "#",
-        icon: CursorClickIcon,
+        icon: FolderOpenIcon,
       },
       {
         name: "Cosmousse",
         description:
           "A mobile web application designed to keep track of your favourite beers.",
         href: "#",
-        icon: ShieldCheckIcon,
+        icon: FolderOpenIcon,
       },
       {
         name: "EKAM Games",
         description:
           "A website where you can add video games to your wishlists.",
         href: "#",
-        icon: ViewGridIcon,
+        icon: FolderOpenIcon,
       },
     ],
   },
-  { name: "Technologies", href: "#", icon: CalendarIcon, current: false },
-  { name: "Blog", href: "#", icon: CalendarIcon, current: false },
+  {
+    name: "Technologies",
+    href: "#",
+    icon: DesktopComputerIcon,
+    current: false,
+  },
+  { name: "Blog", href: "#blog", icon: PaperAirplaneIcon, current: false },
   {
     name: "Resources",
     href: "#",
@@ -98,12 +90,20 @@ const navigation = [
         href: "https://www.linkedin.com/in/maximilian-j-gruber/",
         icon: GlobeAltIcon,
       },
-      { name: "My CV (English)", href: CVEn.default, icon: BookmarkAltIcon },
-      { name: "My CV (French)", href: CVFr.default, icon: DesktopComputerIcon },
+      {
+        name: "My CV (English)",
+        href: CVEn.default,
+        icon: DocumentDownloadIcon,
+      },
+      {
+        name: "My CV (French)",
+        href: CVFr.default,
+        icon: DocumentDownloadIcon,
+      },
       {
         name: "My Certificate",
         href: certificate.default,
-        icon: DesktopComputerIcon,
+        icon: DocumentDownloadIcon,
       },
     ],
   },
@@ -169,7 +169,7 @@ const Home = () => {
                 <div className="flex-shrink-0 flex items-center px-4">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                    src={MaxJGruberLogo}
                     alt="Workflow"
                   />
                 </div>
@@ -178,7 +178,7 @@ const Home = () => {
                     !item.children ? (
                       <div key={item.name}>
                         <a
-                          href="#"
+                          href={item.href}
                           className={classNames(
                             item.current
                               ? "bg-gray-100 text-gray-900"
@@ -253,7 +253,7 @@ const Home = () => {
                   )}
                   <a
                     href="#"
-                    className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-darkest-logo-blue hover:bg-indigo-700"
                   >
                     <div className="flex items-center">
                       <div>Contact Me</div>
@@ -303,10 +303,10 @@ const Home = () => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-              <div className="flex items-center flex-shrink-0 px-4">
+              <div className="flex items-center justify-center">
                 <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                  className="h-20 w-auto logo"
+                  src={MaxJGruberLogo}
                   alt="Workflow"
                 />
               </div>
@@ -315,7 +315,7 @@ const Home = () => {
                   !item.children ? (
                     <div key={item.name}>
                       <a
-                        href="#"
+                        href={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-100 text-gray-900"
@@ -390,8 +390,8 @@ const Home = () => {
                   )
                 )}
                 <a
-                  href="#"
-                  className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  href="#contact-form"
+                  className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                 >
                   <div className="flex items-center">
                     <div>Contact Me</div>
@@ -420,7 +420,7 @@ const Home = () => {
                 <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                   <button
                     type="submit"
-                    className="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="w-full bg-light-logo-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-medium-logo-blue focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Confirm
                   </button>
@@ -441,35 +441,29 @@ const Home = () => {
           </button>
         </div>
         <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
-          <div className="py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              {/* <h1 className="text-2xl font-semibold text-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            {/* <h1 className="text-2xl font-semibold text-gray-900">
                 Dashboard
               </h1> */}
-            </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              {/* Replace with your content */}
-              <div className="py-4">
-                <HeroSection />
-                <MissionSection />
-                <LogoClouds />
-                <AboutMe />
-                <ProjectInfoSection />
-                <ContactForm />
-                {/* <Footer /> */}
-              </div>
-              {/* /End replace */}
-            </div>
           </div>
-        </main>
-        <aside className="hidden relative xl:flex xl:flex-col flex-shrink-0 w-96 border-l border-gray-200">
-          {/* Start secondary column (hidden on smaller screens) */}
-          <div className="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
-            <div className="h-full border-2 border-gray-200 border-dashed rounded-lg" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            {/* Replace with your content */}
             <HeroSection />
+            {/* <MissionSection /> */}
+            <div className="mt-10">
+              <AboutMe />
+            </div>
+            {/* <LogoClouds /> */}
+            <h2 className="text-base text-medium-logo-blue font-semibold tracking-wide uppercase">
+              Projects
+            </h2>
+            <Projects />
+            <BlogSection />
+            <ContactForm />
+            {/* <Footer /> */}
           </div>
-          {/* End secondary column */}
-        </aside>
+          {/* /End replace */}
+        </main>
       </div>
     </div>
   );
