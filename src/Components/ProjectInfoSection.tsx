@@ -1,4 +1,3 @@
-
 export default function ProjectInfoSection(props: Record<string, any>) {
   return (
     <div className="relative bg-white py-16 sm:py-10">
@@ -98,7 +97,10 @@ export default function ProjectInfoSection(props: Record<string, any>) {
               ))}
             </dl>
             <div className="mt-10">
-              <a href="#" className="text-base font-medium text-indigo-600">
+              <a
+                href="#"
+                className="text-base font-medium text-medium-logo-blue"
+              >
                 Check out the website for {props.project.name}{" "}
                 <span aria-hidden="true">&rarr;</span>{" "}
               </a>

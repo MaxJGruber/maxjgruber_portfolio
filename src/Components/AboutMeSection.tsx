@@ -49,13 +49,11 @@ export default function AboutMeSection() {
             </svg>
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
-                <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
+                <div className="aspect-w-12 aspect-h-7 ">
                   <img
-                    className="rounded-lg shadow-lg object-cover object-center"
+                    className="rounded-lg shadow-lg object-cover object-center profile-pic"
                     src={cvPhoto}
                     alt="Max Gruber"
-                    width={500}
-                    height={700}
                   />
                 </div>
               </figure>

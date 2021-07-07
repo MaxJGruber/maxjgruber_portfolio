@@ -27,6 +27,7 @@ import Projects from "../Components/Projects";
 import BlogSection from "../Components/BlogSection";
 import MissionSection from "../Components/MissionSection";
 import SkillsSection from "../Components/SkillsSection";
+import FunFacts from "../Components/FunFacts";
 
 const navigation = [
   { name: "Home", href: "#home", icon: HomeIcon, current: true },
@@ -455,6 +456,7 @@ const Home = () => {
             <div className="mt-20">
               <Title title="ABOUT" />
               <AboutMe />
+              <FunFacts />
             </div>
             <Title title="KNOWLEDGE & SKILLS" />
             <MissionSection />
