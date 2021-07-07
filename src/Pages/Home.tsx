@@ -2,6 +2,7 @@ import HeroSection from "../Components/HeroSection";
 import AboutMe from "../Components/AboutMeSection";
 import ContactForm from "../Components/ContactForm";
 import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
+import Title from "../Components/Title";
 import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
 import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
 import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
@@ -24,6 +25,8 @@ import {
 } from "@heroicons/react/outline";
 import Projects from "../Components/Projects";
 import BlogSection from "../Components/BlogSection";
+import MissionSection from "../Components/MissionSection";
+import SkillsSection from "../Components/SkillsSection";
 
 const navigation = [
   { name: "Home", href: "#home", icon: HomeIcon, current: true },
@@ -68,7 +71,7 @@ const navigation = [
     ],
   },
   {
-    name: "Technologies",
+    name: "Knowledge & Skills",
     href: "#",
     icon: DesktopComputerIcon,
     current: false,
@@ -449,15 +452,17 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             {/* Replace with your content */}
             <HeroSection />
-            {/* <MissionSection /> */}
-            <div className="mt-10">
+            <div className="mt-20">
+              <Title title="ABOUT" />
               <AboutMe />
             </div>
+            <Title title="KNOWLEDGE & SKILLS" />
+            <MissionSection />
+            <SkillsSection />
             {/* <LogoClouds /> */}
-            <h2 className="text-base text-medium-logo-blue font-semibold tracking-wide uppercase">
-              Projects
-            </h2>
+            <Title title="PROJECTS" />
             <Projects />
+            <Title title="BLOG" />
             <BlogSection />
             <ContactForm />
             {/* <Footer /> */}

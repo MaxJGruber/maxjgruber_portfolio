@@ -1,36 +1,27 @@
 import {
-  CloudUploadIcon,
-  CogIcon,
-  LockClosedIcon,
-  RefreshIcon,
+  DatabaseIcon,
+  DeviceMobileIcon,
   ServerIcon,
-  ShieldCheckIcon,
+  UsersIcon,
+  SparklesIcon,
+  GlobeAltIcon,
 } from "@heroicons/react/outline";
 
 const features = [
-  { name: "Responsive Design", icon: CloudUploadIcon },
-  { name: "Clean Code", icon: LockClosedIcon },
-  { name: "Search engine optimization", icon: RefreshIcon },
-  { name: "Constantly Learning & Improving", icon: ShieldCheckIcon },
-  { name: "Teamwork", icon: CogIcon },
-  { name: "Strong understanding of UX/UI", icon: ServerIcon },
+  { name: "Full Stack Web Development", icon: DatabaseIcon },
+  { name: "Responsive Design", icon: DeviceMobileIcon },
+  { name: "SEO & Marketing", icon: GlobeAltIcon },
+  { name: "Teamwork", icon: UsersIcon },
+  { name: "Clean Code", icon: SparklesIcon },
+  { name: "Hosting applications", icon: ServerIcon },
 ];
 
 export default function MissionSection() {
   return (
-    <div className=" bg-white py-16 sm:py-24 lg:py-32">
+    <div className=" bg-white py-16 sm:py-24 lg:py-16">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <h2 className="text-base font-semibold tracking-wider text-indigo-600 uppercase">
-          Workflow
-        </h2>
-        <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-          Everything you need to deploy your app
-        </p>
-        <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-          Phasellus lorem quam molestie id quisque diam aenean nulla in.
-          Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-          condimentum id viverra nulla.
-        </p>
+        {" "}
+        <h2 className="text-3xl font-extrabold text-gray-900">Knowledge</h2>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
@@ -38,7 +29,7 @@ export default function MissionSection() {
                 <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                      <span className="inline-flex items-center justify-center p-3 bg-medium-logo-blue rounded-md shadow-lg">
                         <feature.icon
                           className="h-6 w-6 text-white"
                           aria-hidden="true"
