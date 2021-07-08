@@ -14,7 +14,10 @@ const projects = [
       "Freelance mission project a hairdressing salon in the South-West of France. The client wanted a simple and elegant website for all age groups. As the clientele of the salon is varied, the website content is in English and French.",
     specialFeatures: "",
     landingPagePic: marssn30LandingPage,
-    stats: [{ label: "Created", value: "2021" },{ label: "Duration", value: "3 weeks" }],
+    stats: [
+      { label: "Created", value: "2021" },
+      { label: "Duration", value: "3 weeks" },
+    ],
   },
   {
     name: "Charles Dumeige Osteomeaux",
@@ -24,7 +27,10 @@ const projects = [
       "Freelance mission project for an osteopath in Meaux, France. The website works as an electronic business card for the client and it also has the function to explain in greater detail what his profession consists of. This was my first project for the medical sector.",
     specialFeatures: "",
     landingPagePic: osteomeauxLandingPage,
-    stats: [{ label: "Created", value: "2021" },{ label: "Duration", value: "8 weeks" }],
+    stats: [
+      { label: "Created", value: "2021" },
+      { label: "Duration", value: "8 weeks" },
+    ],
   },
   {
     name: "COSMOUSSE",
@@ -36,7 +42,10 @@ const projects = [
     specialFeatures:
       "Using MapBox, full user authentication using React.JS, use of libraries such as Semantics UI and Material UI.",
     landingPagePic: cosmousseLandingPage,
-    stats: [{ label: "Created", value: "2020" },{ label: "Duration", value: "10 days" }],
+    stats: [
+      { label: "Created", value: "2020" },
+      { label: "Duration", value: "10 days" },
+    ],
   },
   {
     name: "Iron Guitar",
@@ -46,7 +55,10 @@ const projects = [
       "An imitation of world-known video game Guitar Hero where the player needs to hit the note as they align with the fret-board. The higher your streak, the higher the points multiply.",
     specialFeatures: "",
     landingPagePic: ironGuitarLandingPage,
-    stats: [{ label: "Created", value: "2020" },{ label: "Duration", value: "5 days" }],
+    stats: [
+      { label: "Created", value: "2020" },
+      { label: "Duration", value: "5 days" },
+    ],
   },
   {
     name: "EKAM Games",
@@ -57,7 +69,10 @@ const projects = [
       "A website where you can create an account and select video games (from an API connecting us to 350 thousand video games) to add to your wishlist, or your owned games list. A fully responsive website to have at home or on-the-go on your smartphone. Designed with 2 other classmates who are also passionate about video games.",
     specialFeatures: "",
     landingPagePic: ekamLandingPage,
-    stats: [{ label: "Created", value: "2020" },{ label: "Duration", value: "5 days" }],
+    stats: [
+      { label: "Created", value: "2020" },
+      { label: "Duration", value: "5 days" },
+    ],
   },
 ];
 

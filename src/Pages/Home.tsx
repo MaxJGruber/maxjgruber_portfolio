@@ -46,7 +46,7 @@ const navigation = [
   },
   {
     name: "Projects",
-    href: "#",
+    href: "#projects",
     icon: FolderIcon,
     current: false,
     // children: [
@@ -258,8 +258,8 @@ const Home = () => {
                     )
                   )}
                   <a
-                    href="#"
-                    className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-darkest-logo-blue hover:bg-indigo-700"
+                    href="#contact-form"
+                    className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                   >
                     <div className="flex items-center">
                       <div>Contact Me</div>
@@ -288,7 +288,7 @@ const Home = () => {
                   <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                     <button
                       type="submit"
-                      className="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue"
+                      className="w-full bg-medium-logo-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue"
                     >
                       Confirm
                     </button>
@@ -448,31 +448,31 @@ const Home = () => {
         </div>
         <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            {/* <h1 className="text-2xl font-semibold text-gray-900">
-                Dashboard
-              </h1> */}
-          </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            {/* Replace with your content */}
             <HeroSection />
-            <div className="mt-20">
+            <div className="mt-20" id="about">
               <Title title="ABOUT" />
               <AboutMe />
               <FunFacts />
             </div>
-            <Title title="KNOWLEDGE & SKILLS" />
-            <MissionSection />
-            <SkillsSection />
-            {/* <LogoClouds /> */}
-            <Title title="PROJECTS" />
-            <Projects />
-            <Title title="BLOG" />
-            <BlogSection />
-            <Faq />
+            <div id="knowledge">
+              <Title title="KNOWLEDGE & SKILLS" />
+              <MissionSection />
+              <SkillsSection />
+            </div>
+            <div id="projects">
+              <Title title="PROJECTS" />
+              <Projects />
+            </div>
+            <div id="blog">
+              <Title title="BLOG" />
+              <BlogSection />
+            </div>
+            <div id="faq">
+              <Title title="FREQUENTLY ASKED QUESTIONS" />
+              <Faq />
+            </div>
             <ContactForm />
-            {/* <Footer /> */}
           </div>
-          {/* /End replace */}
         </main>
       </div>
     </div>

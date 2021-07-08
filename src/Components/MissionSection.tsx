@@ -20,7 +20,7 @@ export default function MissionSection() {
   return (
     <div className=" bg-white py-16 sm:py-24 lg:py-16">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <h2 id="knowledge" className="text-3xl font-extrabold text-gray-900">Knowledge</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900">Knowledge</h2>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (

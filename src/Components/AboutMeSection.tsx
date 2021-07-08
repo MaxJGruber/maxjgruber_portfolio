@@ -1,5 +1,5 @@
 import cvPhoto from "../Assets/Photo_CV.jpeg";
-import { CameraIcon } from "@heroicons/react/outline";
+// import Bounce from "react-reveal/Bounce";
 
 export default function AboutMeSection() {
   return (
@@ -7,7 +7,7 @@ export default function AboutMeSection() {
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
-          <div id="about">
+          <div>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Hello World, Meet Max!
             </h3>
@@ -28,18 +28,19 @@ export default function AboutMeSection() {
                   id="de316486-4a29-4312-bdfc-fbce2132a2c1"
                   x={0}
                   y={0}
-                  width={20}
-                  height={20}
+                  width={80}
+                  height={105}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect
-                    x={0}
-                    y={0}
-                    width={4}
-                    height={4}
-                    className="text-gray-200"
-                    fill="currentColor"
-                  />
+                  <g fill-rule="evenodd">
+                    <g
+                      id="death-star"
+                      className="text-gray-200"
+                      fill="currentColor"
+                    >
+                      <path d="M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z" />
+                    </g>
+                  </g>
                 </pattern>
               </defs>
               <rect
