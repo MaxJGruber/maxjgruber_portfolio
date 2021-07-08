@@ -11,7 +11,6 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import {
   DocumentDownloadIcon,
-  FolderOpenIcon,
   UserGroupIcon,
   GlobeAltIcon,
   FolderIcon,
@@ -22,12 +21,14 @@ import {
   MenuIcon,
   PaperAirplaneIcon,
   XIcon,
+  ChatAlt2Icon,
 } from "@heroicons/react/outline";
 import Projects from "../Components/Projects";
 import BlogSection from "../Components/BlogSection";
 import MissionSection from "../Components/MissionSection";
 import SkillsSection from "../Components/SkillsSection";
 import FunFacts from "../Components/FunFacts";
+import Faq from "../Components/FAQ";
 
 const navigation = [
   { name: "Home", href: "#home", icon: HomeIcon, current: true },
@@ -38,46 +39,47 @@ const navigation = [
     current: false,
   },
   {
+    name: "Knowledge & Skills",
+    href: "#knowledge",
+    icon: DesktopComputerIcon,
+    current: false,
+  },
+  {
     name: "Projects",
     href: "#",
     icon: FolderIcon,
     current: false,
-    children: [
-      {
-        name: "Osteomeaux",
-        description: "A full stack responsive website for an osteopath.",
-        href: "#",
-        icon: FolderOpenIcon,
-      },
-      {
-        name: "Marss N30",
-        description: "A fully responsive website for a hairdressing salon.",
-        href: "#",
-        icon: FolderOpenIcon,
-      },
-      {
-        name: "Cosmousse",
-        description:
-          "A mobile web application designed to keep track of your favourite beers.",
-        href: "#",
-        icon: FolderOpenIcon,
-      },
-      {
-        name: "EKAM Games",
-        description:
-          "A website where you can add video games to your wishlists.",
-        href: "#",
-        icon: FolderOpenIcon,
-      },
-    ],
-  },
-  {
-    name: "Knowledge & Skills",
-    href: "#",
-    icon: DesktopComputerIcon,
-    current: false,
+    // children: [
+    //   {
+    //     name: "All Projects",
+    //     description: "A fully responsive website for a hairdressing salon.",
+    //     href: "#",
+    //     icon: FolderOpenIcon,
+    //   },
+    //   {
+    //     name: "Osteomeaux",
+    //     description: "A full stack responsive website for an osteopath.",
+    //     href: "#",
+    //     icon: FolderOpenIcon,
+    //   },
+    //   {
+    //     name: "Cosmousse",
+    //     description:
+    //       "A mobile web application designed to keep track of your favourite beers.",
+    //     href: "#",
+    //     icon: FolderOpenIcon,
+    //   },
+    //   {
+    //     name: "EKAM Games",
+    //     description:
+    //       "A website where you can add video games to your wishlists.",
+    //     href: "#",
+    //     icon: FolderOpenIcon,
+    //   },
+    // ],
   },
   { name: "Blog", href: "#blog", icon: PaperAirplaneIcon, current: false },
+  { name: "FAQ", href: "#faq", icon: ChatAlt2Icon, current: false },
   {
     name: "Resources",
     href: "#",
@@ -215,7 +217,7 @@ const Home = () => {
                                 item.current
                                   ? "bg-gray-100 text-gray-900"
                                   : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                                "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-medium-logo-blue"
                               )}
                             >
                               <item.icon
@@ -276,7 +278,7 @@ const Home = () => {
                   <select
                     id="language"
                     name="language"
-                    className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-medium-logo-blue focus:border-indigo-500 sm:text-sm"
                     defaultValue="English"
                   >
                     <option value="en">English</option>
@@ -286,7 +288,7 @@ const Home = () => {
                   <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                     <button
                       type="submit"
-                      className="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue"
                     >
                       Confirm
                     </button>
@@ -348,7 +350,7 @@ const Home = () => {
                               item.current
                                 ? "bg-gray-100 text-gray-900"
                                 : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                              "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                              "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-medium-logo-blue"
                             )}
                           >
                             <item.icon
@@ -414,7 +416,7 @@ const Home = () => {
                 <select
                   id="language"
                   name="language"
-                  className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-medium-logo-blue focus:border-indigo-500 sm:text-sm"
                   defaultValue="English"
                 >
                   <option value="en">English</option>
@@ -424,7 +426,7 @@ const Home = () => {
                 <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                   <button
                     type="submit"
-                    className="w-full bg-light-logo-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-medium-logo-blue focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="w-full bg-light-logo-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-medium-logo-blue focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue"
                   >
                     Confirm
                   </button>
@@ -437,7 +439,7 @@ const Home = () => {
       <div className="flex flex-col w-0 flex-1 overflow-hidden">
         <div className="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
           <button
-            className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-medium-logo-blue"
             onClick={() => setSidebarOpen(true)}
           >
             <span className="sr-only">Open sidebar</span>
@@ -466,6 +468,7 @@ const Home = () => {
             <Projects />
             <Title title="BLOG" />
             <BlogSection />
+            <Faq />
             <ContactForm />
             {/* <Footer /> */}
           </div>
