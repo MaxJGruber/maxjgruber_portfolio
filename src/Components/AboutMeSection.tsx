@@ -29,7 +29,7 @@ export default function AboutMeSection() {
                   x={0}
                   y={0}
                   width={80}
-                  height={105}
+                  height={800}
                   patternUnits="userSpaceOnUse"
                 >
                   <g fill-rule="evenodd">
