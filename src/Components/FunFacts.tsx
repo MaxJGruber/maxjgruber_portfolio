@@ -17,7 +17,7 @@ const features = [
   {
     name: "Stand-Up comedy is my jam!",
     description:
-      "I only watch an incredible amount of it but I really wish I could do it.",
+      "I only watch an incredible amount of it, but I really wish I could do it.",
   },
   {
     name: `I'm a "Disney Baby"`,

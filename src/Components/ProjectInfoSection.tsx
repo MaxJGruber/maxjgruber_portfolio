@@ -7,7 +7,7 @@ export default function ProjectInfoSection(props: Record<string, any>) {
             aria-hidden="true"
             className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
           >
-            <div className="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72" />
+            <div className="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-32" />
             <svg
               className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
               width={404}
@@ -53,11 +53,9 @@ export default function ProjectInfoSection(props: Record<string, any>) {
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
-            {props.project.name === "Aquitaine Lifestyle Solutions" && (
-              <h2 className="leading-6 text-medium-logo-blue font-semibold tracking-wide uppercase">
-                UPCOMING
-              </h2>
-            )}
+            <h2 className="leading-6 text-medium-logo-blue font-semibold tracking-wide uppercase">
+              {props.project.intro}
+            </h2>
             <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">
               {props.project.name}
             </h2>

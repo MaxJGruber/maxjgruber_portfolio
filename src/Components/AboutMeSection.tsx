@@ -14,13 +14,13 @@ export default function AboutMeSection() {
           </div>
         </div>
         <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
-          <div className="relative lg:row-start-1 lg:col-start-2">
+          <div className="relative lg:row-start-1 lg:col-start-2 ">
             <svg
               className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
-              width={404}
-              height={384}
-              fill="none"
-              viewBox="0 0 404 384"
+              // width={404}
+              height={1284}
+              fill="currentColor"
+              viewBox="0 0 404 984"
               aria-hidden="true"
             >
               <defs>
@@ -29,10 +29,10 @@ export default function AboutMeSection() {
                   x={0}
                   y={0}
                   width={80}
-                  height={80}
+                  height={100}
                   patternUnits="userSpaceOnUse"
                 >
-                  <g fill-rule="evenodd">
+                  <g fillRule="evenodd">
                     <g
                       id="death-star"
                       className="text-gray-200"
@@ -51,7 +51,7 @@ export default function AboutMeSection() {
             </svg>
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
-                <div className="aspect-w-12 aspect-h-14 lg:aspect-w-8 lg:aspect-h-8 w-3/4 2xl:aspect-none">
+                <div className="aspect-w-12 aspect-h-14 lg:aspect-none">
                   <img
                     className="rounded-lg shadow-lg object-cover object-center profile-pic"
                     src={cvPhoto}
@@ -76,7 +76,7 @@ export default function AboutMeSection() {
               <p>
                 I am a tri-cultural person fluent in English, French and German
                 allowing me to insert myself easily in any work culture or
-                conversation. While also having a heck of a time deciding who
+                conversation, while also having a heck of a time deciding who
                 I'm backing in football competitions.
               </p>
               <p>
@@ -84,7 +84,7 @@ export default function AboutMeSection() {
                 Stack Developer.
                 <br />
                 Technology leads, society follows. I want to be at the heart of
-                that change. To make a difference.
+                that change. I want to make a difference.
               </p>
               <p>
                 Thanks to my past experiences in management within the

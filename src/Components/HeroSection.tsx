@@ -11,7 +11,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <div className="mt-3 relative z-10 max-w-md mx-auto text-lg text-gray-50 sm:text-2xl md:mt-5 md:max-w-3xl">
-            <p className="my-2">Hi, I'm Maximilian. "Max" for short!</p>
+            <p className="my-2">Hi, I'm Max!</p>
             <p className="my-2">Welcome to my little corner of the internet!</p>
             <p className="my-2">
               I'm a Full Stack Web Developer based in Paris, skilled in MERN

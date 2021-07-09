@@ -406,7 +406,18 @@ const Home = () => {
               </nav>
             </div>
             <div className="flex-shrink-0 border-t border-gray-200 p-4">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+              <p className="text-lg">
+                <a href="#" className="mx-2">
+                  🇬🇧
+                </a>
+                <a href="#" className="mx-2">
+                  🇫🇷
+                </a>
+                <a href="#" className="mx-2">
+                  🇩🇪
+                </a>
+              </p>
+              {/* <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                 Change Language
               </h3>
               <form className="mt-4 sm:flex sm:max-w-md">
@@ -431,7 +442,7 @@ const Home = () => {
                     Confirm
                   </button>
                 </div>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>

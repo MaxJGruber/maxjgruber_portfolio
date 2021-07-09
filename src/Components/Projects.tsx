@@ -10,6 +10,7 @@ const upcomingProjects = [
   {
     name: "Aquitaine Lifestyle Solutions",
     type: "Brochure Website",
+    intro: "upcoming",
     technologies: "React, TypeScript, Tailwind",
     description:
       "Freelance mission project a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. As the current and futur clientele expands over Europe, the website content is in English, French and German.",
@@ -26,6 +27,7 @@ const projects = [
   {
     name: "Marss N30",
     type: "Brochure Website",
+    intro: "My second freelance mission",
     technologies: "React, Tailwind",
     description:
       "Freelance mission project for a hairdressing salon in the South-West of France. The client wanted a simple and elegant website for all age groups. As the clientele of the salon is varied, the website content is in English and French.",
@@ -39,6 +41,7 @@ const projects = [
   {
     name: "Charles Dumeige Osteomeaux",
     type: "Advanced Brochure Website",
+    intro: "My first freelance mission",
     technologies: "Vue, Tailwind, Mongoose, MongoDB, Express",
     description:
       "Freelance mission project for an osteopath in Meaux, France. The website works as an electronic business card for the client and it also has the function to explain in greater detail what his profession consists of. This was my first project for the medical sector.",
@@ -52,6 +55,7 @@ const projects = [
   {
     name: "COSMOUSSE",
     type: "Full MERN Stack Mobile Application",
+    intro: "My final project at ironhack",
     technologies:
       "HTML, CSS, JavaScript, MongoDB, Mongoose, Express.JS, React.JS;",
     description:
@@ -67,6 +71,7 @@ const projects = [
   {
     name: "EKAM Games",
     type: "Front & Back-End Responsive Website",
+    intro: "My second project at Ironhack",
     technologies:
       "HTML, CSS, JavaScript, Handlebars, MongoDB, Mongoose, Express.JS;",
     description:
@@ -81,6 +86,7 @@ const projects = [
   {
     name: "Iron Guitar",
     type: "Front-End Game Application",
+    intro: "My first project at ironhack",
     technologies: "HTML, CSS, JavaScript",
     description:
       "An imitation of world-known video game Guitar Hero where the player needs to hit the note as they align with the fret-board. The higher your streak, the higher the points multiply.",
