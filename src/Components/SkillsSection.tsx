@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { CheckIcon } from "@heroicons/react/outline";
 
 const features = [
@@ -29,14 +28,12 @@ const features = [
   },
   {
     name: "Community Tools",
-    description:
-      "Slack / Zoom / Stack Overflow / Medium",
+    description: "Slack / Zoom / Stack Overflow / Medium / JIRA",
   },
   {
     name: "Currently Learning:",
     description: "Golang / AWS / SQL / TypeScript",
   },
-
 ];
 
 export default function SkillsSection() {

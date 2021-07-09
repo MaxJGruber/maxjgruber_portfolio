@@ -29,7 +29,7 @@ export default function AboutMeSection() {
                   x={0}
                   y={0}
                   width={80}
-                  height={800}
+                  height={80}
                   patternUnits="userSpaceOnUse"
                 >
                   <g fill-rule="evenodd">
@@ -45,16 +45,18 @@ export default function AboutMeSection() {
               </defs>
               <rect
                 width={404}
-                height={384}
+                height={684}
                 fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
               />
             </svg>
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
-                <div className="aspect-w-12 aspect-h-7 ">
+                <div className="aspect-w-12 aspect-h-14 lg:aspect-w-8 lg:aspect-h-8 w-3/4 2xl:aspect-none">
                   <img
                     className="rounded-lg shadow-lg object-cover object-center profile-pic"
                     src={cvPhoto}
+                    width={500}
+                    height={800}
                     alt="Max Gruber"
                   />
                 </div>

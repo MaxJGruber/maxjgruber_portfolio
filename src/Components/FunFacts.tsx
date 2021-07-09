@@ -30,8 +30,8 @@ const features = [
       "I have a repulsion towards wet, damp or dirty plastic (in the form of shrink wrap or plastic shopping bags).",
   },
   {
-    name: "I love video games!",
-    description: "I'm a PlayStation man. Have been and always will be!",
+    name: "I love animals!",
+    description: "I have to put whatever I'm doing on hold when I see a cat!",
   },
 ];
 
