@@ -13,6 +13,7 @@ import {
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
 import { Fragment, useState } from "react";
+import { connect } from "react-redux";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import HeroSection from "../Components/HeroSection";
 import AboutMe from "../Components/AboutMeSection";
@@ -30,6 +31,7 @@ import FunFacts from "../Components/FunFacts";
 import Faq from "../Components/FAQ";
 import NavlinkWithoutChildren from "../Components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "../Components/Navbar/NavlinkWithChildren";
+import contentLanguage from "../Redux/languageContent";
 
 const navigation = [
   { name: "Home", href: "#home", icon: HomeIcon, current: true },
@@ -88,8 +90,22 @@ const navigation = [
   },
 ];
 
-const Home = () => {
+const mapDispatchToProps = (dispatch: Function) => ({
+  setLanguage: (language: string) =>
+    dispatch({ type: "SET_LANGUAGE", language }),
+});
+const mapStateToProps = (state: Record<string, any>) => {
+  return { language: state.language };
+};
+
+const Home = (props: Record<string, any>) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleLanguageSelect = (event: Record<string, any>) => {
+    event.preventDefault();
+    props.setLanguage(event.target.value);
+  };
+ 
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -177,6 +193,29 @@ const Home = () => {
                 </nav>
               </div>
               <div className="flex-shrink-0 border-t border-gray-200 p-4">
+                <p className="text-lg">
+                  <button
+                    onClick={handleLanguageSelect}
+                    value="en"
+                    className="mx-2"
+                  >
+                    🇬🇧
+                  </button>
+                  <button
+                    onClick={handleLanguageSelect}
+                    value="fr"
+                    className="mx-2"
+                  >
+                    🇫🇷
+                  </button>
+                  <button
+                    onClick={handleLanguageSelect}
+                    value="de"
+                    className="mx-2"
+                  >
+                    🇩🇪
+                  </button>
+                </p>
                 {/* <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Change Language
                 </h3>
@@ -251,15 +290,27 @@ const Home = () => {
             </div>
             <div className="flex-shrink-0 border-t border-gray-200 p-4">
               <p className="text-lg">
-                <a href="#" className="mx-2">
+                <button
+                  onClick={handleLanguageSelect}
+                  value="en"
+                  className="mx-2"
+                >
                   🇬🇧
-                </a>
-                <a href="#" className="mx-2">
+                </button>
+                <button
+                  onClick={handleLanguageSelect}
+                  value="fr"
+                  className="mx-2"
+                >
                   🇫🇷
-                </a>
-                <a href="#" className="mx-2">
+                </button>
+                <button
+                  onClick={handleLanguageSelect}
+                  value="de"
+                  className="mx-2"
+                >
                   🇩🇪
-                </a>
+                </button>
               </p>
               {/* <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                 Change Language
@@ -334,4 +385,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

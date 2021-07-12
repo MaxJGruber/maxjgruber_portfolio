@@ -1,9 +1,9 @@
-import ALSLandingPage from "../Assets/project-pics/ALS_LandingPage.png";
-import marssn30LandingPage from "../Assets/project-pics/marss-n30_landing-page.png";
-import osteomeauxLandingPage from "../Assets/project-pics/osteomeaux_landing-page.png";
-import cosmousseLandingPage from "../Assets/project-pics/cosmousse_landing-page.png";
-import ekamLandingPage from "../Assets/project-pics/ekam_landing-page.png";
-import ironGuitarLandingPage from "../Assets/project-pics/iron-guitar_landing-page.png";
+import ALSLandingPage from "../../../Assets/project-pics/ALS_LandingPage.png";
+import marssn30LandingPage from "../../../Assets/project-pics/marss-n30_landing-page.png";
+import osteomeauxLandingPage from "../../../Assets/project-pics/osteomeaux_landing-page.png";
+import cosmousseLandingPage from "../../../Assets/project-pics/cosmousse_landing-page.png";
+import ekamLandingPage from "../../../Assets/project-pics/ekam_landing-page.png";
+import ironGuitarLandingPage from "../../../Assets/project-pics/iron-guitar_landing-page.png";
 
 export const projectsList = {
   upcomingProjects: [
