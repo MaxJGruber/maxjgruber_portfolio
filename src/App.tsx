@@ -1,17 +1,13 @@
 import { Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import Contact from "./Pages/Contact";
-import About from "./Pages/AboutMe";
-import Projects from "./Pages/Projects";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/contact-me" component={Contact} />
-        <Route exact path="/about-me" component={About} />
-        <Route exact path="/my-projects" component={Projects} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   );
