@@ -10,9 +10,9 @@ import {
   PaperAirplaneIcon,
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
-import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
-import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
-import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
+import * as CVEn from "../../CVs/MaxJGruber_CV.pdf";
+import * as CVFr from "../../CVs/MaxJGruber_CV_FR.pdf";
+import * as certificate from "../../Certificate/IRONHACK_CERTIFICATE.pdf";
 
 export const navlinks = {
   navigation: [

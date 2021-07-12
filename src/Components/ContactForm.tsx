@@ -8,6 +8,8 @@ import {
   faMedium,
 } from "@fortawesome/free-brands-svg-icons";
 
+import contentLanguage from "../Redux/languageContent";
+
 export default function ContactForm() {
   const [form, setForm] = useState<Record<string, any>>({});
 
@@ -137,13 +139,13 @@ export default function ContactForm() {
                 </svg>
               </div>
               <h3 className="text-lg font-medium text-white">
-                Contact information
+                {contentLanguage().contactForm.title}
               </h3>
-              <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                I would love to hear from you!
-                <br />
-                Feel free to contact me by email, phone or this form.
-              </p>
+              {contentLanguage().contactForm.intro.map((text) => (
+                <p className="mt-6 text-base text-indigo-50 max-w-3xl">
+                  {text}
+                </p>
+              ))}
               <dl className="mt-8 space-y-6">
                 <dt>
                   <span className="sr-only">Phone number</span>
@@ -207,7 +209,7 @@ export default function ContactForm() {
             {/* Contact form */}
             <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-lg font-medium text-gray-900">
-                Send me a message
+                {contentLanguage().contactForm.formTitle}
               </h3>
               <form
                 action="#"
@@ -219,7 +221,7 @@ export default function ContactForm() {
                     htmlFor="first_name"
                     className="block text-sm font-medium text-gray-900"
                   >
-                    First name
+                    {contentLanguage().contactForm.firstName}
                   </label>
                   <div className="mt-1">
                     <input
@@ -237,7 +239,7 @@ export default function ContactForm() {
                     htmlFor="last_name"
                     className="block text-sm font-medium text-gray-900"
                   >
-                    Last name
+                    {contentLanguage().contactForm.lastName}
                   </label>
                   <div className="mt-1">
                     <input
@@ -255,7 +257,7 @@ export default function ContactForm() {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-900"
                   >
-                    Email
+                    {contentLanguage().contactForm.email}
                   </label>
                   <div className="mt-1">
                     <input
@@ -274,10 +276,10 @@ export default function ContactForm() {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-900"
                     >
-                      Phone
+                      {contentLanguage().contactForm.phone}
                     </label>
                     <span id="phone-optional" className="text-sm text-gray-500">
-                      Optional
+                      {contentLanguage().contactForm.optional}
                     </span>
                   </div>
                   <div className="mt-1">
@@ -297,7 +299,7 @@ export default function ContactForm() {
                     htmlFor="subject"
                     className="block text-sm font-medium text-gray-900"
                   >
-                    Subject
+                    {contentLanguage().contactForm.subject}
                   </label>
                   <div className="mt-1">
                     <input
@@ -315,7 +317,7 @@ export default function ContactForm() {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-900"
                     >
-                      Message
+                      {contentLanguage().contactForm.message}
                     </label>
                   </div>
                   <div className="mt-1">
@@ -336,7 +338,7 @@ export default function ContactForm() {
                     onClick={handleSubmit}
                     className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue sm:w-auto"
                   >
-                    Submit
+                    {contentLanguage().contactForm.submit}
                   </button>
                 </div>
               </form>

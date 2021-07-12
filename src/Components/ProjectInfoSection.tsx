@@ -1,4 +1,5 @@
 import ElectricalCircuitPattern from "./ElectricalCircuitPattern";
+import contentLanguage from "../Redux/languageContent";
 
 export default function ProjectInfoSection(props: Record<string, any>) {
   return (
@@ -60,16 +61,21 @@ export default function ProjectInfoSection(props: Record<string, any>) {
             <div className="mt-6 text-gray-500 space-y-6">
               <p className="text-lg">{props.project.type}</p>
               <p className="text-base text-left leading-7">
-                <strong>Description: </strong> {props.project.description}
+                <strong>{contentLanguage().projectSection.description} </strong>{" "}
+                {props.project.description}
               </p>
               {props.project.specialFeatures && (
                 <p className="text-base text-left leading-7">
-                  <strong>Special implemented features: </strong>
+                  <strong>
+                    {contentLanguage().projectSection.specialFeatures}{" "}
+                  </strong>
                   {props.project.specialFeatures}
                 </p>
               )}
               <p className="text-base text-left leading-7">
-                <strong>Technologies used: </strong>
+                <strong>
+                  {contentLanguage().projectSection.technologiesUsed}{" "}
+                </strong>
                 {props.project.technologies}
               </p>
             </div>
@@ -100,8 +106,8 @@ export default function ProjectInfoSection(props: Record<string, any>) {
                   href="#"
                   className="text-base font-medium text-medium-logo-blue"
                 >
-                  Check out the website for {props.project.name}{" "}
-                  <span aria-hidden="true">&rarr;</span>{" "}
+                  {contentLanguage().projectSection.linkText}{" "}
+                  {props.project.name} <span aria-hidden="true">&rarr;</span>{" "}
                 </a>
               </div>
             )}

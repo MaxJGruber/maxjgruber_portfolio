@@ -1,3 +1,5 @@
+import contentLanguage from "../Redux/languageContent";
+
 const HeroSection = () => {
   return (
     <main id="home" className="">
@@ -7,16 +9,13 @@ const HeroSection = () => {
             <span className="block xl:inline">Maximilian Gruber,</span>
             <br />
             <span className="block text-medium-logo-blue xl:inline">
-              Web Developer
+              {contentLanguage().heroSection.profession}
             </span>
           </h1>
           <div className="mt-3 relative z-10 max-w-md mx-auto text-lg text-gray-50 sm:text-2xl md:mt-5 md:max-w-3xl">
-            <p className="my-2">Hi, I'm Max!</p>
-            <p className="my-2">Welcome to my little corner of the internet!</p>
-            <p className="my-2">
-              I'm a Full Stack Web Developer based in Paris, skilled in MERN
-              stack.
-            </p>
+            {contentLanguage().heroSection.intro.map((text) => (
+              <p className="my-2">{text}</p>
+            ))}
           </div>
         </div>
       </div>

@@ -1,17 +1,4 @@
-import {
-  DocumentDownloadIcon,
-  UserGroupIcon,
-  GlobeAltIcon,
-  FolderIcon,
-  HomeIcon,
-  DesktopComputerIcon,
-  InboxIcon,
-  UserIcon,
-  MenuIcon,
-  PaperAirplaneIcon,
-  XIcon,
-  ChatAlt2Icon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
@@ -20,9 +7,6 @@ import AboutMe from "../Components/AboutMeSection";
 import ContactForm from "../Components/ContactForm";
 import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
 import Title from "../Components/Title";
-import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
-import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
-import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
 import Projects from "../Components/Projects";
 import BlogSection from "../Components/BlogSection";
 import MissionSection from "../Components/MissionSection";
@@ -32,63 +16,6 @@ import Faq from "../Components/FAQ";
 import NavlinkWithoutChildren from "../Components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "../Components/Navbar/NavlinkWithChildren";
 import contentLanguage from "../Redux/languageContent";
-
-const navigation = [
-  { name: "Home", href: "#home", icon: HomeIcon, current: true },
-  {
-    name: "About Me",
-    href: "#about",
-    icon: UserIcon,
-    current: false,
-  },
-  {
-    name: "Knowledge & Skills",
-    href: "#knowledge",
-    icon: DesktopComputerIcon,
-    current: false,
-  },
-  {
-    name: "Projects",
-    href: "#projects",
-    icon: FolderIcon,
-    current: false,
-  },
-  { name: "Blog", href: "#blog", icon: PaperAirplaneIcon, current: false },
-  { name: "FAQ", href: "#faq", icon: ChatAlt2Icon, current: false },
-  {
-    name: "Resources",
-    href: "#",
-    icon: InboxIcon,
-    current: false,
-    children: [
-      {
-        name: "My GitHub",
-        href: "https://github.com/MaxJGruber",
-        icon: UserGroupIcon,
-      },
-      {
-        name: "My LinkedIn",
-        href: "https://www.linkedin.com/in/maximilian-j-gruber/",
-        icon: GlobeAltIcon,
-      },
-      {
-        name: "My CV (English)",
-        href: CVEn.default,
-        icon: DocumentDownloadIcon,
-      },
-      {
-        name: "My CV (French)",
-        href: CVFr.default,
-        icon: DocumentDownloadIcon,
-      },
-      {
-        name: "My Certificate",
-        href: certificate.default,
-        icon: DocumentDownloadIcon,
-      },
-    ],
-  },
-];
 
 const mapDispatchToProps = (dispatch: Function) => ({
   setLanguage: (language: string) =>
@@ -105,7 +32,7 @@ const Home = (props: Record<string, any>) => {
     event.preventDefault();
     props.setLanguage(event.target.value);
   };
- 
+
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -165,7 +92,7 @@ const Home = (props: Record<string, any>) => {
                   />
                 </div>
                 <nav className="mt-5 px-2 space-y-1">
-                  {navigation.map((item) =>
+                  {contentLanguage().navlinks.navigation.map((item) =>
                     !item.children ? (
                       <div key={item.name}>
                         <NavlinkWithoutChildren item={item} />
@@ -187,7 +114,7 @@ const Home = (props: Record<string, any>) => {
                     className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                   >
                     <div className="flex items-center">
-                      <div>Contact Me</div>
+                      <div>{contentLanguage().navlinks.contactMe}</div>
                     </div>
                   </a>
                 </nav>
@@ -216,32 +143,6 @@ const Home = (props: Record<string, any>) => {
                     🇩🇪
                   </button>
                 </p>
-                {/* <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Change Language
-                </h3>
-                <form className="mt-4 sm:flex sm:max-w-md">
-                  <label htmlFor="emailAddress" className="sr-only">
-                    Language
-                  </label>
-                  <select
-                    id="language"
-                    name="language"
-                    className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-medium-logo-blue focus:border-indigo-500 sm:text-sm"
-                    defaultValue="English"
-                  >
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="de">Deutsch</option>
-                  </select>
-                  <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                    <button
-                      type="submit"
-                      className="w-full bg-medium-logo-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue"
-                    >
-                      Confirm
-                    </button>
-                  </div>
-                </form> */}
               </div>
             </div>
           </Transition.Child>
@@ -265,7 +166,7 @@ const Home = (props: Record<string, any>) => {
                 />
               </div>
               <nav className="mt-5 flex-1 px-2 bg-white space-y-1">
-                {navigation.map((item) =>
+                {contentLanguage().navlinks.navigation.map((item) =>
                   !item.children ? (
                     <div key={item.name}>
                       <NavlinkWithoutChildren item={item} />
@@ -283,7 +184,7 @@ const Home = (props: Record<string, any>) => {
                   className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                 >
                   <div className="flex items-center">
-                    <div>Contact Me</div>
+                    <div>{contentLanguage().navlinks.contactMe}</div>
                   </div>
                 </a>
               </nav>
@@ -312,32 +213,6 @@ const Home = (props: Record<string, any>) => {
                   🇩🇪
                 </button>
               </p>
-              {/* <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Change Language
-              </h3>
-              <form className="mt-4 sm:flex sm:max-w-md">
-                <label htmlFor="emailAddress" className="sr-only">
-                  Language
-                </label>
-                <select
-                  id="language"
-                  name="language"
-                  className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-medium-logo-blue focus:border-indigo-500 sm:text-sm"
-                  defaultValue="English"
-                >
-                  <option value="en">English</option>
-                  <option value="fr">Français</option>
-                  <option value="de">Deutsch</option>
-                </select>
-                <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                  <button
-                    type="submit"
-                    className="w-full bg-light-logo-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-medium-logo-blue focus:ring-2 focus:ring-offset-2 focus:ring-medium-logo-blue"
-                  >
-                    Confirm
-                  </button>
-                </div>
-              </form> */}
             </div>
           </div>
         </div>
@@ -356,25 +231,25 @@ const Home = (props: Record<string, any>) => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <HeroSection />
             <div className="mt-20" id="about">
-              <Title title="ABOUT" />
+              <Title title={contentLanguage().titles.about} />
               <AboutMe />
               <FunFacts />
             </div>
             <div id="knowledge">
-              <Title title="KNOWLEDGE & SKILLS" />
+              <Title title={contentLanguage().titles.knowledgeSkills} />
               <MissionSection />
               <SkillsSection />
             </div>
             <div id="projects">
-              <Title title="PROJECTS" />
+              <Title title={contentLanguage().titles.projects} />
               <Projects />
             </div>
             <div id="blog">
-              <Title title="BLOG" />
+              <Title title={contentLanguage().titles.blog} />
               <BlogSection />
             </div>
             <div id="faq">
-              <Title title="FREQUENTLY ASKED QUESTIONS" />
+              <Title title={contentLanguage().titles.faq} />
               <Faq />
             </div>
             <ContactForm />
