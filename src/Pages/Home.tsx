@@ -1,14 +1,3 @@
-import HeroSection from "../Components/HeroSection";
-import AboutMe from "../Components/AboutMeSection";
-import ContactForm from "../Components/ContactForm";
-import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
-import Title from "../Components/Title";
-import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
-import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
-import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
-
-import { Fragment, useState } from "react";
-import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import {
   DocumentDownloadIcon,
   UserGroupIcon,
@@ -23,12 +12,24 @@ import {
   XIcon,
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
+import { Fragment, useState } from "react";
+import { Dialog, Transition, Disclosure } from "@headlessui/react";
+import HeroSection from "../Components/HeroSection";
+import AboutMe from "../Components/AboutMeSection";
+import ContactForm from "../Components/ContactForm";
+import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
+import Title from "../Components/Title";
+import * as CVEn from "../Content/CVs/MaxJGruber_CV.pdf";
+import * as CVFr from "../Content/CVs/MaxJGruber_CV_FR.pdf";
+import * as certificate from "../Content/Certificate/IRONHACK_CERTIFICATE.pdf";
 import Projects from "../Components/Projects";
 import BlogSection from "../Components/BlogSection";
 import MissionSection from "../Components/MissionSection";
 import SkillsSection from "../Components/SkillsSection";
 import FunFacts from "../Components/FunFacts";
 import Faq from "../Components/FAQ";
+import NavlinkWithoutChildren from "../Components/Navbar/NavlinkWithoutChildren";
+import NavlinkWithChildren from "../Components/Navbar/NavlinkWithChildren";
 
 const navigation = [
   { name: "Home", href: "#home", icon: HomeIcon, current: true },
@@ -49,34 +50,6 @@ const navigation = [
     href: "#projects",
     icon: FolderIcon,
     current: false,
-    // children: [
-    //   {
-    //     name: "All Projects",
-    //     description: "A fully responsive website for a hairdressing salon.",
-    //     href: "#",
-    //     icon: FolderOpenIcon,
-    //   },
-    //   {
-    //     name: "Osteomeaux",
-    //     description: "A full stack responsive website for an osteopath.",
-    //     href: "#",
-    //     icon: FolderOpenIcon,
-    //   },
-    //   {
-    //     name: "Cosmousse",
-    //     description:
-    //       "A mobile web application designed to keep track of your favourite beers.",
-    //     href: "#",
-    //     icon: FolderOpenIcon,
-    //   },
-    //   {
-    //     name: "EKAM Games",
-    //     description:
-    //       "A website where you can add video games to your wishlists.",
-    //     href: "#",
-    //     icon: FolderOpenIcon,
-    //   },
-    // ],
   },
   { name: "Blog", href: "#blog", icon: PaperAirplaneIcon, current: false },
   { name: "FAQ", href: "#faq", icon: ChatAlt2Icon, current: false },
@@ -114,10 +87,6 @@ const navigation = [
     ],
   },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -183,26 +152,7 @@ const Home = () => {
                   {navigation.map((item) =>
                     !item.children ? (
                       <div key={item.name}>
-                        <a
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? "bg-gray-100 text-gray-900"
-                              : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                            "group w-full flex items-center pl-2 py-2 text-sm font-medium rounded-md"
-                          )}
-                        >
-                          <item.icon
-                            className={classNames(
-                              item.current
-                                ? "text-gray-500"
-                                : "text-gray-400 group-hover:text-gray-500",
-                              "mr-3 flex-shrink-0 h-6 w-6"
-                            )}
-                            aria-hidden="true"
-                          />
-                          {item.name}
-                        </a>
+                        <NavlinkWithoutChildren item={item} />
                       </div>
                     ) : (
                       <Disclosure
@@ -211,48 +161,7 @@ const Home = () => {
                         className="space-y-1"
                       >
                         {({ open }) => (
-                          <>
-                            <Disclosure.Button
-                              className={classNames(
-                                item.current
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                                "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-medium-logo-blue"
-                              )}
-                            >
-                              <item.icon
-                                className="mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                                aria-hidden="true"
-                              />
-                              <span className="flex-1">{item.name}</span>
-                              <svg
-                                className={classNames(
-                                  open
-                                    ? "text-gray-400 rotate-90"
-                                    : "text-gray-300",
-                                  "ml-3 flex-shrink-0 h-5 w-5 transform group-hover:text-gray-400 transition-colors ease-in-out duration-150"
-                                )}
-                                viewBox="0 0 20 20"
-                                aria-hidden="true"
-                              >
-                                <path
-                                  d="M6 6L14 10L6 14V6Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </Disclosure.Button>
-                            <Disclosure.Panel className="space-y-1">
-                              {item.children.map((subItem) => (
-                                <a
-                                  key={subItem.name}
-                                  href={subItem.href}
-                                  className="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                                >
-                                  {subItem.name}
-                                </a>
-                              ))}
-                            </Disclosure.Panel>
-                          </>
+                          <NavlinkWithChildren item={item} open={open} />
                         )}
                       </Disclosure>
                     )
@@ -268,7 +177,7 @@ const Home = () => {
                 </nav>
               </div>
               <div className="flex-shrink-0 border-t border-gray-200 p-4">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                {/* <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Change Language
                 </h3>
                 <form className="mt-4 sm:flex sm:max-w-md">
@@ -293,7 +202,7 @@ const Home = () => {
                       Confirm
                     </button>
                   </div>
-                </form>
+                </form> */}
               </div>
             </div>
           </Transition.Child>
@@ -320,77 +229,12 @@ const Home = () => {
                 {navigation.map((item) =>
                   !item.children ? (
                     <div key={item.name}>
-                      <a
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-100 text-gray-900"
-                            : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                          "group w-full flex items-center pl-2 py-2 text-sm font-medium rounded-md"
-                        )}
-                      >
-                        <item.icon
-                          className={classNames(
-                            item.current
-                              ? "text-gray-500"
-                              : "text-gray-400 group-hover:text-gray-500",
-                            "mr-3 flex-shrink-0 h-6 w-6"
-                          )}
-                          aria-hidden="true"
-                        />
-                        {item.name}
-                      </a>
+                      <NavlinkWithoutChildren item={item} />
                     </div>
                   ) : (
                     <Disclosure as="div" key={item.name} className="space-y-1">
                       {({ open }) => (
-                        <>
-                          <Disclosure.Button
-                            className={classNames(
-                              item.current
-                                ? "bg-gray-100 text-gray-900"
-                                : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                              "group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-medium-logo-blue"
-                            )}
-                          >
-                            <item.icon
-                              className="mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            <span className="flex-1">{item.name}</span>
-                            <svg
-                              className={classNames(
-                                open
-                                  ? "text-gray-400 rotate-90"
-                                  : "text-gray-300",
-                                "ml-3 flex-shrink-0 h-5 w-5 transform group-hover:text-gray-400 transition-colors ease-in-out duration-150"
-                              )}
-                              viewBox="0 0 20 20"
-                              aria-hidden="true"
-                            >
-                              <path
-                                d="M6 6L14 10L6 14V6Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </Disclosure.Button>
-                          <Disclosure.Panel className="space-y-1">
-                            {item.children.map((subItem) => (
-                              <a
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                              >
-                                {" "}
-                                <subItem.icon
-                                  className="mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                                  aria-hidden="true"
-                                />
-                                {subItem.name}
-                              </a>
-                            ))}
-                          </Disclosure.Panel>
-                        </>
+                        <NavlinkWithChildren item={item} open={open} />
                       )}
                     </Disclosure>
                   )

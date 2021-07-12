@@ -1,5 +1,4 @@
 import cvPhoto from "../Assets/Photo_CV.jpeg";
-// import Bounce from "react-reveal/Bounce";
 
 export default function AboutMeSection() {
   return (
@@ -9,7 +8,7 @@ export default function AboutMeSection() {
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Hello World, Meet Max!
+              "Hello World", Meet Max!
             </h3>
           </div>
         </div>
@@ -17,7 +16,6 @@ export default function AboutMeSection() {
           <div className="relative lg:row-start-1 lg:col-start-2 ">
             <svg
               className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
-              // width={404}
               height={1284}
               fill="currentColor"
               viewBox="0 0 404 984"
@@ -89,9 +87,9 @@ export default function AboutMeSection() {
               <p>
                 Thanks to my past experiences in management within the
                 Hospitality sector, I know what it is like to have to learn
-                things quickly, solve issues spontaneously yet correctly and,
-                most of all, how to work harmoniously with coworkers whilst
-                facing important tasks and deadlines.
+                things quickly, solve issues spontaneously and, most of all, how
+                to work harmoniously with coworkers whilst facing important
+                tasks and deadlines.
               </p>
               <p>
                 I'm excited to make the leap and continue improving my skills,

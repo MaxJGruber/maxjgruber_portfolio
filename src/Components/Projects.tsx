@@ -103,10 +103,10 @@ export default function Projects() {
   return (
     <div>
       {upcomingProjects.map((project: Record<string, any>) => (
-        <ProjectInfoSection project={project} />
+        <ProjectInfoSection project={project} key={project.name} />
       ))}
       {projects.map((project: Record<string, any>) => (
-        <ProjectInfoSection project={project} />
+        <ProjectInfoSection project={project} key={project.name} />
       ))}
     </div>
   );
