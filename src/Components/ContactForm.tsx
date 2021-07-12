@@ -141,8 +141,8 @@ export default function ContactForm() {
               <h3 className="text-lg font-medium text-white">
                 {contentLanguage().contactForm.title}
               </h3>
-              {contentLanguage().contactForm.intro.map((text) => (
-                <p className="mt-6 text-base text-indigo-50 max-w-3xl">
+              {contentLanguage().contactForm.intro.map((text, i) => (
+                <p className="mt-6 text-base text-indigo-50 max-w-3xl" key={i}>
                   {text}
                 </p>
               ))}

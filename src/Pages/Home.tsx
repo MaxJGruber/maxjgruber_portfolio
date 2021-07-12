@@ -123,22 +123,28 @@ const Home = (props: Record<string, any>) => {
                 <p className="text-lg">
                   <button
                     onClick={handleLanguageSelect}
+                    type="button"
+                    title="English"
                     value="en"
-                    className="mx-2"
+                    className="mx-2 focus:outline-none"
                   >
                     🇬🇧
                   </button>
                   <button
                     onClick={handleLanguageSelect}
+                    type="button"
+                    title="Français"
                     value="fr"
-                    className="mx-2"
+                    className="mx-2 focus:outline-none"
                   >
                     🇫🇷
                   </button>
                   <button
                     onClick={handleLanguageSelect}
+                    type="button"
+                    title="Deutsch"
                     value="de"
-                    className="mx-2"
+                    className="mx-2 focus:outline-none"
                   >
                     🇩🇪
                   </button>

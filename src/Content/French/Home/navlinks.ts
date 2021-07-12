@@ -24,7 +24,7 @@ export const navlinks = {
       current: false,
     },
     {
-      name: "Connaissances & Compétences",
+      name: "Savoir & Compétences",
       href: "#knowledge",
       icon: DesktopComputerIcon,
       current: false,
@@ -38,7 +38,7 @@ export const navlinks = {
     { name: "Blog", href: "#blog", icon: PaperAirplaneIcon, current: false },
     { name: "FAQ", href: "#faq", icon: ChatAlt2Icon, current: false },
     {
-      name: "Resources",
+      name: "Ressources",
       href: "#",
       icon: InboxIcon,
       current: false,
@@ -71,5 +71,5 @@ export const navlinks = {
       ],
     },
   ],
-  contactMe: "Contact Me",
+  contactMe: "Me contacter",
 };

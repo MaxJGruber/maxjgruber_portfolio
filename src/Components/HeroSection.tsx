@@ -13,8 +13,10 @@ const HeroSection = () => {
             </span>
           </h1>
           <div className="mt-3 relative z-10 max-w-md mx-auto text-lg text-gray-50 sm:text-2xl md:mt-5 md:max-w-3xl">
-            {contentLanguage().heroSection.intro.map((text) => (
-              <p className="my-2">{text}</p>
+            {contentLanguage().heroSection.intro.map((text, i) => (
+              <p className="my-2" key={i}>
+                {text}
+              </p>
             ))}
           </div>
         </div>
