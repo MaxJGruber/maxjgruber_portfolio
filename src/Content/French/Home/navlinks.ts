@@ -10,6 +10,7 @@ import {
   PaperAirplaneIcon,
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import * as CVEn from "../../CVs/MaxJGruber_CV.pdf";
 import * as CVFr from "../../CVs/MaxJGruber_CV_FR.pdf";
 import * as certificate from "../../Certificate/IRONHACK_CERTIFICATE.pdf";
@@ -42,33 +43,37 @@ export const navlinks = {
       href: "#",
       icon: InboxIcon,
       current: false,
-      children: [
-        {
-          name: "Mon GitHub",
-          href: "https://github.com/MaxJGruber",
-          icon: UserGroupIcon,
-        },
-        {
-          name: "Mon LinkedIn",
-          href: "https://www.linkedin.com/in/maximilian-j-gruber/",
-          icon: GlobeAltIcon,
-        },
-        {
-          name: "Mon CV (Anglais)",
-          href: CVEn.default,
-          icon: DocumentDownloadIcon,
-        },
-        {
-          name: "Mon CV (Français)",
-          href: CVFr.default,
-          icon: DocumentDownloadIcon,
-        },
-        {
-          name: "Mon Diplôme",
-          href: certificate.default,
-          icon: DocumentDownloadIcon,
-        },
-      ],
+      children: {
+        links: [
+          {
+            name: "Mon GitHub",
+            href: "https://github.com/MaxJGruber",
+            icon: faGithubSquare,
+          },
+          {
+            name: "Mon LinkedIn",
+            href: "https://www.linkedin.com/in/maximilian-j-gruber/",
+            icon: faLinkedin,
+          },
+        ],
+        documents: [
+          {
+            name: "Mon CV (Anglais)",
+            href: CVEn.default,
+            icon: DocumentDownloadIcon,
+          },
+          {
+            name: "Mon CV (Français)",
+            href: CVFr.default,
+            icon: DocumentDownloadIcon,
+          },
+          {
+            name: "Mon Diplôme",
+            href: certificate.default,
+            icon: DocumentDownloadIcon,
+          },
+        ],
+      },
     },
   ],
   contactMe: "Me contacter",

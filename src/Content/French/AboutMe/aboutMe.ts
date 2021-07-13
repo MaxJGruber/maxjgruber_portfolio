@@ -1,28 +1,11 @@
 export const aboutMe = {
-  title: `"Hello World", Meet Max!`,
+  title: `"Hello World", ici Max!`,
   text: [
-    `I’m Maximilian Gruber (yes, like the bad guy in Die Hard). I’m a
-    NaN (😉) year old Junior Full Stack Web Developer graduated from
-    Ironhack’s 10-week immersive bootcamp in Paris, France. In a
-    past life I had a career in Hospitality, and am now keen to
-    start off my digital career using my new found skills in MERN
-    Stack.`,
-    `I am a tri-cultural person fluent in English, French and German
-    allowing me to insert myself easily in any work culture or
-    conversation, while also having a heck of a time deciding who
-    I'm backing in football competitions.`,
-    `Given the right guidance, my goal is to become a successful Full
-    Stack Developer.`,
-    `Technology leads, society follows. I want to be at the heart of
-    that change. I want to make a difference.`,
-    `Thanks to my past experiences in management within the
-    Hospitality sector, I know what it is like to have to learn
-    things quickly, solve issues spontaneously and, most of all, how
-    to work harmoniously with coworkers whilst facing important
-    tasks and deadlines.`,
-    `I'm excited to make the leap and continue improving my skills,
-    as well as myself, with the right company. Feel free to contact
-    me with any job opportunities and/or vegetarian recipes that
-    don't include coriander.`,
+    `Je m'appelle Maximilian Gruber (oui, comme le méchant dans Piège de Crystal). Je suis un développeur web junior Full Stack de NaN (😉 ) ans, diplômé du bootcamp immersif de 10 semaines d'Ironhack à Paris, en France. Dans une vie antérieure, j'ai eu une carrière dans l’hôtellerie et la restauration, et je suis maintenant désireux de commencer ma carrière numérique en utilisant mes nouvelles compétences trouvées dans MERN Stack.`,
+    `Je suis une personne tri-culturelle parlant couramment l'anglais, le français et l'allemand, ce qui me permet de m'insérer facilement dans n'importe quelle culture de travail ou conversation, tout en ayant un mal fou à décider qui je soutiens dans les compétitions de sports.`,
+    `Je cherche une société qui va me donner la possibilité d'atteindre mon objectif ce qui est de devenir un bon développeur Full Stack.`,
+    `La technologie mène, la société suit. Je veux être au cœur de ce changement. Je veux faire la différence.`,
+    `Grâce à mes expériences passées en gestion dans le secteur de l’hôtellerie et de la restauration, je sais ce que c'est que de devoir apprendre des choses rapidement, de résoudre des problèmes spontanément et, surtout, de travailler harmonieusement avec ses collègues tout en faisant face à des tâches et à des délais importants.`,
+    `J'ai hâte de faire le grand saut et de continuer à m’améliorer ainsi qu’améliorer mes compétences avec la bonne entreprise. N'hésitez pas à me contacter pour toute offre d'emploi et/ou pour des recettes végétariennes sans coriandre.`,
   ],
 };

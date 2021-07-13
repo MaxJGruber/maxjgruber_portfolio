@@ -1,7 +1,5 @@
 import {
   DocumentDownloadIcon,
-  UserGroupIcon,
-  GlobeAltIcon,
   FolderIcon,
   HomeIcon,
   DesktopComputerIcon,
@@ -10,6 +8,7 @@ import {
   PaperAirplaneIcon,
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import * as CVEn from "../../CVs/MaxJGruber_CV.pdf";
 import * as CVFr from "../../CVs/MaxJGruber_CV_FR.pdf";
 import * as certificate from "../../Certificate/IRONHACK_CERTIFICATE.pdf";
@@ -42,33 +41,37 @@ export const navlinks = {
       href: "#",
       icon: InboxIcon,
       current: false,
-      children: [
-        {
-          name: "My GitHub",
-          href: "https://github.com/MaxJGruber",
-          icon: UserGroupIcon,
-        },
-        {
-          name: "My LinkedIn",
-          href: "https://www.linkedin.com/in/maximilian-j-gruber/",
-          icon: GlobeAltIcon,
-        },
-        {
-          name: "My CV (English)",
-          href: CVEn.default,
-          icon: DocumentDownloadIcon,
-        },
-        {
-          name: "My CV (French)",
-          href: CVFr.default,
-          icon: DocumentDownloadIcon,
-        },
-        {
-          name: "My Certificate",
-          href: certificate.default,
-          icon: DocumentDownloadIcon,
-        },
-      ],
+      children: {
+        links: [
+          {
+            name: "My GitHub",
+            href: "https://github.com/MaxJGruber",
+            icon: faGithubSquare,
+          },
+          {
+            name: "My LinkedIn",
+            href: "https://www.linkedin.com/in/maximilian-j-gruber/",
+            icon: faLinkedin,
+          },
+        ],
+        documents: [
+          {
+            name: "My CV (English)",
+            href: CVEn.default,
+            icon: DocumentDownloadIcon,
+          },
+          {
+            name: "My CV (French)",
+            href: CVFr.default,
+            icon: DocumentDownloadIcon,
+          },
+          {
+            name: "My Certificate",
+            href: certificate.default,
+            icon: DocumentDownloadIcon,
+          },
+        ],
+      },
     },
   ],
   contactMe: "Contact Me",

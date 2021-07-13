@@ -1,3 +1,4 @@
+import heroSectionImg from "../Assets/hero-section-img.jpeg";
 import contentLanguage from "../Redux/languageContent";
 
 const HeroSection = () => {
@@ -24,7 +25,7 @@ const HeroSection = () => {
       <img
         className="absolute inset-0 w-full
       h-screen object-cover"
-        src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80"
+        src={heroSectionImg}
         alt=""
       />
     </main>

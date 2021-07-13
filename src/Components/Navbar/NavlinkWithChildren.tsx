@@ -1,4 +1,5 @@
 import { Disclosure } from "@headlessui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -32,7 +33,22 @@ const NavlinkWithChildren = (props: Record<string, any>) => {
         </svg>
       </Disclosure.Button>
       <Disclosure.Panel className="space-y-1">
-        {props.item.children.map((subItem: Record<string, any>) => (
+        {props.item.children.links.map((subItem: Record<string, any>) => (
+          <a
+            key={subItem.name}
+            href={subItem.href}
+            className="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50"
+          >
+            {" "}
+            <FontAwesomeIcon
+              icon={subItem.icon}
+              className="mr-3 ml-1 flex-shrink-0 text-xl text-gray-400 group-hover:text-gray-500"
+              aria-hidden="true"
+            />
+            {subItem.name}
+          </a>
+        ))}
+        {props.item.children.documents.map((subItem: Record<string, any>) => (
           <a
             key={subItem.name}
             href={subItem.href}

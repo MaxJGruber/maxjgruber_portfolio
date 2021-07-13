@@ -1,5 +1,5 @@
 export const titles = {
-  about: `A PROPOS DE MOI`,
+  about: `À PROPOS DE MOI`,
   knowledgeSkills: `CONNAISSANCES & COMPÉTENCES`,
   projects: `PROJETS`,
   blog: `BLOG`,

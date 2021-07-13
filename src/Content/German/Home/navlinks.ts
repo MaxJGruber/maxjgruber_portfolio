@@ -10,6 +10,7 @@ import {
   PaperAirplaneIcon,
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import * as CVEn from "../../CVs/MaxJGruber_CV.pdf";
 import * as CVFr from "../../CVs/MaxJGruber_CV_FR.pdf";
 import * as certificate from "../../Certificate/IRONHACK_CERTIFICATE.pdf";
@@ -42,33 +43,37 @@ export const navlinks = {
       href: "#",
       icon: InboxIcon,
       current: false,
-      children: [
-        {
-          name: "Mein GitHub",
-          href: "https://github.com/MaxJGruber",
-          icon: UserGroupIcon,
-        },
-        {
-          name: "Mein LinkedIn",
-          href: "https://www.linkedin.com/in/maximilian-j-gruber/",
-          icon: GlobeAltIcon,
-        },
-        {
-          name: "Mein CV (Englisch)",
-          href: CVEn.default,
-          icon: DocumentDownloadIcon,
-        },
-        {
-          name: "Mein CV (Französisch)",
-          href: CVFr.default,
-          icon: DocumentDownloadIcon,
-        },
-        {
-          name: "Mein Diplom",
-          href: certificate.default,
-          icon: DocumentDownloadIcon,
-        },
-      ],
+      children: {
+        links: [
+          {
+            name: "Mein GitHub",
+            href: "https://github.com/MaxJGruber",
+            icon: faGithubSquare,
+          },
+          {
+            name: "Mein LinkedIn",
+            href: "https://www.linkedin.com/in/maximilian-j-gruber/",
+            icon: faLinkedin,
+          },
+        ],
+        documents: [
+          {
+            name: "Mein CV (Englisch)",
+            href: CVEn.default,
+            icon: DocumentDownloadIcon,
+          },
+          {
+            name: "Mein CV (Französisch)",
+            href: CVFr.default,
+            icon: DocumentDownloadIcon,
+          },
+          {
+            name: "Mein Diplom",
+            href: certificate.default,
+            icon: DocumentDownloadIcon,
+          },
+        ],
+      },
     },
   ],
   contactMe: "Kontakt",

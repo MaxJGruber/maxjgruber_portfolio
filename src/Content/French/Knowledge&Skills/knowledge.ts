@@ -32,7 +32,7 @@ export const knowledge = {
       name: "Développement piloté par les tests",
       icon: SparklesIcon,
       description:
-        "C'est quelque chose dans lequel je suis assez nouveau. Cependant, j'ai essayé Moka et Jasmine pendant un court moment, et j'ai l'intention d'explorer Jest ensuite.",
+        "C'est quelque chose dans lequel je suis assez nouveau. Cependant, j'ai essayé Mocha et Jasmine pendant un court moment, et j'ai l'intention d'explorer Jest ensuite.",
     },
     {
       name: "Travail en équipe",
@@ -44,7 +44,7 @@ export const knowledge = {
       name: "Hébergement",
       icon: ServerIcon,
       description:
-        "Grâce à mes missions en Freelance, j'ai utilisé Heroku et j'ai commencé à utiliser l'hébergement AWS.",
+        "Grâce à mes missions en Freelance, j'utilise principalement Heroku et j'ai commencé à utiliser l'hébergement AWS.",
     },
   ],
 };
