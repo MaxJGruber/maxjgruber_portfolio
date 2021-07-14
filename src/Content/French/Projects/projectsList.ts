@@ -1,9 +1,9 @@
-import ALSLandingPage from "../../../Assets/project-pics/ALS_LandingPage.png";
-import marssn30LandingPage from "../../../Assets/project-pics/marss-n30_landing-page.png";
-import osteomeauxLandingPage from "../../../Assets/project-pics/osteomeaux_landing-page.png";
-import cosmousseLandingPage from "../../../Assets/project-pics/cosmousse_landing-page.png";
-import ekamLandingPage from "../../../Assets/project-pics/ekam_landing-page.png";
 import ironGuitarDemo from "../../../Assets/project-pics/iron-guitar-demo.gif";
+import cosmousseDemo from "../../../Assets/project-pics/cosmousse-demo.gif";
+import osteomeauxDemo from "../../../Assets/project-pics/osteomeaux-demo.gif";
+import newALSDemo from "../../../Assets/project-pics/new-als-demo.gif";
+import marssn30Demo from "../../../Assets/project-pics/marss-n30-demo.gif";
+import ekamDemo from "../../../Assets/project-pics/ekam-demo.gif";
 
 export const projectsList = {
   upcomingProjects: [
@@ -15,7 +15,7 @@ export const projectsList = {
       description:
         "Freelance mission project a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. As the current and futur clientele expands over Europe, the website content is in English, French and German.",
       specialFeatures: "",
-      landingPagePic: ALSLandingPage,
+      landingPagePic: newALSDemo,
       contain: true,
       stats: [
         { label: "Expected", value: "Fall 2021" },
@@ -32,7 +32,7 @@ export const projectsList = {
       description:
         "Projet de mission en freelance pour un salon de coiffure dans le Sud-Ouest de la France. Le client voulait un site Web simple et élégant pour tous les groupes d'âge. La clientèle du salon étant variée, le contenu du site est en anglais et en français.",
       specialFeatures: "",
-      landingPagePic: marssn30LandingPage,
+      landingPagePic: marssn30Demo,
       contain: false,
       stats: [
         { label: "Conçu", value: "2021" },
@@ -47,7 +47,7 @@ export const projectsList = {
       description:
         "Projet de mission en freelance pour un ostéopathe à Meaux, France. Le site Web fonctionne comme une carte de visite électronique pour le client et il a également pour fonction d'expliquer plus en détail en quoi consiste son métier. C'était mon premier projet pour le secteur médical.",
       specialFeatures: "",
-      landingPagePic: osteomeauxLandingPage,
+      landingPagePic: osteomeauxDemo,
       contain: true,
       stats: [
         { label: "Conçu", value: "2021" },
@@ -64,8 +64,8 @@ export const projectsList = {
         "Une application permettant à un utilisateur de créer un compte et de localiser sur votre carte les meilleures bières que vous avez bues et de garder un inventaire de vos meilleurs moments. Une application mobile à toujours avoir dans sa poche !",
       specialFeatures:
         "Utilisation de MapBox, authentification complète de l'utilisateur à l'aide de React.JS, utilisation de bibliothèques telles que Semantics UI et Material UI.",
-      landingPagePic: cosmousseLandingPage,
-      contain: false,
+      landingPagePic: cosmousseDemo,
+      contain: true,
       stats: [
         { label: "Conçu", value: "2020" },
         { label: "Durée", value: "10 jours" },
@@ -80,7 +80,7 @@ export const projectsList = {
       description:
         "Un site Web où vous pouvez créer un compte et sélectionner des jeux vidéo (à partir d'une API nous connectant à 350 000 jeux vidéo) à ajouter à votre liste de souhaits ou à votre liste de jeux. Un site Web entièrement responsive à avoir à la maison ou en déplacement sur votre smartphone. Conçu avec 2 autres camarades de classe également passionnés de jeux vidéo.",
       specialFeatures: "",
-      landingPagePic: ekamLandingPage,
+      landingPagePic: ekamDemo,
       contain: false,
       stats: [
         { label: "Conçu", value: "2020" },

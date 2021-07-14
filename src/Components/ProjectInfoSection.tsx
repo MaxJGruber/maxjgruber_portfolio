@@ -40,7 +40,11 @@ export default function ProjectInfoSection(props: Record<string, any>) {
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
             {/* Testimonial card*/}
             {/* <h2>AFTER</h2> */}
-            <div className="relative pt-64  rounded-2xl shadow-xl overflow-hidden">
+            <div
+              className={`relative pt-64 rounded-2xl  overflow-hidden ${
+                props.project.name === "COSMOUSSE" ? "demo" : "shadow-xl"
+              }`}
+            >
               <img
                 className={`absolute inset-0 h-full w-full ${
                   props.project.contain ? "object-contain" : "object-cover"
