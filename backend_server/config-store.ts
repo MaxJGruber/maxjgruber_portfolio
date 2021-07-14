@@ -11,6 +11,7 @@ nconf.required([
   "WUFOO_FORM_ID",
   "BACKEND_PORT",
   "PORT",
+  "FRONTEND_URL",
 ]);
 
 export default {
@@ -20,4 +21,5 @@ export default {
   WUFOO_FORM_ID: nconf.get("WUFOO_FORM_ID"),
   BACKEND_PORT: nconf.get("BACKEND_PORT"),
   PORT: nconf.get("PORT"),
+  FRONTEND_URL: nconf.get("FRONTEND_URL"),
 };

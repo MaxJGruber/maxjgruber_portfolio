@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: `http://localhost:${config.PORT}`,
+    origin: config.FRONTEND_URL,
     credentials: true,
   })
 );
