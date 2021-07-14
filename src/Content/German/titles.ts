@@ -4,4 +4,6 @@ export const titles = {
   projects: `PROJEKTE`,
   blog: `BLOG`,
   faq: `HÄUFIG GESTELLTE FRAGEN`,
+  before: "VOR",
+  after: "NACH",
 };

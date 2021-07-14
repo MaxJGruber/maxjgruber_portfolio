@@ -4,6 +4,7 @@ import osteomeauxDemo from "../../../Assets/project-pics/osteomeaux-demo.gif";
 import newALSDemo from "../../../Assets/project-pics/new-als-demo.gif";
 import marssn30Demo from "../../../Assets/project-pics/marss-n30-demo.gif";
 import ekamDemo from "../../../Assets/project-pics/ekam-demo.gif";
+import oldALSDemo from "../../../Assets/project-pics/old-als-demo.gif";
 
 export const projectsList = {
   upcomingProjects: [
@@ -13,9 +14,10 @@ export const projectsList = {
       intro: "upcoming",
       technologies: "React, TypeScript, Tailwind",
       description:
-        "Freelance mission project a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. As the current and futur clientele expands over Europe, the website content is in English, French and German.",
+        "Freelance mission project a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. I designed the new website on a completly different technical stack keeping mostly the content. As the client has the intensions to appeal to a international demographic, the website content is in English, French and German.",
       specialFeatures: "",
       landingPagePic: newALSDemo,
+      oldLandingPage: oldALSDemo,
       contain: true,
       stats: [
         { label: "Expected", value: "Fall 2021" },
@@ -34,6 +36,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: marssn30Demo,
       contain: false,
+      projectLink: "https://www.marss-n30.com/",
       stats: [
         { label: "Created", value: "2021" },
         { label: "Duration", value: "3 weeks" },
@@ -49,6 +52,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: osteomeauxDemo,
       contain: true,
+      projectLink: "https://www.charles-dumeige-osteomeaux.fr/",
       stats: [
         { label: "Created", value: "2021" },
         { label: "Duration", value: "8 weeks" },
@@ -66,6 +70,7 @@ export const projectsList = {
         "Using MapBox, full user authentication using React.JS, use of libraries such as Semantics UI and Material UI.",
       landingPagePic: cosmousseDemo,
       contain: true,
+      projectLink: "https://cosmousse.herokuapp.com/",
       stats: [
         { label: "Created", value: "2020" },
         { label: "Duration", value: "10 days" },
@@ -82,6 +87,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: ekamDemo,
       contain: false,
+      projectLink: "https://ekam-games.herokuapp.com/",
       stats: [
         { label: "Created", value: "2020" },
         { label: "Duration", value: "5 days" },
@@ -96,6 +102,7 @@ export const projectsList = {
         "An imitation of world-known video game Guitar Hero where the player needs to hit the note as they align with the fret-board. The higher your streak, the higher the points multiply.",
       specialFeatures: "",
       landingPagePic: ironGuitarDemo,
+      projectLink: "https://maxjgruber.github.io/Iron-Guitar/",
       contain: false,
       stats: [
         { label: "Created", value: "2020" },

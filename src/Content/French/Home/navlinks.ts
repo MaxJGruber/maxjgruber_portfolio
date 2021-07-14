@@ -1,7 +1,5 @@
 import {
   DocumentDownloadIcon,
-  UserGroupIcon,
-  GlobeAltIcon,
   FolderIcon,
   HomeIcon,
   DesktopComputerIcon,

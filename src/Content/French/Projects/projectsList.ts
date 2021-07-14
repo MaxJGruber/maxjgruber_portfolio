@@ -4,6 +4,7 @@ import osteomeauxDemo from "../../../Assets/project-pics/osteomeaux-demo.gif";
 import newALSDemo from "../../../Assets/project-pics/new-als-demo.gif";
 import marssn30Demo from "../../../Assets/project-pics/marss-n30-demo.gif";
 import ekamDemo from "../../../Assets/project-pics/ekam-demo.gif";
+import oldALSDemo from "../../../Assets/project-pics/old-als-demo.gif";
 
 export const projectsList = {
   upcomingProjects: [
@@ -13,14 +14,12 @@ export const projectsList = {
       intro: "prochainement",
       technologies: "React, TypeScript, Tailwind",
       description:
-        "Freelance mission project a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. As the current and futur clientele expands over Europe, the website content is in English, French and German.",
+        "Projet de mission indépendante d'une société de conseil aux entreprises dans le Sud-Ouest de la France. L'entreprise souhaitait une refonte et un lifting de son ancien site Web pour plaire à une clientèle plus large de tous les groupes d'âge. J'ai conçu le nouveau site Web sur un stack technique complètement différent en gardant principalement le contenu. Comme le client a l'intention de s'adresser à une population internationale, le contenu du site Web est en anglais, français et allemand.",
       specialFeatures: "",
       landingPagePic: newALSDemo,
+      oldLandingPage: oldALSDemo,
       contain: true,
-      stats: [
-        { label: "Expected", value: "Fall 2021" },
-        // { label: "Duration", value: "3 weeks" },
-      ],
+      stats: [{ label: "Attendu", value: "Automne 2021" }],
     },
   ],
   projects: [
@@ -34,6 +33,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: marssn30Demo,
       contain: false,
+      projectLink: "https://www.marss-n30.com/",
       stats: [
         { label: "Conçu", value: "2021" },
         { label: "Durée", value: "3 semaines" },
@@ -49,6 +49,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: osteomeauxDemo,
       contain: true,
+      projectLink: "https://www.charles-dumeige-osteomeaux.fr/",
       stats: [
         { label: "Conçu", value: "2021" },
         { label: "Durée", value: "8 semaines" },
@@ -66,6 +67,7 @@ export const projectsList = {
         "Utilisation de MapBox, authentification complète de l'utilisateur à l'aide de React.JS, utilisation de bibliothèques telles que Semantics UI et Material UI.",
       landingPagePic: cosmousseDemo,
       contain: true,
+      projectLink: "https://cosmousse.herokuapp.com/",
       stats: [
         { label: "Conçu", value: "2020" },
         { label: "Durée", value: "10 jours" },
@@ -82,6 +84,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: ekamDemo,
       contain: false,
+      projectLink: "https://ekam-games.herokuapp.com/",
       stats: [
         { label: "Conçu", value: "2020" },
         { label: "Durée", value: "5 jours" },
@@ -97,6 +100,7 @@ export const projectsList = {
       specialFeatures: "",
       landingPagePic: ironGuitarDemo,
       contain: false,
+      projectLink: "https://maxjgruber.github.io/Iron-Guitar/",
       stats: [
         { label: "Conçu", value: "2020" },
         { label: "Durée", value: "5 jours" },
