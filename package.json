@@ -35,7 +35,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
-    "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
@@ -53,7 +52,7 @@
     "prod:back": "node ./backend_build/index.js",
     "build:back": "tsc --project tsconfig.backend.json --outDir \"backend_build\"",
     "dev:front": "craco start",
-    "prod:front": "node src/server.js",
+    "prod:front": "node server.js",
     "build:front": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
