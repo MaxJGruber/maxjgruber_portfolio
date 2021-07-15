@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
     next();
 });
 app.use(cors_1.default({
-    origin: "http://localhost:" + config_store_1.default.PORT,
+    origin: config_store_1.default.FRONTEND_URL,
     credentials: true,
 }));
 app.post("/submit-form", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {

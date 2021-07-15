@@ -14,6 +14,7 @@ nconf_1.default.required([
     "WUFOO_FORM_ID",
     "BACKEND_PORT",
     "PORT",
+    "REACT_APP_FRONTEND_URL",
 ]);
 exports.default = {
     WUFOO_BASE_URL: nconf_1.default.get("WUFOO_BASE_URL"),
@@ -22,4 +23,5 @@ exports.default = {
     WUFOO_FORM_ID: nconf_1.default.get("WUFOO_FORM_ID"),
     BACKEND_PORT: nconf_1.default.get("BACKEND_PORT"),
     PORT: nconf_1.default.get("PORT"),
+    FRONTEND_URL: nconf_1.default.get("REACT_APP_FRONTEND_URL"),
 };

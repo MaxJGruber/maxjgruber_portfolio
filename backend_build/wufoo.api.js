@@ -61,12 +61,12 @@ function submitForm(dataForm) {
                             method: "post",
                             url: url,
                             data: dataForm,
-                            headers: dataForm.getHeaders(),
+                            // headers: dataForm.getHeaders(),
                         })];
                 case 1:
-                    data = (_a.sent()).data;
+                    data = _a.sent();
                     console.log("DATA>>>>", data);
-                    return [2 /*return*/, data];
+                    return [2 /*return*/, data.data];
             }
         });
     });
