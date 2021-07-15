@@ -6,6 +6,7 @@ const service = axios.create({
   baseURL,
 });
 
+console.log(baseURL);
 export async function submitForm(
   dataForm: Record<string, any>
 ): Promise<number | undefined> {
