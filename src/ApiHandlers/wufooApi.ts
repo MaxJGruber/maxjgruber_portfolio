@@ -12,7 +12,7 @@ export async function submitForm(
 ): Promise<Record<string, any> | undefined> {
   console.log(dataForm);
   try {
-    const data = await service.post("/submit-form", dataForm);
+    const data = await service.post("/api/submit-form", dataForm);
     // console.log("STATUS>>>>", status);
     console.log("DATA>>>>", data);
     return data;

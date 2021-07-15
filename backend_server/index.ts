@@ -20,7 +20,7 @@ app.use(
   })
 );
 
-app.post("/submit-form", async (req: Request, res: Response) => {
+app.post("/api/submit-form", async (req: Request, res: Response) => {
   try {
     const formData = new FormData();
     for (var key in req.body) {
