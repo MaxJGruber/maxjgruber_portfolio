@@ -24,7 +24,7 @@ export default function ContactForm() {
 
   async function handleSubmit(
     e: Record<string, any>
-  ): Promise<number | undefined> {
+  ): Promise<Record<string, any> | undefined> {
     e.preventDefault();
     const response = await submitForm(form);
     console.log(response);

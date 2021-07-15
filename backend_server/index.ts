@@ -19,7 +19,7 @@ app.use(
     credentials: true,
   })
 );
-console.log(config.FRONTEND_URL);
+
 app.post("/submit-form", async (req: Request, res: Response) => {
   try {
     const formData = new FormData();
