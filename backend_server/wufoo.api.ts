@@ -19,7 +19,7 @@ export async function submitForm(
     method: "post",
     url,
     data: dataForm,
-    // headers: dataForm.getHeaders(),
+    headers: dataForm.getHeaders(),
   });
   console.log("DATA>>>>", data);
   return data.data;
