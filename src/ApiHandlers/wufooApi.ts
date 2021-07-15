@@ -12,9 +12,10 @@ export async function submitForm(
 ): Promise<number | undefined> {
   console.log(dataForm);
   try {
-    const { status } = await service.post("/submit-form", dataForm);
-    console.log("STATUS>>>>", status);
-    return status;
+    const data = await service.post("/submit-form", dataForm);
+    // console.log("STATUS>>>>", status);
+    console.log("DATA>>>>", data);
+    return data.data;
   } catch (error) {
     console.log(error);
   }
