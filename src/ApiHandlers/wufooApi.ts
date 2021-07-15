@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:4000";
+const baseURL = "https://maxjgruber-portfolio.herokuapp.com";
 
 const service = axios.create({
   baseURL,
