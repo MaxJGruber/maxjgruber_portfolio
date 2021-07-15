@@ -6,7 +6,7 @@ const service = axios.create({
   baseURL,
 });
 
-// console.log("BACKEND_URL", baseURL);
+console.log("BACKEND_URL", baseURL);
 export async function submitForm(
   dataForm: Record<string, any>
 ): Promise<Record<string, any> | undefined> {
