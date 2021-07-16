@@ -54,7 +54,7 @@
     "build:back": "tsc --project tsconfig.backend.json --outDir \"backend_build\"",
     "dev:front": "craco start",
     "prod:front": "node server.js",
-    "build:front": "dotenv -e .env.production craco build",
+    "build:front": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
