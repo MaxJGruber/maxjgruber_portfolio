@@ -9,9 +9,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import contentLanguage from "../Redux/languageContent";
+import Notification from "../Components/Notification";
 
 export default function ContactForm() {
   const [form, setForm] = useState<Record<string, any>>({});
+  const [sentStatus, setSentStatus] = useState<Boolean | null>(null);
 
   function handleChange(e: Record<string, any>) {
     const newForm: Record<string, any> = { ...form };
@@ -28,8 +30,15 @@ export default function ContactForm() {
     e.preventDefault();
     const response = await submitForm(form);
     console.log(response);
+    response && response.status === 201
+      ? setSentStatus(true)
+      : setSentStatus(false);
+    setTimeout(() => {
+      setSentStatus(null);
+    }, 5000);
     return response;
   }
+
   return (
     <div id="contact-form" className="bg-gray-100">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
@@ -333,6 +342,8 @@ export default function ContactForm() {
                   </div>
                 </div>
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
+                  {sentStatus && <Notification success={true} />}
+                  {sentStatus === false && <Notification success={false} />}
                   <button
                     type="submit"
                     onClick={handleSubmit}

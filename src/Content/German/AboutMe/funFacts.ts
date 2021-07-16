@@ -32,7 +32,7 @@ export const funFacts = {
         "Ich habe eine Abneigung gegen nasses, feuchtes oder schmutziges Plastik (in Form von Schrumpffolie oder Plastiktüten).",
     },
     {
-      name: "I love Tiere!",
+      name: "I liebe Tiere!",
       description:
         "Ich muss alles, was ich tue, auf Eis legen, wenn ich eine Katze sehe!",
     },

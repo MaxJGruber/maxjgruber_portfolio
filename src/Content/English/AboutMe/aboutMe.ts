@@ -5,7 +5,7 @@ export const aboutMe = {
     NaN (😉) year old Junior Full Stack Web Developer graduated from
     Ironhack’s 10-week immersive bootcamp in Paris, France. In a
     past life I had a career in Hospitality, and am now keen to
-    start off my digital career using my new found skills in MERN
+    start off my digital career using my newfound skills in MERN
     Stack.`,
     `I am a tri-cultural person fluent in English, French and German
     allowing me to insert myself easily in any work culture or

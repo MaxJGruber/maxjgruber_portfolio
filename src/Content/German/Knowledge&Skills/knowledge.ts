@@ -20,7 +20,7 @@ export const knowledge = {
       name: "Responsive Design",
       icon: DeviceMobileIcon,
       description:
-        "Ich habe enorm viel Arbeit in Responsive Design gesteckt, damit meine Projekte auf Desktop- oder kleineren Bildschirmen immer den gleichen Geist behalten.",
+        "Ich habe enorm viel Arbeit in Responsive Design gesteckt, damit meine Projekte auf Desktop- oder kleineren Bildschirmen immer den gleichen Charakter behalten.",
     },
     {
       name: "SEO & Leistung",

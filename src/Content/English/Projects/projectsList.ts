@@ -14,7 +14,7 @@ export const projectsList = {
       intro: "upcoming",
       technologies: "React.JS / TypeScript / Tailwind",
       description:
-        "Freelance mission project a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. I designed the new website on a completly different technical stack keeping mostly the content. As the client has the intensions to appeal to a international demographic, the website content is in English, French and German.",
+        "Freelance mission project for a business consultancy company in the South-West of France. The company wanted a remodel and facelift of their old website to appeal to a larger clientele of all age groups. I designed the new website on a completly different technical stack keeping mostly the content. As the client has the intentions to appeal to a international demographic, the website content is in English, French and German.",
       specialFeatures: "",
       landingPagePic: newALSDemo,
       oldLandingPage: oldALSDemo,
@@ -99,7 +99,7 @@ export const projectsList = {
       intro: "My first project at ironhack",
       technologies: "HTML / CSS / JavaScript",
       description:
-        "An imitation of world-known video game Guitar Hero where the player needs to hit the note as they align with the fret-board. The higher your streak, the higher the points multiply.",
+        "An imitation of world-known video game Guitar Hero where the player needs to hit the notes as they align with the fret-board. The higher your streak, the higher the points multiply.",
       specialFeatures: "",
       landingPagePic: ironGuitarDemo,
       projectLink: "https://maxjgruber.github.io/Iron-Guitar/",
