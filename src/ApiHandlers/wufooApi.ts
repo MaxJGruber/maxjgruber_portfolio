@@ -2,9 +2,9 @@ import axios from "axios";
 
 const service = axios.create({
   baseURL: process.env.REACT_APP_BACKEND_URL,
+  withCredentials: true,
 });
 
-console.log(">>>>", service);
 export async function submitForm(
   dataForm: Record<string, any>
 ): Promise<Record<string, any> | undefined> {
