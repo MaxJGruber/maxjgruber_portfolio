@@ -38,7 +38,7 @@ export const projectsList = {
       contain: false,
       projectLink: "https://www.marss-n30.com/",
       stats: [
-        { label: "Created", value: "2021" },
+        { label: "Erstellt", value: "2021" },
         { label: "Dauer", value: "3 Wochen" },
       ],
     },

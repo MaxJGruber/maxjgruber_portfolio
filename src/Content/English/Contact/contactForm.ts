@@ -5,6 +5,7 @@ export const contactForm = {
     `Feel free to contact me by email, phone or this form.`,
   ],
   formTitle: `Send me a message`,
+  requiredWarning: "Required fields are marked with",
   firstName: `First name`,
   lastName: `Last name`,
   email: `Email`,

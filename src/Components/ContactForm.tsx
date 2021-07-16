@@ -220,6 +220,10 @@ export default function ContactForm() {
               <h3 className="text-lg font-medium text-gray-900">
                 {contentLanguage().contactForm.formTitle}
               </h3>
+              <h2 className="mt-3 text-sm font-medium text-gray-900">
+                {contentLanguage().contactForm.requiredWarning}{" "}
+                <span className="text-red-400">*</span>
+              </h2>
               <form
                 action="#"
                 method="POST"
@@ -231,6 +235,7 @@ export default function ContactForm() {
                     className="block text-sm font-medium text-gray-900"
                   >
                     {contentLanguage().contactForm.firstName}
+                    <span className="text-red-400">*</span>
                   </label>
                   <div className="mt-1">
                     <input
@@ -249,6 +254,7 @@ export default function ContactForm() {
                     className="block text-sm font-medium text-gray-900"
                   >
                     {contentLanguage().contactForm.lastName}
+                    <span className="text-red-400">*</span>
                   </label>
                   <div className="mt-1">
                     <input
@@ -267,6 +273,7 @@ export default function ContactForm() {
                     className="block text-sm font-medium text-gray-900"
                   >
                     {contentLanguage().contactForm.email}
+                    <span className="text-red-400">*</span>
                   </label>
                   <div className="mt-1">
                     <input
@@ -327,6 +334,7 @@ export default function ContactForm() {
                       className="block text-sm font-medium text-gray-900"
                     >
                       {contentLanguage().contactForm.message}
+                      <span className="text-red-400">*</span>
                     </label>
                   </div>
                   <div className="mt-1">
