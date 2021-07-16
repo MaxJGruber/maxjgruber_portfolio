@@ -32,6 +32,7 @@ export const skillsSection = {
     },
     {
       name: "Currently Learning:",
+      id: "currently learning",
       description: "Golang / AWS / SQL / TypeScript",
     },
   ],

@@ -1,5 +1,5 @@
 export const skillsSection = {
-  title: `Technical Skills`,
+  title: `Compétences techniques`,
   features: [
     {
       name: "Langues de programmation & plateformes logicielles",
@@ -32,6 +32,7 @@ export const skillsSection = {
     },
     {
       name: "En cours d'apprentissage",
+      id: "currently learning",
       description: "Golang / AWS / SQL / TypeScript",
     },
   ],

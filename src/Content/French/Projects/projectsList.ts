@@ -12,7 +12,7 @@ export const projectsList = {
       name: "Aquitaine Lifestyle Solutions",
       type: "Site vitrine",
       intro: "prochainement",
-      technologies: "React, TypeScript, Tailwind",
+      technologies: "React.JS / TypeScript / Tailwind",
       description:
         "Projet de mission indépendante d'une société de conseil aux entreprises dans le Sud-Ouest de la France. L'entreprise souhaitait une refonte et un lifting de son ancien site Web pour plaire à une clientèle plus large de tous les groupes d'âge. J'ai conçu le nouveau site Web sur un stack technique complètement différent en gardant principalement le contenu. Comme le client a l'intention de s'adresser à une population internationale, le contenu du site Web est en anglais, français et allemand.",
       specialFeatures: "",
@@ -27,7 +27,7 @@ export const projectsList = {
       name: "Marss N30",
       type: "Site vitrine",
       intro: "Ma seconde mission en freelance",
-      technologies: "React, Tailwind",
+      technologies: "React.JS / Tailwind",
       description:
         "Projet de mission en freelance pour un salon de coiffure dans le Sud-Ouest de la France. Le client voulait un site Web simple et élégant pour tous les groupes d'âge. La clientèle du salon étant variée, le contenu du site est en anglais et en français.",
       specialFeatures: "",
@@ -43,7 +43,7 @@ export const projectsList = {
       name: "Charles Dumeige Osteomeaux",
       type: "Site vitrine avancé",
       intro: "Ma première mission en freelance",
-      technologies: "Vue, Tailwind, Mongoose, MongoDB, Express",
+      technologies: "Vue.JS / Tailwind / MongoDB / Mongoose / Express.JS",
       description:
         "Projet de mission en freelance pour un ostéopathe à Meaux, France. Le site Web fonctionne comme une carte de visite électronique pour le client et il a également pour fonction d'expliquer plus en détail en quoi consiste son métier. C'était mon premier projet pour le secteur médical.",
       specialFeatures: "",
@@ -60,7 +60,7 @@ export const projectsList = {
       type: "Application mobile Full MERN Stack",
       intro: "Mon projet final à Ironhack",
       technologies:
-        "HTML, CSS, JavaScript, MongoDB, Mongoose, Express.JS, React.JS;",
+        "HTML / CSS / JavaScript / MongoDB / Mongoose / Express.JS / React.JS ",
       description:
         "Une application permettant à un utilisateur de créer un compte et de localiser sur votre carte les meilleures bières que vous avez bues et de garder un inventaire de vos meilleurs moments. Une application mobile à toujours avoir dans sa poche !",
       specialFeatures:
@@ -78,7 +78,7 @@ export const projectsList = {
       type: "Site Web réactif Front & Back-End",
       intro: "Mon second projet à Ironhack",
       technologies:
-        "HTML, CSS, JavaScript, Handlebars, MongoDB, Mongoose, Express.JS;",
+        "HTML / CSS / JavaScript / Handlebars / MongoDB / Mongoose / Express.JS",
       description:
         "Un site Web où vous pouvez créer un compte et sélectionner des jeux vidéo (à partir d'une API nous connectant à 350 000 jeux vidéo) à ajouter à votre liste de souhaits ou à votre liste de jeux. Un site Web entièrement responsive à avoir à la maison ou en déplacement sur votre smartphone. Conçu avec 2 autres camarades de classe également passionnés de jeux vidéo.",
       specialFeatures: "",
@@ -94,7 +94,7 @@ export const projectsList = {
       name: "Iron Guitar",
       type: "Jeu vidéo Front-End",
       intro: "Mon premier projet à Ironhack",
-      technologies: "HTML, CSS, JavaScript",
+      technologies: "HTML / CSS / JavaScript",
       description:
         "Une imitation du jeu vidéo mondialement connu Guitar Hero où le joueur doit frapper la note en s'alignant avec le manche. Plus votre séquence est élevée, plus les points se multiplient.",
       specialFeatures: "",

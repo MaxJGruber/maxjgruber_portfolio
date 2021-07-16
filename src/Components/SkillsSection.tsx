@@ -14,7 +14,7 @@ export default function SkillsSection() {
           {contentLanguage().skillsSection.features.map((feature) => (
             <div key={feature.name} className="relative">
               <dt>
-                {feature.name === "Currently Learning:" ? (
+                {feature.id === "currently learning" ? (
                   <FlagIcon
                     className="absolute h-6 w-6 text-yellow-500"
                     aria-hidden="true"

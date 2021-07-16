@@ -1,13 +1,13 @@
 export const skillsSection = {
-  title: `Technical Skills`,
+  title: `Technische Fähigkeiten`,
   features: [
     {
-      name: "Programming Languages & Engines",
+      name: "Programmiersprachen & Engines",
       description: "JavaScript(ES6) / HTML5 / CSS3 / Node",
     },
     {
       name: "Front-End Frameworks",
-      description: "React (with Hooks & Redux) / Vue (with Vuex)",
+      description: "React (mit Hooks & Redux) / Vue (mit Vuex)",
     },
     {
       name: "Front-End Libraries",
@@ -18,11 +18,11 @@ export const skillsSection = {
       description: "Express / Mongoose",
     },
     {
-      name: "Database Types",
+      name: "Datenbanktypen",
       description: "MongoDB",
     },
     {
-      name: "Programming Tools",
+      name: "Programmiertools",
       description:
         "Visual Studio Code / CLI / Heroku / Git / GitHub / Postman / npm & yarn",
     },
@@ -31,7 +31,8 @@ export const skillsSection = {
       description: "Slack / Zoom / Stack Overflow / Medium / JIRA",
     },
     {
-      name: "Currently Learning:",
+      name: "Gegenwärtig im Lernprozess von:",
+      id: "currently learning",
       description: "Golang / AWS / SQL / TypeScript",
     },
   ],

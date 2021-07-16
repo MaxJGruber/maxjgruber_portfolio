@@ -94,7 +94,7 @@ const Home = (props: Record<string, any>) => {
                 <nav className="mt-5 px-2 space-y-1">
                   {contentLanguage().navlinks.navigation.map((item) =>
                     !item.children ? (
-                      <div key={item.name}>
+                      <div key={item.name} onClick={() => setSidebarOpen(false)}>
                         <NavlinkWithoutChildren item={item} />
                       </div>
                     ) : (

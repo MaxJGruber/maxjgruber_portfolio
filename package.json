@@ -28,6 +28,7 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "dotenv-cli": "^4.0.0",
     "express": "^4.17.1",
     "form-data": "^4.0.0",
     "nconf": "^0.11.2",
@@ -53,7 +54,7 @@
     "build:back": "tsc --project tsconfig.backend.json --outDir \"backend_build\"",
     "dev:front": "craco start",
     "prod:front": "node server.js",
-    "build:front": "craco build",
+    "build:front": "dotenv -e .env.production craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
