@@ -38,5 +38,7 @@ app.post("/api/submit-form", async (req: Request, res: Response) => {
   }
 });
 
+
+
 app.listen(config.BACKEND_PORT);
 console.log(`Server running on: http://localhost:${config.BACKEND_PORT}`);

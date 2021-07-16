@@ -1,12 +1,10 @@
 import axios from "axios";
 
-const baseURL = process.env.REACT_APP_BACKEND_URL;
-
 const service = axios.create({
-  baseURL,
+  baseURL: process.env.REACT_APP_BACKEND_URL,
 });
 
-console.log("BACKEND_URL", baseURL);
+console.log(">>>>", service);
 export async function submitForm(
   dataForm: Record<string, any>
 ): Promise<Record<string, any> | undefined> {
