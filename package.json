@@ -46,7 +46,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "yarn prod:back & yarn prod:front",
+    "start": "yarn prod:front",
     "build": "yarn build:front && yarn build:back",
     "dev:all": "yarn dev:front & yarn dev:back",
     "dev:back": "nodemon --project tsconfig.backend.json --watch './**/*.ts' --exec 'ts-node' ./backend_server/index.ts",
