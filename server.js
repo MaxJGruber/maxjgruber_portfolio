@@ -17,4 +17,4 @@ app.get("*", (req, res) => {
 console.log(path.join(__dirname, "build", "index.html"));
 const port = process.env.PORT || 3000;
 app.listen(port);
-console.log(`Server running on: http://localhost:${port}`);
+console.log(`FRONT-END Server running on: http://localhost:${port}`);

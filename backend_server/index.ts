@@ -1,6 +1,5 @@
 import config from "./config-store";
 import express, { Response, Request } from "express";
-import path from "path";
 import { submitForm } from "./wufoo.api";
 import FormData from "form-data";
 import cors from "cors";
@@ -31,7 +30,7 @@ app.post("/api/submit-form", async (req: Request, res: Response) => {
     if (data.Success === 1) {
       res.sendStatus(201);
     } else {
-      throw Error;
+      throw new Error();
     }
   } catch (error) {
     console.log(error);
@@ -39,6 +38,7 @@ app.post("/api/submit-form", async (req: Request, res: Response) => {
   }
 });
 
-
 app.listen(config.BACKEND_PORT);
-console.log(`Server running on: http://localhost:${config.BACKEND_PORT}`);
+console.log(
+  `BACK-END Server running on: http://localhost:${config.BACKEND_PORT}`
+);

@@ -71,7 +71,7 @@ app.post("/api/submit-form", function (req, res) { return __awaiter(void 0, void
                     res.sendStatus(201);
                 }
                 else {
-                    throw Error;
+                    throw new Error();
                 }
                 return [3 /*break*/, 3];
             case 2:
@@ -84,4 +84,4 @@ app.post("/api/submit-form", function (req, res) { return __awaiter(void 0, void
     });
 }); });
 app.listen(config_store_1.default.BACKEND_PORT);
-console.log("Server running on: http://localhost:" + config_store_1.default.BACKEND_PORT);
+console.log("BACK-END Server running on: http://localhost:" + config_store_1.default.BACKEND_PORT);
