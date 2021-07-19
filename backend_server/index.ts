@@ -46,12 +46,11 @@ app.post("/api/submit-form", async (req: Request, res: Response) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "../build/index.html"));
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
-console.log(path.join(__dirname, "../build"));
-console.log(path.join(__dirname, "../build/index.html"));
-app.listen(config.BACKEND_PORT);
+console.log(process.env.PORT)
+app.listen(process.env.PORT);
 console.log(
-  `BACK-END Server running on: http://localhost:${config.BACKEND_PORT}`
+  `BACK-END Server running on: http://localhost:${process.env.PORT}`
 );

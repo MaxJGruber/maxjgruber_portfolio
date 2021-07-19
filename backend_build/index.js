@@ -41,6 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var config_store_1 = __importDefault(require("./config-store"));
 var express_1 = __importDefault(require("express"));
+var path_1 = __importDefault(require("path"));
 var wufoo_api_1 = require("./wufoo.api");
 var form_data_1 = __importDefault(require("form-data"));
 var cors_1 = __importDefault(require("cors"));
@@ -54,6 +55,10 @@ app.use(cors_1.default({
     origin: config_store_1.default.FRONTEND_URL,
     credentials: true,
 }));
+app.use(express_1.default.static(path_1.default.join(__dirname, "../build")));
+app.get("/ping", function (req, res) {
+    res.send("pong");
+});
 app.post("/api/submit-form", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var formData, key, data, error_1;
     return __generator(this, function (_a) {
@@ -83,5 +88,10 @@ app.post("/api/submit-form", function (req, res) { return __awaiter(void 0, void
         }
     });
 }); });
+app.get("*", function (req, res) {
+    res.sendFile(path_1.default.join(__dirname, "../build/index.html"));
+});
+console.log(path_1.default.join(__dirname, "../build"));
+console.log(path_1.default.join(__dirname, "../build/index.html"));
 app.listen(config_store_1.default.BACKEND_PORT);
 console.log("BACK-END Server running on: http://localhost:" + config_store_1.default.BACKEND_PORT);
