@@ -38,7 +38,19 @@ app.post("/api/submit-form", async (req: Request, res: Response) => {
   }
 });
 
+if (process.env.NODE_ENV === "production") {
+  app.use("*", (req, res, next) => {
+    // If no routes match, send them the React HTML.
+    res.sendFile(__dirname + "/build/index.html");
+  });
+}
 
+// 404 Middleware
+app.use((req, res, next) => {
+  const error = new Error("Ressource not found.");
+  // error.status = 404;
+  next(error);
+});
 
 app.listen(config.BACKEND_PORT);
 console.log(`Server running on: http://localhost:${config.BACKEND_PORT}`);
