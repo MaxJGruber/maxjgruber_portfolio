@@ -200,21 +200,21 @@ const Home = (props: Record<string, any>) => {
                 <button
                   onClick={handleLanguageSelect}
                   value="en"
-                  className="mx-2"
+                  className="mx-2 focus:outline-none"
                 >
                   🇬🇧
                 </button>
                 <button
                   onClick={handleLanguageSelect}
                   value="fr"
-                  className="mx-2"
+                  className="mx-2 focus:outline-none"
                 >
                   🇫🇷
                 </button>
                 <button
                   onClick={handleLanguageSelect}
                   value="de"
-                  className="mx-2"
+                  className="mx-2 focus:outline-none"
                 >
                   🇩🇪
                 </button>

@@ -31,7 +31,7 @@ export default function AboutMeSection() {
                   height={100}
                   patternUnits="userSpaceOnUse"
                 >
-                  <g fillRule="evenodd">
+                  <g fillRule="inherit">
                     <g
                       id="death-star"
                       className="text-gray-200"
@@ -43,8 +43,8 @@ export default function AboutMeSection() {
                 </pattern>
               </defs>
               <rect
-                width={404}
-                height={684}
+                width={400}
+                height={700}
                 fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
               />
             </svg>

@@ -4,7 +4,7 @@ import contentLanguage from "../Redux/languageContent";
 const ComparisonComponent = (props: Record<string, any>) => {
   return (
     <>
-      <div className="relative sm:py-16 lg:py-0">
+      <div className="relative py-16 sm:py-16 lg:py-0">
         <div
           aria-hidden="true"
           className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"

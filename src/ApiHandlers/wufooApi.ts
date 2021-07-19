@@ -12,7 +12,7 @@ export async function submitForm(
   try {
     const data = await service.post("/api/submit-form", dataForm);
     // console.log("STATUS>>>>", status);
-    console.log("DATA>>>>", data);
+    // console.log("DATA>>>>", data);
     return data;
   } catch (error) {
     console.log(error);
