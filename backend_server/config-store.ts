@@ -9,7 +9,7 @@ nconf.required([
   "WUFOO_API_KEY",
   "WUFOO_PASSWORD",
   "WUFOO_FORM_ID",
-  "BACKEND_PORT",
+  // "BACKEND_PORT",
   "PORT",
   "REACT_APP_FRONTEND_URL",
 ]);
@@ -19,7 +19,7 @@ export default {
   WUFOO_API_KEY: nconf.get("WUFOO_API_KEY"),
   WUFOO_PASSWORD: nconf.get("WUFOO_PASSWORD"),
   WUFOO_FORM_ID: nconf.get("WUFOO_FORM_ID"),
-  BACKEND_PORT: nconf.get("BACKEND_PORT"),
+  // BACKEND_PORT: nconf.get("BACKEND_PORT"),
   PORT: nconf.get("PORT"),
   FRONTEND_URL: nconf.get("REACT_APP_FRONTEND_URL"),
 };
