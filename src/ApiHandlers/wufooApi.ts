@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const service = axios.create({
-  baseURL: `http://localhost:${process.env.BACKEND_PORT}`,
+  baseURL: `http://localhost:4000`,
   withCredentials: true,
 });
 
