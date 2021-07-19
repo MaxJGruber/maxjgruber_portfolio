@@ -48,7 +48,6 @@ if (process.env.NODE_ENV === "production") {
 }
 console.log(process.env.NODE_ENV);
 
-app.listen(config.BACKEND_PORT);
-console.log(
-  `BACK-END Server running on: http://localhost:${config.BACKEND_PORT}`
-);
+const port = config.BACKEND_PORT || process.env.PORT;
+app.listen(port);
+console.log(`BACK-END Server running on: http://localhost:${port}`);
