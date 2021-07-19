@@ -1,5 +1,6 @@
 import config from "./config-store";
 import express, { Response, Request } from "express";
+import path from "path";
 import { submitForm } from "./wufoo.api";
 import FormData from "form-data";
 import cors from "cors";
@@ -20,6 +21,8 @@ app.use(
   })
 );
 
+app.use(express.static(path.join(__dirname, "../build")));
+
 app.post("/api/submit-form", async (req: Request, res: Response) => {
   try {
     const formData = new FormData();
@@ -36,6 +39,10 @@ app.post("/api/submit-form", async (req: Request, res: Response) => {
     console.log(error);
     res.sendStatus(400);
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "../build/index.html"));
 });
 
 app.listen(config.BACKEND_PORT);
