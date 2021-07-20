@@ -1,3 +1,4 @@
+const sslRedirect = require("heroku-ssl-redirect").default;
 import config from "./config-store";
 import express, { Response, Request } from "express";
 import path from "path";
@@ -21,6 +22,7 @@ app.use(
   })
 );
 
+app.use(sslRedirect());
 app.use(express.static(path.join(__dirname, "../build")));
 
 app.post("/api/submit-form", async (req: Request, res: Response) => {
@@ -46,7 +48,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../build/index.html"));
   });
 }
-console.log(process.env.NODE_ENV);
 
 const port = process.env.NODE_ENV === "production" ? process.env.PORT : 4000;
 app.listen(port);
