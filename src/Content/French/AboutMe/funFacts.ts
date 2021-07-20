@@ -9,7 +9,7 @@ export const funFacts = {
     {
       name: "Je ne peux pas travailler sans musique!",
       description:
-        "La musique me donne le rythme et le tempo pour maximiser ma productivité, n’importe ce que je fais.",
+        "La musique me donne le rythme et le tempo pour maximiser ma productivité, qu’importe ce que je fais.",
     },
     {
       name: "J’ai un vaste sens de l’humour",
