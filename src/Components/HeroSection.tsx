@@ -26,7 +26,7 @@ const HeroSection = () => {
         className="absolute inset-0 w-full
       h-screen object-cover"
         src={heroSectionImg}
-        alt=""
+        alt="MacBook on a desktop"
       />
     </main>
   );

@@ -2,20 +2,12 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
-import HeroSection from "../Components/HeroSection";
-import AboutMe from "../Components/AboutMeSection";
-import ContactForm from "../Components/ContactForm";
 import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
-import Title from "../Components/Title";
-import Projects from "../Components/Projects";
-import BlogSection from "../Components/BlogSection";
-import MissionSection from "../Components/MissionSection";
-import SkillsSection from "../Components/SkillsSection";
-import FunFacts from "../Components/FunFacts";
-import Faq from "../Components/FAQ";
 import NavlinkWithoutChildren from "../Components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "../Components/Navbar/NavlinkWithChildren";
 import contentLanguage from "../Redux/languageContent";
+import LanguageSelection from "../Components/Navbar/LanguageSelection";
+import MainView from "../Components/MainView";
 
 const mapDispatchToProps = (dispatch: Function) => ({
   setLanguage: (language: string) =>
@@ -94,7 +86,10 @@ const Home = (props: Record<string, any>) => {
                 <nav className="mt-5 px-2 space-y-1">
                   {contentLanguage().navlinks.navigation.map((item) =>
                     !item.children ? (
-                      <div key={item.name} onClick={() => setSidebarOpen(false)}>
+                      <div
+                        key={item.name}
+                        onClick={() => setSidebarOpen(false)}
+                      >
                         <NavlinkWithoutChildren item={item} />
                       </div>
                     ) : (
@@ -120,35 +115,9 @@ const Home = (props: Record<string, any>) => {
                 </nav>
               </div>
               <div className="flex-shrink-0 border-t border-gray-200 p-4">
-                <p className="text-lg">
-                  <button
-                    onClick={handleLanguageSelect}
-                    type="button"
-                    title="English"
-                    value="en"
-                    className="mx-2 focus:outline-none"
-                  >
-                    🇬🇧
-                  </button>
-                  <button
-                    onClick={handleLanguageSelect}
-                    type="button"
-                    title="Français"
-                    value="fr"
-                    className="mx-2 focus:outline-none"
-                  >
-                    🇫🇷
-                  </button>
-                  <button
-                    onClick={handleLanguageSelect}
-                    type="button"
-                    title="Deutsch"
-                    value="de"
-                    className="mx-2 focus:outline-none"
-                  >
-                    🇩🇪
-                  </button>
-                </p>
+                <LanguageSelection
+                  handleLanguageSelect={handleLanguageSelect}
+                />
               </div>
             </div>
           </Transition.Child>
@@ -196,29 +165,7 @@ const Home = (props: Record<string, any>) => {
               </nav>
             </div>
             <div className="flex-shrink-0 border-t border-gray-200 p-4">
-              <p className="text-lg">
-                <button
-                  onClick={handleLanguageSelect}
-                  value="en"
-                  className="mx-2 focus:outline-none"
-                >
-                  🇬🇧
-                </button>
-                <button
-                  onClick={handleLanguageSelect}
-                  value="fr"
-                  className="mx-2 focus:outline-none"
-                >
-                  🇫🇷
-                </button>
-                <button
-                  onClick={handleLanguageSelect}
-                  value="de"
-                  className="mx-2 focus:outline-none"
-                >
-                  🇩🇪
-                </button>
-              </p>
+              <LanguageSelection handleLanguageSelect={handleLanguageSelect} />
             </div>
           </div>
         </div>
@@ -233,34 +180,7 @@ const Home = (props: Record<string, any>) => {
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <HeroSection />
-            <div className="mt-20" id="about">
-              <Title title={contentLanguage().titles.about} />
-              <AboutMe />
-              <FunFacts />
-            </div>
-            <div id="knowledge">
-              <Title title={contentLanguage().titles.knowledgeSkills} />
-              <MissionSection />
-              <SkillsSection />
-            </div>
-            <div id="projects">
-              <Title title={contentLanguage().titles.projects} />
-              <Projects />
-            </div>
-            <div id="blog">
-              <Title title={contentLanguage().titles.blog} />
-              <BlogSection />
-            </div>
-            <div id="faq">
-              <Title title={contentLanguage().titles.faq} />
-              <Faq />
-            </div>
-            <ContactForm />
-          </div>
-        </main>
+        <MainView />
       </div>
     </div>
   );
