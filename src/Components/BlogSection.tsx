@@ -19,7 +19,6 @@ export default function BlogSection() {
       getMediumFeed().then((response) => setArticles(response.items));
     }
   }, [articles.length]);
-  console.log(articles);
 
   return (
     <div className="bg-white pb-20 px-4 sm:px-6 lg:px-8">

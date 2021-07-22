@@ -1,7 +1,10 @@
 export const aboutMe = {
   title: `"Hello World", hier Max!`,
+  intro: [
+    `Ich heiße Maximilian Gruber (ja, wie der Erzbösewicht in Stirb langsam ). Ich bin NaN (`,
+    `) Jahre alt und habe kürzlich das 10-wöchige Bootcamp Intensivtraining als Junior Full Stack Web Developer in Paris erfolgreich absolviert. Zuvor hatte ich mich einer Karriere im Managementbereich von Gastronomie und Catering gewidmet, bin jetzt aber Feuer und Flamme, eine digitale Karriere mit Hilfe meiner neugewonnenen Kenntnisse im MERN Stack zu beginnen.`,
+  ],
   text: [
-    `Ich heiße Maximilian Gruber (ja, wie der Erzbösewicht in Stirb langsam ). Ich bin NaN (😉) Jahre alt und habe kürzlich das 10-wöchige Bootcamp Intensivtraining als Junior Full Stack Web Developer in Paris erfolgreich absolviert. Zuvor hatte ich mich einer Karriere im Managementbereich von Gastronomie und Catering gewidmet, bin jetzt aber Feuer und Flamme, eine digitale Karriere mit Hilfe meiner neugewonnenen Kenntnisse im MERN Stack zu beginnen.`,
     `Ich bin in einem tri-kulturellen Familienkontext aufgewachsen und spreche fließend Englisch, Französisch und Deutsch. Diese mehrsprachigen Fähigkeiten erlauben mir, mich problemlos in jeder Arbeitskultur und -konversation zurechtzufinden und schnell zu integrieren. Der einzige Nachteil besteht darin, dass ich mich leider stets entscheiden muss, wessen nationale Seite ich bei großen Sportereignissen unterstütze.`,
     `Mein Ziel und mein Bestreben sind, mittels entsprechend qualifizierter und beharrlicher Weiterentwicklung ein erfolgreicher Full Stack Developer zu werden.`,
     `Die Technologie gibt die Richtung an, die Gesellschaft folgt den Vorgaben. Ich will an diesem komplexen Entwicklungsprozess aktiv teilhaben und ihn vor allem positiv und kreativ beeinflussen.`,

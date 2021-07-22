@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/outline";
-import contentLanguage from "../Redux/languageContent";
+import contentLanguage from "../../Redux/languageContent";
 
 export default function Notification(props: { success: boolean }) {
   return (

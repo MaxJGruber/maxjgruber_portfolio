@@ -64,6 +64,18 @@ export default function AboutMeSection() {
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="mt-5 prose prose-indigo text-md text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+              <p>
+                {contentLanguage().aboutMe.intro.map((paragraph, i) => (
+                  <span key={i}>
+                    {paragraph}
+                    {paragraph && paragraph.includes("Maximilian") ? (
+                      <span>&#128540;</span>
+                    ) : (
+                      ""
+                    )}
+                  </span>
+                ))}
+              </p>
               {contentLanguage().aboutMe.text.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}

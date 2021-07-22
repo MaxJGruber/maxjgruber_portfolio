@@ -34,7 +34,6 @@ export default function languagePickerReducer(
 ) {
   switch (action.type) {
     case "SET_LANGUAGE":
-      console.log(action.language);
       hasLanguageSessionStorage(action.language);
       let newState = { ...state, language: action.language };
       return newState;

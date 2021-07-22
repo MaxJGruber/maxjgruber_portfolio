@@ -1,7 +1,10 @@
 export const aboutMe = {
   title: `"Hello World", ici Max!`,
+  intro: [
+    `Je m'appelle Maximilian Gruber (oui, comme le méchant dans Piège de Crystal). Je suis un développeur web junior Full Stack de NaN ans (`,
+    `), diplômé du bootcamp immersif de 10 semaines d'Ironhack à Paris, en France. Dans une vie antérieure, j'ai eu une carrière dans l’hôtellerie et la restauration, et je suis maintenant désireux de commencer ma carrière numérique en utilisant mes nouvelles compétences trouvées dans MERN Stack.`
+  ],
   text: [
-    `Je m'appelle Maximilian Gruber (oui, comme le méchant dans Piège de Crystal). Je suis un développeur web junior Full Stack de NaN (😉 ) ans, diplômé du bootcamp immersif de 10 semaines d'Ironhack à Paris, en France. Dans une vie antérieure, j'ai eu une carrière dans l’hôtellerie et la restauration, et je suis maintenant désireux de commencer ma carrière numérique en utilisant mes nouvelles compétences trouvées dans MERN Stack.`,
     `Je suis une personne tri-culturelle parlant couramment l'anglais, le français et l'allemand, ce qui me permet de m'insérer facilement dans n'importe quelle culture de travail ou conversation, tout en ayant un mal fou à décider qui je soutiens dans les compétitions de sports.`,
     `Je cherche une société qui va me donner la possibilité d'atteindre mon objectif ce qui est de devenir un bon développeur Full Stack.`,
     `La technologie mène, la société suit. Je veux être au cœur de ce changement. Je veux faire la différence.`,

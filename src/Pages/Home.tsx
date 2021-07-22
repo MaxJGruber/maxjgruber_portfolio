@@ -20,9 +20,8 @@ const mapStateToProps = (state: Record<string, any>) => {
 const Home = (props: Record<string, any>) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const handleLanguageSelect = (event: Record<string, any>) => {
-    event.preventDefault();
-    props.setLanguage(event.target.value);
+  const handleLanguageSelect = (languageSelected: string) => {
+    props.setLanguage(languageSelected);
   };
 
   return (

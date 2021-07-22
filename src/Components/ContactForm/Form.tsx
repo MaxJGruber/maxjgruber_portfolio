@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { submitForm } from "../../ApiHandlers/wufooApi";
 import contentLanguage from "../../Redux/languageContent";
-import Notification from "../Notification";
+import Notification from "./Notification";
 
 export default function Form() {
   const [form, setForm] = useState<Record<string, any>>({});
@@ -12,8 +12,7 @@ export default function Form() {
     const value = e.target.value;
     const key = e.target.name;
     newForm[key] = value;
-    console.log(newForm);
-    setForm((form) => (form = newForm));
+    setForm(newForm);
   }
 
   async function handleSubmit(
@@ -21,14 +20,24 @@ export default function Form() {
   ): Promise<Record<string, any> | undefined> {
     e.preventDefault();
     const response = await submitForm(form);
-    console.log(response);
-    response && response.status === 201
-      ? setSentStatus(true)
-      : setSentStatus(false);
+    if (response && response.status === 201) {
+      setSentStatus(true);
+      resetForm();
+    } else {
+      setSentStatus(false);
+    }
     setTimeout(() => {
       setSentStatus(null);
     }, 5000);
     return response;
+  }
+
+  function resetForm() {
+    const newForm: Record<string, any> = { ...form };
+    for (const key in newForm) {
+      newForm[key] = "";
+    }
+    setForm(newForm);
   }
   return (
     <form
@@ -51,8 +60,9 @@ export default function Form() {
             name="Field1"
             id="first_name"
             autoComplete="given-name"
+            value={form.Field1 ? form.Field1 : ""}
             onChange={handleChange}
-            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-indigo-500 border-gray-300 rounded-md"
+            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-medium-logo-blue border-gray-300 rounded-md"
           />
         </div>
       </div>
@@ -70,8 +80,9 @@ export default function Form() {
             name="Field2"
             id="last_name"
             autoComplete="family-name"
+            value={form.Field2 ? form.Field2 : ""}
             onChange={handleChange}
-            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-indigo-500 border-gray-300 rounded-md"
+            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-medium-logo-blue border-gray-300 rounded-md"
           />
         </div>
       </div>
@@ -89,8 +100,9 @@ export default function Form() {
             name="Field3"
             type="email"
             autoComplete="email"
+            value={form.Field3 ? form.Field3 : ""}
             onChange={handleChange}
-            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-indigo-500 border-gray-300 rounded-md"
+            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-medium-logo-blue border-gray-300 rounded-md"
           />
         </div>
       </div>
@@ -112,8 +124,9 @@ export default function Form() {
             name="Field10"
             id="phone"
             autoComplete="tel"
+            value={form.Field10 ? form.Field10 : ""}
             onChange={handleChange}
-            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-indigo-500 border-gray-300 rounded-md"
+            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-medium-logo-blue border-gray-300 rounded-md"
             aria-describedby="phone-optional"
           />
         </div>
@@ -130,8 +143,9 @@ export default function Form() {
             type="text"
             name="Field33"
             id="subject"
+            value={form.Field33 ? form.Field33 : ""}
             onChange={handleChange}
-            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-indigo-500 border-gray-300 rounded-md"
+            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-medium-logo-blue border-gray-300 rounded-md"
           />
         </div>
       </div>
@@ -150,10 +164,10 @@ export default function Form() {
             id="message"
             name="Field27"
             rows={4}
+            value={form.Field27 ? form.Field27 : ""}
             onChange={handleChange}
-            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-indigo-500 border border-gray-300 rounded-md"
+            className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-medium-logo-blue focus:border-medium-logo-blue border border-gray-300 rounded-md"
             aria-describedby="message-max"
-            defaultValue={""}
           />
         </div>
       </div>

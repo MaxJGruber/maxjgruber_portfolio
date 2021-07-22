@@ -1,12 +1,15 @@
 export const aboutMe = {
   title: `"Hello World", Meet Max!`,
-  text: [
+  intro: [
     `I’m Maximilian Gruber (yes, like the bad guy in Die Hard). I’m a
-    NaN (😉) year old Junior Full Stack Web Developer graduated from
-    Ironhack’s 10-week immersive bootcamp in Paris, France. In a
-    past life I had a career in Hospitality, and am now keen to
-    start off my digital career using my newfound skills in MERN
-    Stack.`,
+  NaN (`,
+    `) year old Junior Full Stack Web Developer graduated from
+  Ironhack’s 10-week immersive bootcamp in Paris, France. In a
+  past life I had a career in Hospitality, and am now keen to
+  start off my digital career using my newfound skills in MERN
+  Stack.`,
+  ],
+  text: [
     `I am a tri-cultural person fluent in English, French and German
     allowing me to insert myself easily in any work culture or
     conversation, while also having a heck of a time deciding who
