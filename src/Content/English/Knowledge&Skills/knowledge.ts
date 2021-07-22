@@ -29,10 +29,10 @@ export const knowledge = {
         "I am regularly searching how to stay on top of fast-changing trends with Google. I also have a keen interest in webpage performace optimization.",
     },
     {
-      name: "Test Driven Development",
+      name: "Testing & Debugging",
       icon: SparklesIcon,
       description:
-        "This is something I am fairly new in. However, I have dabbled with Mocha and Jasmine for a short while, and I intend to explore Jest next.",
+        "I ran into countless bugs but I've managed to fix a lot of them too. I have dabbled with Mocha and Jasmine for a short while, and I intend to explore Jest next.",
     },
     {
       name: "Teamwork",

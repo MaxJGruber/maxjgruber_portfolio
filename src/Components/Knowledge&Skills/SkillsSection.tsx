@@ -1,5 +1,5 @@
 import { CheckIcon, FlagIcon } from "@heroicons/react/outline";
-import contentLanguage from "../Redux/languageContent";
+import contentLanguage from "../../Redux/languageContent";
 
 export default function SkillsSection() {
   return (

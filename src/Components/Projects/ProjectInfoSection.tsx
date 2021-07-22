@@ -1,6 +1,6 @@
 import ElectricalCircuitPattern from "../ElectricalCircuitPattern";
 import contentLanguage from "../../Redux/languageContent";
-import ComparisonComponent from "../ComparisonComponent";
+import ComparisonComponent from "./ComparisonComponent";
 import ProjectContentArea from "./ProjectContentArea";
 import ProjectStatsSection from "./ProjectStatsSection";
 
@@ -14,7 +14,7 @@ interface Project {
   landingPagePic: string;
   oldLandingPage?: string;
   specialFeatures: string;
-  projectLink?: string | undefined;
+  projectLink?: string;
   stats: { label: string; value: string }[];
 }
 
@@ -86,7 +86,7 @@ export default function ProjectInfoSection(props: { project: Project }) {
             </div>
           </div>
           {props.project.oldLandingPage && (
-            <ComparisonComponent id="COMP" project={props.project} />
+            <ComparisonComponent project={props.project} />
           )}
         </div>
 

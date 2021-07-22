@@ -1,11 +1,24 @@
 import { Disclosure } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { UserIcon } from "@heroicons/react/outline";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+interface SubnavObject {
+  href: string;
+  current: boolean;
+  name: string;
+  children: {
+    links: { name: string; href: string; icon: typeof faLinkedin }[];
+    documents: { name: string; href: string; icon: typeof UserIcon }[];
+  };
+  icon: typeof UserIcon;
+}
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const NavlinkWithChildren = (props: Record<string, any>) => {
+const NavlinkWithChildren = (props: { item: SubnavObject; open: boolean }) => {
   return (
     <>
       <Disclosure.Button
@@ -33,7 +46,7 @@ const NavlinkWithChildren = (props: Record<string, any>) => {
         </svg>
       </Disclosure.Button>
       <Disclosure.Panel className="space-y-1">
-        {props.item.children.links.map((subItem: Record<string, any>) => (
+        {props.item.children.links.map((subItem) => (
           <a
             key={subItem.name}
             href={subItem.href}
@@ -48,7 +61,7 @@ const NavlinkWithChildren = (props: Record<string, any>) => {
             {subItem.name}
           </a>
         ))}
-        {props.item.children.documents.map((subItem: Record<string, any>) => (
+        {props.item.children.documents.map((subItem) => (
           <a
             key={subItem.name}
             href={subItem.href}

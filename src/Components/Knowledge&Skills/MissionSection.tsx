@@ -1,4 +1,4 @@
-import contentLanguage from "../Redux/languageContent";
+import contentLanguage from "../../Redux/languageContent";
 
 export default function MissionSection() {
   return (

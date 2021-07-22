@@ -1,8 +1,16 @@
+import { UserIcon } from "@heroicons/react/outline";
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const NavlinkWithoutChildren = (props: Record<string, any>) => {
+interface SubnavObject {
+  href: string;
+  current: boolean;
+  name: string;
+  icon: typeof UserIcon;
+}
+const NavlinkWithoutChildren = (props: { item: SubnavObject }) => {
   return (
     <div>
       <a

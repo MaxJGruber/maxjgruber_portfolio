@@ -1,5 +1,5 @@
-import cvPhoto from "../Assets/Photo_CV.jpeg";
-import contentLanguage from "../Redux/languageContent";
+import cvPhoto from "../../Assets/Photo_CV.jpeg";
+import contentLanguage from "../../Redux/languageContent";
 
 export default function AboutMeSection() {
   return (

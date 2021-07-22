@@ -9,7 +9,13 @@ interface StatsArea {
 function ProjectStatsSection(props: { project: StatsArea }) {
   return (
     <div className="mt-10">
-      <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
+      <dl
+        className={
+          props.project.stats.length > 1
+            ? `grid grid-cols-2 gap-x-4 gap-y-8`
+            : `flex items-center justify-center`
+        }
+      >
         {props.project.stats.map((stat) => (
           <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
             <dt className="text-base font-medium text-gray-500">

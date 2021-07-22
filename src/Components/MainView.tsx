@@ -1,14 +1,14 @@
 import contentLanguage from "../Redux/languageContent";
 import HeroSection from "../Components/HeroSection";
-import AboutMe from "../Components/AboutMeSection";
+import AboutMe from "./AboutMe/AboutMeSection";
 import ContactForm from "../Components/ContactForm/ContactForm";
 import Title from "../Components/Title";
 import Projects from "./Projects/Projects";
 import BlogSection from "../Components/BlogSection";
-import MissionSection from "../Components/MissionSection";
-import SkillsSection from "../Components/SkillsSection";
-import FunFacts from "../Components/FunFacts";
-import Faq from "../Components/FAQ";
+import MissionSection from "./Knowledge&Skills/MissionSection";
+import SkillsSection from "./Knowledge&Skills/SkillsSection";
+import FunFacts from "./AboutMe/FunFacts";
+import Faq from "./AboutMe/FAQ";
 
 function MainView() {
   return (

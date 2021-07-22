@@ -1,7 +1,13 @@
-import ElectricalCircuitPattern from "./ElectricalCircuitPattern";
-import contentLanguage from "../Redux/languageContent";
+import ElectricalCircuitPattern from "../ElectricalCircuitPattern";
+import contentLanguage from "../../Redux/languageContent";
 
-const ComparisonComponent = (props: Record<string, any>) => {
+interface comparisonData {
+  name: string;
+  contain: boolean;
+  oldLandingPage?: string;
+}
+
+const ComparisonComponent = (props: { project: comparisonData }) => {
   return (
     <>
       <div className="relative py-16 sm:py-16 lg:py-0">

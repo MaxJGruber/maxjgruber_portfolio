@@ -29,10 +29,10 @@ export const knowledge = {
         "Je cherche régulièrement comment rester au courant des tendances en évolution rapide avec Google. J'ai également un vif intérêt pour l'optimisation des performances des pages Web.",
     },
     {
-      name: "Développement piloté par les tests",
+      name: "Tests & Debugging",
       icon: SparklesIcon,
       description:
-        "C'est quelque chose dans lequel je suis assez nouveau. Cependant, j'ai essayé Mocha et Jasmine pendant un court moment, et j'ai l'intention d'explorer Jest ensuite.",
+        "J'ai rencontré d'innombrables bugs mais j'ai réussi à en corriger beaucoup aussi. J'ai essayé Mocha et Jasmine pendant un court moment, et j'ai l'intention d'explorer Jest ensuite.",
     },
     {
       name: "Travail en équipe",
