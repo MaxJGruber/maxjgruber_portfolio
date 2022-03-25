@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import store from "./Redux/store";
+import store from "../stores/store";
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 

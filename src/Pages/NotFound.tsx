@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MaxJGruberLogo from "../Assets/MaxJGruber_LOGO.png";
 import michaelScottNoGif from "../Assets/michael-scott-no.gif";
-import contentLanguage from "../Redux/languageContent";
+import contentLanguage from "../../stores/languageContent";
 
 export default function NotFound() {
   return (
