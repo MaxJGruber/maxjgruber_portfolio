@@ -3,7 +3,7 @@ import { submitForm } from "apihandlers/wufooApi";
 import contentLanguage from "stores/languageContent";
 import Notification from "./Notification";
 
-export default function Form() {
+const Form = () => {
   const [form, setForm] = useState<Record<string, any>>({});
   const [sentStatus, setSentStatus] = useState<Boolean | null>(null);
 
@@ -184,4 +184,6 @@ export default function Form() {
       </div>
     </form>
   );
-}
+};
+
+export default Form;

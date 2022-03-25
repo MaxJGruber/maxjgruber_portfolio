@@ -12,7 +12,7 @@ interface BlogObject {
   thumbnail: string;
 }
 
-export default function BlogSection() {
+const BlogSection = () => {
   const [articles, setArticles] = useState<Array<BlogObject>>([]);
   useEffect(() => {
     if (!articles.length) {
@@ -70,4 +70,6 @@ export default function BlogSection() {
       </div>
     </div>
   );
-}
+};
+
+export default BlogSection;

@@ -10,7 +10,6 @@ import {
 } from "@heroicons/react/outline";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
-
 export const navlinks = {
   navigation: [
     { name: "Home", href: "#home", icon: HomeIcon, current: true },
@@ -55,17 +54,17 @@ export const navlinks = {
         documents: [
           {
             name: "My CV (English)",
-            href: "CVEn.default",
+            href: "content/CVs/MaxJGruber_CV.pdf",
             icon: DocumentDownloadIcon,
           },
           {
             name: "My CV (French)",
-            href: "CVFr.default",
+            href: "content/CVs/MaxJGruber_CV_FR.pdf",
             icon: DocumentDownloadIcon,
           },
           {
             name: "My Certificate",
-            href: "certificate.default",
+            href: "content/Certificate/IRONHACK_CERTIFICATE.pdf",
             icon: DocumentDownloadIcon,
           },
         ],

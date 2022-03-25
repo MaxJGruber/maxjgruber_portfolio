@@ -4,9 +4,9 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import NavlinkWithoutChildren from "components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "components/Navbar/NavlinkWithChildren";
-import contentLanguage from "stores/languageContent";
 import LanguageSelection from "components/Navbar/LanguageSelection";
 import MainView from "components/MainView";
+import contentLanguage from "stores/languageContent";
 
 const mapDispatchToProps = (dispatch: Function) => ({
   setLanguage: (language: string) =>
