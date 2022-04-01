@@ -11,20 +11,50 @@ export const projectsList = {
       landingPagePic: "static/project-pics/new-als-demo.gif",
       oldLandingPage: "static/project-pics/old-als-demo.gif",
       contain: true,
-      stats: [
-        { label: "Expected", value: "Fall 2021" },
-        // { label: "Duration", value: "3 weeks" },
-      ],
+      stats: [{ label: "Expected", value: "TBD" }],
     },
   ],
   projects: [
+    {
+      name: "Europe Sustainable Development Report 2021",
+      type: "Data Visualization",
+      intro: "Second project at SDSN",
+      technologies: "Next.Js",
+      description:
+        "The Europe Sustainable Development Report 2021 is the third edition of SDSN's independent quantitative report on the progress of the European Union and its member states towards Sustainable Development Goals (SDGs).",
+      specialFeatures: "",
+      landingPagePic: "static/project-pics/esdr2021.gif",
+      contain: false,
+      projectLink: "https://eu-dashboards.sdgindex.org/",
+      stats: [
+        { label: "Created", value: "2021" },
+        { label: "Duration", value: "6 weeks" },
+      ],
+    },
+    {
+      name: "SDG Impact Investment Toolkit BETA",
+      type: "Data visualization",
+      intro: "First project at SDSN",
+      technologies: "Next.Js",
+      description:
+        "Freelance mission project for a hairdressing salon in the South-West of France. The client wanted a simple and elegant website for all age groups. As the clientele of the salon is varied, the website content is in English and French.",
+      specialFeatures: "",
+      landingPagePic: "static/project-pics/impact-investment-toolkit.gif",
+      contain: false,
+      projectLink: "https://sdg-investment-tool-beta.netlify.app/",
+      stats: [
+        { label: "Expected", value: "TBD" },
+        // { label: "Created", value: "2021" },
+        // { label: "Duration", value: "3 weeks" },
+      ],
+    },
     {
       name: "Marss N30",
       type: "Brochure Website",
       intro: "My second freelance mission",
       technologies: "React.JS / Tailwind",
       description:
-        "Freelance mission project for a hairdressing salon in the South-West of France. The client wanted a simple and elegant website for all age groups. As the clientele of the salon is varied, the website content is in English and French.",
+        'A toolkit developed in partnership with the Inter-american Development Bank that offers an "ex-ante" analysis to explore and track investment opportunities for advancing the Sustainable Development Goals in Latin America and the Caribbean.',
       specialFeatures: "",
       landingPagePic: "static/project-pics/marss-n30-demo.gif",
       contain: false,
