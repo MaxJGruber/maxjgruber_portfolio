@@ -11,10 +11,42 @@ export const projectsList = {
       landingPagePic: "static/project-pics/new-als-demo.gif",
       oldLandingPage: "static/project-pics/old-als-demo.gif",
       contain: true,
-      stats: [{ label: "Attendu", value: "Automne 2021" }],
+      stats: [{ label: "Attendu", value: "À DÉTERMINER" }],
     },
   ],
   projects: [
+    {
+      name: "Europe Sustainable Development Report 2021",
+      type: "Visualisation des données",
+      intro: "Second projet au SDSN",
+      technologies: "Next.Js",
+      description:
+        "Le rapport Europe sur le développement durable 2021 est la troisième édition du rapport quantitatif indépendant de SDSN sur les progrès de l'Union européenne et de ses États membres vers les objectifs de développement durable (ODD).",
+      specialFeatures: "",
+      landingPagePic: "static/project-pics/esdr2021.gif",
+      contain: false,
+      projectLink: "https://eu-dashboards.sdgindex.org/",
+      stats: [
+        { label: "Conçu", value: "2021" },
+        { label: "Durée", value: "6 semaines" },
+      ],
+    },
+    {
+      name: "SDG Impact Investment Toolkit BETA",
+      type: "Visualisation des données",
+      intro: "Premier projet au SDSN",
+      technologies: "Next.Js",
+      description: `Un outil développé en partenariat avec la Inter-american Development Bank qui offre une analyse "ex-ante" pour explorer et suivre les opportunités d'investissement pour faire avancer les Objectifs de développement durable en Amérique latine et dans les Caraïbes.`,
+      specialFeatures: "",
+      landingPagePic: "static/project-pics/impact-investment-toolkit.gif",
+      contain: false,
+      projectLink: "https://sdg-investment-tool-beta.netlify.app/",
+      stats: [
+        { label: "Attendu", value: "À DÉTERMINER" },
+        // { label: "Created", value: "2021" },
+        // { label: "Duration", value: "3 weeks" },
+      ],
+    },
     {
       name: "Marss N30",
       type: "Site vitrine",

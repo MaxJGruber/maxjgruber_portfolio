@@ -37,7 +37,8 @@ export const projectsList = {
       intro: "First project at SDSN",
       technologies: "Next.Js",
       description:
-        "Freelance mission project for a hairdressing salon in the South-West of France. The client wanted a simple and elegant website for all age groups. As the clientele of the salon is varied, the website content is in English and French.",
+        'A toolkit developed in partnership with the Inter-american Development Bank that offers an "ex-ante" analysis to explore and track investment opportunities for advancing the Sustainable Development Goals in Latin America and the Caribbean.',
+
       specialFeatures: "",
       landingPagePic: "static/project-pics/impact-investment-toolkit.gif",
       contain: false,
@@ -54,7 +55,7 @@ export const projectsList = {
       intro: "My second freelance mission",
       technologies: "React.JS / Tailwind",
       description:
-        'A toolkit developed in partnership with the Inter-american Development Bank that offers an "ex-ante" analysis to explore and track investment opportunities for advancing the Sustainable Development Goals in Latin America and the Caribbean.',
+        "Freelance mission project for a hairdressing salon in the South-West of France. The client wanted a simple and elegant website for all age groups. As the clientele of the salon is varied, the website content is in English and French.",
       specialFeatures: "",
       landingPagePic: "static/project-pics/marss-n30-demo.gif",
       contain: false,

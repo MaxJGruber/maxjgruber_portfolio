@@ -11,12 +11,44 @@ export const projectsList = {
       landingPagePic: "static/project-pics/new-als-demo.gif",
       oldLandingPage: "static/project-pics/old-als-demo.gif",
       contain: true,
-      stats: [
-        { label: "Fälligkeit", value: "Herbst 2021" },
-      ],
+      stats: [{ label: "Fälligkeit", value: "TBD" }],
     },
   ],
   projects: [
+    {
+      name: "Europe Sustainable Development Report 2021",
+      type: "Datenvisualisierung",
+      intro: "Zweites Projekt bei SDSN",
+      technologies: "Next.Js",
+      description:
+        "Der Bericht über die nachhaltige Entwicklung in Europa 2021 ist die dritte Ausgabe des unabhängigen quantitativen Berichts von SDSN über die Fortschritte der Europäischen Union und ihrer Mitgliedstaaten bei der Umsetzung der Ziele für nachhaltige Entwicklung (SDGs).",
+      specialFeatures: "",
+      landingPagePic: "static/project-pics/esdr2021.gif",
+      contain: false,
+      projectLink: "https://eu-dashboards.sdgindex.org/",
+      stats: [
+        { label: "Erstellt", value: "2021" },
+        { label: "Dauer", value: "6 Wochen" },
+      ],
+    },
+    {
+      name: "SDG Impact Investment Toolkit BETA",
+      type: "Datenvisualisierung",
+      intro: "Erstes Projekt bei SDSN",
+      technologies: "Next.Js",
+      description:
+        "Ein in Zusammenarbeit mit der Inter-american Development Bank entwickeltes Toolkit, das eine Ex-ante-Analyse bietet, um Investitionsmöglichkeiten zur Förderung der Ziele für nachhaltige Entwicklung in Lateinamerika und der Karibik zu untersuchen und zu verfolgen.",
+
+      specialFeatures: "",
+      landingPagePic: "static/project-pics/impact-investment-toolkit.gif",
+      contain: false,
+      projectLink: "https://sdg-investment-tool-beta.netlify.app/",
+      stats: [
+        { label: "Fälligkeit", value: "TBD" },
+        // { label: "Created", value: "2021" },
+        // { label: "Duration", value: "3 weeks" },
+      ],
+    },
     {
       name: "Marss N30",
       type: "Werbebroschüre und Webauftritt",
