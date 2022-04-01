@@ -3,11 +3,11 @@ export const skillsSection = {
   features: [
     {
       name: "Programmiersprachen & Engines",
-      description: "JavaScript(ES6) / HTML5 / CSS3 / Node",
+      description: "JavaScript(ES6) / HTML5 / CSS3 / Node / Python(Pandas)",
     },
     {
       name: "Front-End Frameworks",
-      description: "React (mit Hooks & Redux) / Vue (mit Vuex)",
+      description: "React (mit Hooks & Redux) / NextJs / Vue (mit Vuex)",
     },
     {
       name: "Front-End Libraries",
@@ -24,16 +24,16 @@ export const skillsSection = {
     {
       name: "Programmiertools",
       description:
-        "Visual Studio Code / CLI / Heroku / Git / GitHub / Postman / npm & yarn",
+        "Visual Studio Code / CLI / Heroku / Netlify / Git / GitHub / Postman / npm & yarn",
     },
     {
       name: "Community Tools",
-      description: "Slack / Zoom / Stack Overflow / Medium / JIRA",
+      description: "Slack / Zoom / Stack Overflow / Medium / JIRA / Trello",
     },
     {
       name: "Gegenwärtig im Lernprozess von:",
       id: "currently learning",
-      description: "Golang / AWS / SQL / TypeScript",
+      description: "Golang / SQL / TypeScript",
     },
   ],
 };

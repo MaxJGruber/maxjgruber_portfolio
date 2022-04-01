@@ -14,7 +14,7 @@ export const knowledge = {
       name: "Full Stack Web Development",
       icon: DatabaseIcon,
       description:
-        "Ich bin im MongoDB-, Express-, React-, Node-Stack ausgebildet. Ich habe auch Vue, Golang und SQL erforscht.",
+        "Ich bin im MongoDB-, Express-, React-, Node-Stack und Python ausgebildet. Ich habe auch Vue, Golang und SQL erforscht.",
     },
     {
       name: "Responsive Design",
@@ -32,7 +32,7 @@ export const knowledge = {
       name: "Testing & Debugging",
       icon: SparklesIcon,
       description:
-        "Ich bin auf unzählige Fehler gestoßen, aber ich habe es auch geschafft, viele davon zu beheben. Ich habe mich für eine kurze Zeit mit Mocha und Jasmine beschäftigt und habe vor, Jest als nächstes zu erkunden.",
+        "Ich bin auf unzählige Fehler gestoßen, aber ich habe es auch geschafft, viele davon zu beheben. Ich bin in Cypress und Jest ausgebildet.",
     },
     {
       name: "Zusammenarbeit",
@@ -44,7 +44,7 @@ export const knowledge = {
       name: "Hosting",
       icon: ServerIcon,
       description:
-        "Durch meine freiberufliche Tätigkeit habe ich Heroku verwendet und angefangen, AWS-Hosting zu verwenden.",
+        "Durch meine freiberufliche Tätigkeit habe ich Heroku verwendet und angefangen, AWS-Hosting zu verwenden. Ich verwende auch Netlify.",
     },
   ],
 };
