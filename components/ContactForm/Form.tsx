@@ -20,7 +20,7 @@ const Form = () => {
   ): Promise<Record<string, any> | undefined> {
     e.preventDefault();
     const response = await submitForm(form);
-    if (response && response.status === 201) {
+    if (response.Success === 1) {
       setSentStatus(true);
       resetForm();
     } else {
