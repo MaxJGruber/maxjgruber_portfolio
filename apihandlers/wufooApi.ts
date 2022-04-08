@@ -4,8 +4,8 @@ import FormData from "form-data";
 const service = axios.create({
   baseURL: process.env.WUFOO_BASE_URL,
   auth: {
-    username: process.env.WUFOO_API_KEY,
-    password: process.env.WUFOO_PASSWORD,
+    username: process.env.WUFOO_API_KEY!,
+    password: process.env.WUFOO_PASSWORD!,
   },
 });
 
