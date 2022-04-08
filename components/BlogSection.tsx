@@ -27,7 +27,7 @@ const BlogSection = () => {
           {articles.map((post) => (
             <div
               key={post.title}
-              className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+              className="flex flex-col rounded-lg shadow-lg overflow-hidden post"
             >
               <div className="flex-shrink-0">
                 <img
