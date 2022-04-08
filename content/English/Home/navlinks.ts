@@ -54,17 +54,17 @@ export const navlinks = {
         documents: [
           {
             name: "My CV (English)",
-            href: "content/CVs/MaxJGruber_CV.pdf",
+            href: "static/personal-documents/MaxJGruber_CV.pdf",
             icon: DocumentDownloadIcon,
           },
           {
             name: "My CV (French)",
-            href: "content/CVs/MaxJGruber_CV_FR.pdf",
+            href: "static/personal-documents/MaxJGruber_CV_FR.pdf",
             icon: DocumentDownloadIcon,
           },
           {
             name: "My Certificate",
-            href: "content/Certificate/IRONHACK_CERTIFICATE.pdf",
+            href: "static/personal-documents/IRONHACK_CERTIFICATE.pdf",
             icon: DocumentDownloadIcon,
           },
         ],

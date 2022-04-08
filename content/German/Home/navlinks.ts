@@ -9,9 +9,6 @@ import {
   ChatAlt2Icon,
 } from "@heroicons/react/outline";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
-// import * as CVEn from "../../CVs/MaxJGruber_CV.pdf";
-// import * as CVFr from "../../CVs/MaxJGruber_CV_FR.pdf";
-// import * as certificate from "../../Certificate/IRONHACK_CERTIFICATE.pdf";
 
 export const navlinks = {
   navigation: [
@@ -57,17 +54,17 @@ export const navlinks = {
         documents: [
           {
             name: "Mein CV (Englisch)",
-            href: "CVEn.default",
+            href: "static/personal-documents/MaxJGruber_CV.pdf",
             icon: DocumentDownloadIcon,
           },
           {
             name: "Mein CV (Französisch)",
-            href: "CVFr.default",
+            href: "static/personal-documents/MaxJGruber_CV_FR.pdf",
             icon: DocumentDownloadIcon,
           },
           {
             name: "Mein Diplom",
-            href: "certificate.default",
+            href: "static/personal-documents/IRONHACK_CERTIFICATE.pdf",
             icon: DocumentDownloadIcon,
           },
         ],
