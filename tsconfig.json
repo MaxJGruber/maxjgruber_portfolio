@@ -14,13 +14,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@apihandlers/*": ["./apihandlers/*"],
+      "@page/*": ["./pages/*"],
+      "@content/*": ["./content/*"],
+      "@static/*": ["./public/static/*"],
+      "@assets/*": ["./public/static/assets/*"],
+      "@stores/*": ["./stores/*"],
+      "@styles/*": ["./styles/*"]
+    }
   },
   "include": [
-    "src",
-    "craco.config.js",
     "global.d.ts",
-    "backend_server",
-    "server.js"
-  ]
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.png"
+  ],
+  "exclude": ["node_modules"]
 }
