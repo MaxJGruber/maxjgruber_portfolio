@@ -44,6 +44,7 @@
     "start": "next start",
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "test": "next test",
     "cypress": "cypress open"
   },
