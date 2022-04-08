@@ -41,13 +41,8 @@
   },
   "scripts": {
     "start": "next start",
-    "build": "yarn build:front && yarn build:back",
-    "dev:all": "yarn dev:front & yarn dev:back",
-    "dev:back": "nodemon --project tsconfig.backend.json --watch './**/*.ts' --exec 'ts-node' ./backend_server/index.ts",
-    "prod:back": "node ./backend_build/index.js",
-    "build:back": "tsc --project tsconfig.backend.json --outDir \"backend_build\"",
     "dev": "next dev",
-    "build:front": "next build",
+    "build": "next build",
     "test": "next test"
   },
   "eslintConfig": {
