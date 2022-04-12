@@ -9,6 +9,12 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  NEXT_PUBLIC_WUFOO_BASE_URL: ${{secrets.NEXT_PUBLIC_WUFOO_BASE_URL}}
+  NEXT_PUBLIC_WUFOO_API_KEY: ${{secrets.NEXT_PUBLIC_WUFOO_API_KEY}}
+  NEXT_PUBLIC_WUFOO_FORM_ID: ${{secrets.NEXT_PUBLIC_WUFOO_FORM_ID}}
+  NEXT_PUBLIC_WUFOO_PASSWORD: ${{secrets.NEXT_PUBLIC_WUFOO_PASSWORD}}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
