@@ -27,9 +27,7 @@ function ProjectStatsSection(props: { project: StatsArea }) {
           </div>
         ))}
       </dl>
-      {props.project.name === "Aquitaine Lifestyle Solutions" ? (
-        ""
-      ) : (
+      {props.project.projectLink && (
         <div className="mt-10">
           <a
             href={props.project.projectLink}
