@@ -28,7 +28,7 @@ export const skillsSection = {
     },
     {
       name: "Community Tools",
-      description: "Slack / Zoom / Stack Overflow / Medium / JIRA / Trello",
+      description: "Slack / Zoom / Stack Overflow / Medium / Notion / Trello",
     },
     {
       name: "Currently Learning:",

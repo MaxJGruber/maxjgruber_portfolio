@@ -93,7 +93,7 @@ export const projectsList = {
       intro: "Sixth project at SDSN",
       technologies: "Next.Js / Nivo charts",
       description:
-        "Peace, diplomacy, and international cooperation are fundamental conditions for the world to progress on the SDGs towards 2030 and beyond. For the second year in a row, the world is no longer making progress on the SDGs. A global plan to finance the SDGs is needed. At mid-point on the way to 2030, policy efforts and commitments supporting the SDGs vary significantly across countries, including among G20 countries.",
+        "At the halfway mark to 2030, the Sustainable Development Report 2023 takes stock of progress made and discusses priorities to restore and accelerate SDG progress. Published on the eve of the 2023 Paris Summit for a New Global Financial Pact, this year’s edition focuses specifically on the need to scale up development finance and to reform the global financial architecture to support the SDGs.",
       specialFeatures:
         "The data explorer: A tool customize your visual charts and deep-dive into the data",
       landingPagePic: "static/project-pics/sdr.gif",
