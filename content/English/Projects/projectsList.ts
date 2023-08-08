@@ -7,7 +7,7 @@ export const projectsList = {
       technologies: "Next.Js / Nivo charts",
       description:
         "This data visualization tool tracks bilateral spillover effects that one country has over another. This new global measure will inform domestic and international policy debates on sustainable consumption and production in the context of Agenda 2030, the SDGs and the Paris Climate Agreement.",
-      landingPagePic: "TODO",
+      landingPagePic: "static/project-pics/spillovers-dashboard.gif",
       contain: false,
       stats: [{ label: "Expected", value: "TBD" }],
     },
@@ -32,7 +32,7 @@ export const projectsList = {
       technologies: "Next.Js",
       description:
         "The GCSI is a composite of the latest breakthroughs in sustainability indicators, focusing attention on how countries are af­fecting the Global Commons both within their borders and through impacts embodied in trade and consumption (so-called “international spillovers”).",
-      landingPagePic: "TODO",
+      landingPagePic: "static/project-pics/gcsi.gif",
       contain: false,
       projectLink: "https://gcsi.unsdsn.org/",
       stats: [
@@ -47,7 +47,7 @@ export const projectsList = {
       technologies: "Next.Js",
       description:
         "It presents Benin's starting point in its new commitment to the implementation of the 2030 Agenda following the inaugural issue of the SDG Eurobond in 2021. It is the first report to provide an independent analysis of the country's SDG performance and trends compared to the Economic Community of West African States (ECOWAS) as well as the policies and progress.",
-      landingPagePic: "TODO",
+      landingPagePic: "static/project-pics/benin-sdr.gif",
       contain: false,
       projectLink: "https://benin.sdgindex.org/",
       stats: [
@@ -64,7 +64,7 @@ export const projectsList = {
         "The Esri ArcGIS powered interactive maps showcase the performance of countries on each of the 17 Sustainable Development Goals. Visualize countries' current performance or visualize trends to see which countries are on track.",
       specialFeatures:
         "Extensive use of the Esri's ArcGIS API for JavaScript. Use of Python to format datasets for ArcGIS Hub upload.",
-      landingPagePic: "TODO",
+      landingPagePic: "static/project-pics/data-hub.gif",
       contain: false,
       projectLink: "https://datahub.sdgtransformationcenter.org/",
       stats: [
@@ -79,7 +79,7 @@ export const projectsList = {
       technologies: "Next.Js / Tailwind",
       description:
         "The SDG Transformation Center is an initiative of the UN Sustainable Development Solutions Network (SDSN) and operates under the leadership of Prof. Jeffrey Sachs. The Center leverages data and insights but also the convening power of the largest network of researchers and scientists mobilized for the SDGs.",
-      landingPagePic: "TODO",
+      landingPagePic: "static/project-pics/sdg-transformation-center.gif",
       contain: false,
       projectLink: "https://sdgtransformationcenter.org/",
       stats: [
@@ -96,7 +96,7 @@ export const projectsList = {
         "Peace, diplomacy, and international cooperation are fundamental conditions for the world to progress on the SDGs towards 2030 and beyond. For the second year in a row, the world is no longer making progress on the SDGs. A global plan to finance the SDGs is needed. At mid-point on the way to 2030, policy efforts and commitments supporting the SDGs vary significantly across countries, including among G20 countries.",
       specialFeatures:
         "The data explorer: A tool customize your visual charts and deep-dive into the data",
-      landingPagePic: "TODO",
+      landingPagePic: "static/project-pics/sdr.gif",
       contain: false,
       projectLink: "https://dashboards.sdgindex.org/",
       stats: [
@@ -113,7 +113,7 @@ export const projectsList = {
         "The Europe Sustainable Development Report 2022 (4th edition) was prepared by a team of independent researchers at the UN Sustainable Development Solutions Network (SDSN) in collaboration with SDSN Europe. It builds on the methodology of the annual Sustainable Development Report, including the SDG Index and Dashboards, issued by the SDSN and Bertelsmann Stiftung since 2016.",
       specialFeatures:
         "The data explorer: A tool customize your visual charts and deep-dive into the data",
-      landingPagePic: "static/project-pics/esdr2021.gif",
+      landingPagePic: "static/project-pics/esdr-2022.gif",
       contain: false,
       projectLink: "https://eu-dashboards.sdgindex.org/",
       stats: [
