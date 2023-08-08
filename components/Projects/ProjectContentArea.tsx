@@ -6,7 +6,7 @@ interface ContentArea {
   type: string;
   description: string;
   technologies: string;
-  specialFeatures: string;
+  specialFeatures?: string;
 }
 
 function ProjectContentArea(props: { project: ContentArea }) {
