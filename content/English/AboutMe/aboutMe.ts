@@ -4,7 +4,7 @@ export const aboutMe = {
     `I’m Maximilian Gruber (yes, like the bad guy in Die Hard). I’m a
   NaN (`,
     `) year old Junior Full Stack Web Developer graduated from
-  Ironhack’s 10-week immersive bootcamp in Paris, France. In a
+  Ironhack’s 10-week immersive bootcamp in Paris, France in 2020. In a
   past life I had a career in Hospitality, and am now keen to
   start off my digital career using my newfound skills in MERN
   Stack.`,

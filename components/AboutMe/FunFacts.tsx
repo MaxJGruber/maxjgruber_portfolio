@@ -13,11 +13,13 @@ const FunFacts = () => (
               key={feature.name}
               className="pt-6 pb-8 md:grid md:grid-cols-12 md:gap-8"
             >
-              <dt className="text-base font-bold text-medium-logo-blue md:col-span-5">
+              <dt className="text-base text-left font-bold text-medium-logo-blue md:col-span-5">
                 {feature.name}
               </dt>
               <dd className="mt-2 md:mt-0 md:col-span-7">
-                <p className="text-base text-gray-500">{feature.description}</p>
+                <p className="text-base text-left text-gray-500">
+                  {feature.description}
+                </p>
               </dd>
             </div>
           ))}

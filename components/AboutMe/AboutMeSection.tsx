@@ -46,7 +46,7 @@ const AboutMeSection = () => (
               fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
             />
           </svg>
-          <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
+          <div className="relative text-base mx-auto max-w-prose lg:max-w-none lg:w-3/4">
             <figure>
               <div className="aspect-w-12 aspect-h-14 lg:aspect-none">
                 <img
@@ -61,7 +61,7 @@ const AboutMeSection = () => (
           </div>
         </div>
         <div className="mt-8 lg:mt-0">
-          <div className="mt-5 prose prose-indigo text-md text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+          <div className="mt-5 prose leading-normal prose-indigo text-md text-left text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
             <p>
               {contentLanguage().aboutMe.intro.map((paragraph, i) => (
                 <span key={i}>

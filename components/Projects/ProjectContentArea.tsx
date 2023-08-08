@@ -6,7 +6,7 @@ interface ContentArea {
   type: string;
   description: string;
   technologies: string;
-  specialFeatures: string;
+  specialFeatures?: string;
 }
 
 function ProjectContentArea(props: { project: ContentArea }) {
@@ -20,17 +20,17 @@ function ProjectContentArea(props: { project: ContentArea }) {
       </h2>
       <div className="mt-6 text-gray-500 space-y-6">
         <p className="text-lg">{props.project.type}</p>
-        <p className="text-base text-left leading-7">
+        <p className="text-base text-left leading-normal">
           <strong>{contentLanguage().projectSection.description} </strong>{" "}
           {props.project.description}
         </p>
         {props.project.specialFeatures && (
-          <p className="text-base text-left leading-7">
+          <p className="text-base text-left leading-normal">
             <strong>{contentLanguage().projectSection.specialFeatures} </strong>
             {props.project.specialFeatures}
           </p>
         )}
-        <p className="text-base text-left leading-7">
+        <p className="text-base text-left leading-normal">
           <strong>{contentLanguage().projectSection.technologiesUsed} </strong>
           {props.project.technologies}
         </p>

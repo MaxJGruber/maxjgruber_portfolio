@@ -13,7 +13,7 @@ interface Project {
   contain: boolean;
   landingPagePic: string;
   oldLandingPage?: string;
-  specialFeatures: string;
+  specialFeatures?: string;
   projectLink?: string;
   stats: { label: string; value: string }[];
 }

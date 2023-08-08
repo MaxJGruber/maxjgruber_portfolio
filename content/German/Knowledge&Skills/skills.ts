@@ -11,7 +11,7 @@ export const skillsSection = {
     },
     {
       name: "Front-End Libraries",
-      description: "Material UI / Semantic UI / Vuetify / Bootstrap / Tailwind",
+      description: "Material UI / Tailwind / Semantic UI / Vuetify / Bootstrap",
     },
     {
       name: "Back-End Frameworks",
@@ -19,16 +19,16 @@ export const skillsSection = {
     },
     {
       name: "Datenbanktypen",
-      description: "MongoDB",
+      description: "MongoDB / ArcGIS Hub",
     },
     {
       name: "Programmiertools",
       description:
-        "Visual Studio Code / CLI / Heroku / Netlify / Git / GitHub / Postman / npm & yarn",
+        "Visual Studio Code / ArcGIS API for JavaScript / CLI / Heroku / Netlify / Git / GitHub / Postman / npm & yarn",
     },
     {
       name: "Community Tools",
-      description: "Slack / Zoom / Stack Overflow / Medium / JIRA / Trello",
+      description: "Slack / Zoom / Stack Overflow / Medium / Notion / Trello",
     },
     {
       name: "Gegenwärtig im Lernprozess von:",
