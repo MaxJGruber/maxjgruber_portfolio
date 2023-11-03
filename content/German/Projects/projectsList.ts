@@ -7,7 +7,7 @@ export const projectsList = {
       technologies: "Next.Js / Nivo charts",
       description:
         "Dieses Datenvisualisierungstool verfolgt bilaterale Spillover-Effekte, die ein Land auf ein anderes ausübt. Dieses neue globale Maß wird die nationalen und internationalen politischen Debatten über nachhaltigen Konsum und nachhaltige Produktion im Kontext der Agenda 2030, der SDGs und des Pariser Klimaabkommens beeinflussen.",
-      landingPagePic: "static/project-pics/spillovers-dashboard.gif",
+      landingPagePic: "static/project-pics/spillovers-dashboard.webp",
       contain: false,
       stats: [{ label: "Fälligkeit", value: "TBD" }],
     },
@@ -19,8 +19,8 @@ export const projectsList = {
       description:
         "Unabhängiges Auftragsprojekt für eine Firma für Unternehmensberatung in Südwest-Frankreich. Das Unternehmen benötigt eine radikal neu gestaltete und attraktivere Version ihres bisherigen Webauftritts, um durch eine zeitgemäße Aktualisierung einen erweiterten Kundenkreis in allen Altersschichten zu erreichen. Ich habe die neue Website auf einem völlig anderen technischen Stack entworfen, wobei hauptsächlich der Inhalt beibehalten wurde. Da das Unternehmen auch geographisch eine Ausdehnung in ganz Europa anstrebt, werden die sprachlichen Inhalte des Projekts in Englisch, Französisch und Deutsch konzipiert.",
       specialFeatures: "",
-      landingPagePic: "static/project-pics/new-als-demo.gif",
-      oldLandingPage: "static/project-pics/old-als-demo.gif",
+      landingPagePic: "static/project-pics/new-als-demo.webp",
+      oldLandingPage: "static/project-pics/old-als-demo.webp",
       contain: true,
       stats: [{ label: "Fälligkeit", value: "TBD" }],
     },
@@ -33,7 +33,7 @@ export const projectsList = {
       technologies: "Next.Js",
       description:
         "Der GCSI ist eine Zusammenstellung der neuesten Durchbrüche bei den Nachhaltigkeitsindikatoren, die die Aufmerksamkeit darauf lenkt, wie Länder die globalen Gemeingüter sowohl innerhalb ihrer Grenzen als auch durch Auswirkungen in Handel und Konsum (sogenannte “internationale Spillover”) beeinflussen.",
-      landingPagePic: "static/project-pics/gcsi.gif",
+      landingPagePic: "static/project-pics/gcsi.webp",
       contain: false,
       projectLink: "https://gcsi.unsdsn.org/",
       stats: [
@@ -48,7 +48,7 @@ export const projectsList = {
       technologies: "Next.Js",
       description:
         "Er stellt die Ausgangssituation Benins in seinem neuen Engagement für die Umsetzung der Agenda 2030 nach der Erstausgabe des SDG-Eurobonds im Jahr 2021 dar. Es ist der erste Bericht, der eine unabhängige Analyse der SDG-Leistungen und -Trends des Landes im Vergleich zur Wirtschaftsgemeinschaft Westafrikanischer Staaten (ECOWAS) sowie der Strategien und Fortschritte liefert.",
-      landingPagePic: "static/project-pics/benin-sdr.gif",
+      landingPagePic: "static/project-pics/benin-sdr.webp",
       contain: false,
       projectLink: "https://benin.sdgindex.org/",
       stats: [
@@ -65,7 +65,7 @@ export const projectsList = {
         "Die interaktiven Karten von Esri ArcGIS zeigen die Leistung der Länder bei jedem der 17 Ziele für nachhaltige Entwicklung. Visualisieren Sie die aktuelle Leistung der Länder oder zeigen Sie Trends auf, um zu sehen, welche Länder auf dem richtigen Weg sind.",
       specialFeatures:
         "Ausführliche Nutzung der ArcGIS API von Esri für JavaScript. Verwendung von Python zur Formatierung von Datensätzen für den Upload in ArcGIS Hub.",
-      landingPagePic: "static/project-pics/data-hub.gif",
+      landingPagePic: "static/project-pics/data-hub.webp",
       contain: false,
       projectLink: "https://datahub.sdgtransformationcenter.org/",
       stats: [
@@ -80,7 +80,7 @@ export const projectsList = {
       technologies: "Next.Js / Tailwind",
       description:
         "Das SDG Transformation Center ist eine Initiative des UN Sustainable Development Solutions Network (SDSN) und arbeitet unter der Leitung von Prof. Jeffrey Sachs. Das Zentrum nutzt Daten und Erkenntnisse, aber auch die einladende Kraft des größten Netzwerks von Forschern und Wissenschaftlern, das für die SDGs mobilisiert wurde.",
-      landingPagePic: "static/project-pics/sdg-transformation-center.gif",
+      landingPagePic: "static/project-pics/sdg-transformation-center.webp",
       contain: false,
       projectLink: "https://sdgtransformationcenter.org/",
       stats: [
@@ -97,7 +97,7 @@ export const projectsList = {
         "Auf halbem Weg zum Jahr 2030 zieht der Bericht über nachhaltige Entwicklung 2023 eine Bilanz der erzielten Fortschritte und erörtert Prioritäten zur Wiederherstellung und Beschleunigung der SDG-Fortschritte. Die diesjährige Ausgabe, die am Vorabend des Pariser Gipfels 2023 für einen neuen globalen Finanzpakt veröffentlicht wird, konzentriert sich speziell auf die Notwendigkeit, die Entwicklungsfinanzierung zu erhöhen und die globale Finanzarchitektur zur Unterstützung der SDGs zu reformieren.",
       specialFeatures:
         "Der Data Explorer: Ein Werkzeug, mit dem Sie Ihre visuellen Diagramme anpassen und tief in die Daten eintauchen können",
-      landingPagePic: "static/project-pics/sdr.gif",
+      landingPagePic: "static/project-pics/sdr.webp",
       contain: false,
       projectLink: "https://dashboards.sdgindex.org/",
       stats: [
@@ -112,7 +112,7 @@ export const projectsList = {
       technologies: "Next.Js",
       description:
         "Der Bericht über die nachhaltige Entwicklung in Europa 2022 (4. Ausgabe) wurde von einem Team unabhängiger Forscher des UN Sustainable Development Solutions Network (SDSN) in Zusammenarbeit mit SDSN Europe erstellt. Er baut auf der Methodik des jährlichen Nachhaltigkeitsberichts auf, einschließlich des SDG-Index und der Dashboards, die vom SDSN und der Bertelsmann Stiftung seit 2016 herausgegeben werden.",
-      landingPagePic: "static/project-pics/esdr-2022.gif",
+      landingPagePic: "static/project-pics/esdr-2022.webp",
       contain: false,
       projectLink: "https://eu-dashboards.sdgindex.org/",
       stats: [
@@ -127,7 +127,7 @@ export const projectsList = {
       technologies: "Next.Js / Tailwind",
       description:
         "Freiberufliches Projekt für denselben Osteopathen, aber dieses Mal für Sartrouville und Paris, Frankreich. Die Website fungiert als elektronische Visitenkarte für den Kunden und hat auch die Funktion, seinen Beruf näher zu erläutern.",
-      landingPagePic: "static/project-pics/osteomeaux-demo.gif",
+      landingPagePic: "static/project-pics/osteomeaux-demo.webp",
       contain: true,
       projectLink: "https://www.charles-dumeige-osteopathe.fr/",
       stats: [
@@ -142,7 +142,7 @@ export const projectsList = {
       technologies: "Next.Js",
       description:
         "Ein in Zusammenarbeit mit der Inter-american Development Bank entwickeltes Toolkit, das eine Ex-ante-Analyse bietet, um Investitionsmöglichkeiten zur Förderung der Ziele für nachhaltige Entwicklung in Lateinamerika und der Karibik zu untersuchen und zu verfolgen.",
-      landingPagePic: "static/project-pics/impact-investment-toolkit.gif",
+      landingPagePic: "static/project-pics/impact-investment-toolkit.webp",
       contain: false,
       projectLink: "https://sdg-investment-tool-beta.netlify.app/",
       stats: [{ label: "Fälligkeit", value: "TBD" }],
@@ -154,7 +154,7 @@ export const projectsList = {
       technologies: "React.JS / Tailwind",
       description:
         "Werbebroschüre und Webauftritt für einen neuen Frisörsalon im Süden Frankreichs. Der Kunde wünschte  eine einfach gehaltene jedoch graphisch elegante und stilvolle Webseite, die gleichermaßen alle Alters- und Kundengruppen anspricht. Da die Kundschaft des Salons sehr vielschichtig ist, wurden die entsprechenden Inhalte auf Englisch und Französisch verfasst.",
-      landingPagePic: "static/project-pics/marss-n30-demo.gif",
+      landingPagePic: "static/project-pics/marss-n30-demo.webp",
       contain: false,
       projectLink: "https://www.marss-n30.com/",
       stats: [
@@ -169,7 +169,7 @@ export const projectsList = {
       technologies: "Vue.JS / Tailwind / MongoDB / Mongoose / Express.JS",
       description:
         "Hochentwickelte Werbebroschüre und Webauftritt für eine osteopathische Praxis in Meaux, Frankreich. Die Webseite wurde als elektronische Geschäftskarte für den Kunden konzipiert und erläutert auch fachlich fundiert und allgemeinverständlich alle Aspekte von Therapie, Theorie und Behandlungsprinzipien dieser medizinischen Berufsgattung.",
-      landingPagePic: "static/project-pics/osteomeaux-demo.gif",
+      landingPagePic: "static/project-pics/osteomeaux-demo.webp",
       contain: true,
       stats: [
         { label: "Erstellt", value: "2021" },
@@ -186,7 +186,7 @@ export const projectsList = {
         "Eine app, auf der ein Benutzer sein eigenes Konto eröffnen und auch einen geographischen Marker setzen kann - um seine Lieblingsbiersorten und lokalen Entdeckungen / Erlebnisse zu speichern und für andere zu dokumentieren. Eine app, die allgegenwärtig und in der Tasche stets verfügbar ist.",
       specialFeatures:
         "Benützung von MapBox, full user authentication mit React.JS, benützung von Front-End Libraries wie Semantics UI and Material UI.",
-      landingPagePic: "static/project-pics/cosmousse-demo.gif",
+      landingPagePic: "static/project-pics/cosmousse-demo.webp",
       contain: true,
       projectLink: "https://github.com/search?q=cosmousse&type=repositories",
       stats: [
@@ -202,7 +202,7 @@ export const projectsList = {
         "HTML / CSS / JavaScript / Handlebars / MongoDB / Mongoose / Express.JS",
       description:
         "Eine Webseite, auf der man ein Konto eröffnen und Videospiele auswählen kann, entweder als Wunschliste oder aus dem eigenen Bestand (auf der Basis einer API-Verbindung mit 350 000 Videospielen). Eine voll interaktive Webseite für zuhause oder auch unterwegs auf dem Smartphone. Mit 2 anderen Klassenkameraden entworfen, die sich auch für Videospiele begeistern.",
-      landingPagePic: "static/project-pics/ekam-demo.gif",
+      landingPagePic: "static/project-pics/ekam-demo.webp",
       contain: false,
       stats: [
         { label: "Erstellt", value: "2020" },
@@ -216,7 +216,7 @@ export const projectsList = {
       technologies: "HTML / CSS / JavaScript",
       description:
         "Eine Nachahmung des weltberühmten Videospiels Guitar Hero, bei der die Spieler die richtigen Noten auf dem Griffbrett treffen müssen. Je mehr zusammenhängende Treffer erzielt werden, desto höher steigt die Punktzahl.",
-      landingPagePic: "static/project-pics/iron-guitar-demo.gif",
+      landingPagePic: "static/project-pics/iron-guitar-demo.webp",
       contain: false,
       projectLink: "https://github.com/MaxJGruber/Iron-Guitar",
       stats: [
