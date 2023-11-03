@@ -1,9 +1,11 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
+import Head from "next/head";
+import { Router } from "next/router";
 import { Provider } from "react-redux";
 import { enableStaticRendering } from "mobx-react-lite";
 import { DefaultSeo } from "next-seo";
 import { TITLE, META_DESCRIPTION, META_IMAGE, URL } from "root/config";
+import * as gtag from "helpers/gtag";
 import store from "stores/store";
 import changeLanguage from "stores/languageContent";
 import "styles/globals.css";
@@ -28,6 +30,18 @@ const App = ({ Component, pageProps }) => {
       setContent(changeLanguage());
     }, []);
   });
+
+  // Track pages with google analytics
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    Router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      Router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
+  // End of track pages with google analytics
 
   return (
     <div className="App">
