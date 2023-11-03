@@ -21,7 +21,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+          <link rel="icon" href="static/favicon.ico" />
           <meta name="theme-color" content="#000000" />
           <script
             type="text/javascript"
