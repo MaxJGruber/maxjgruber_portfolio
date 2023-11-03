@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -102,14 +103,14 @@ const Home = (props: Record<string, any>) => {
                       </Disclosure>
                     )
                   )}
-                  <a
+                  <Link
                     href="#contact-form"
                     className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                   >
                     <div className="flex items-center">
                       <div>{contentLanguage().navlinks.contactMe}</div>
                     </div>
-                  </a>
+                  </Link>
                 </nav>
               </div>
               <div className="flex-shrink-0 border-t border-gray-200 p-4">
