@@ -54,17 +54,17 @@ export const navlinks = {
         documents: [
           {
             name: "Mein CV (Englisch)",
-            href: "static/personal-documents/MaxJGruber_CV.pdf",
+            href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV.pdf",
             icon: DocumentDownloadIcon,
           },
-          {
-            name: "Mein CV (Französisch)",
-            href: "static/personal-documents/MaxJGruber_CV_FR.pdf",
-            icon: DocumentDownloadIcon,
-          },
+          // {
+          //   name: "Mein CV (Französisch)",
+          //   href: "static/personal-documents/MaxJGruber_CV_FR.pdf",
+          //   icon: DocumentDownloadIcon,
+          // },
           {
             name: "Mein Diplom",
-            href: "static/personal-documents/IRONHACK_CERTIFICATE.pdf",
+            href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/IRONHACK_CERTIFICATE.pdf",
             icon: DocumentDownloadIcon,
           },
         ],
