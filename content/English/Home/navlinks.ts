@@ -57,11 +57,11 @@ export const navlinks = {
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV.pdf",
             icon: DocumentDownloadIcon,
           },
-          // {
-          //   name: "My CV (French)",
-          //   href: "static/personal-documents/MaxJGruber_CV_FR.pdf",
-          //   icon: DocumentDownloadIcon,
-          // },
+          {
+            name: "My CV (French)",
+            href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV-FR.pdf",
+            icon: DocumentDownloadIcon,
+          },
           {
             name: "My Certificate",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/IRONHACK_CERTIFICATE.pdf",
