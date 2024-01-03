@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  output: "export",
   env: {
     WUFOO_BASE_URL: process.env.NEXT_PUBLIC_WUFOO_BASE_URL,
     WUFOO_API_KEY: process.env.NEXT_PUBLIC_WUFOO_API_KEY,
