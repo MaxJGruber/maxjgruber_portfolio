@@ -13,6 +13,29 @@ type TextProps = {
   funFacts: FunFactsProps;
 };
 
+type NavbarLinkProps = {
+  name: string;
+  href: string;
+  icon: HeroIconType;
+  current: boolean;
+  children?: {
+    links: {
+      name: string;
+      href: string;
+      icon: FontAwesomeIconProps;
+    }[];
+    documents: {
+      name: string;
+      href: string;
+      icon: HeroIconType;
+    }[];
+  };
+};
+type NavbarProps = {
+  navigation: NavbarLinkProps[];
+  contactMe: string;
+};
+
 type TitlesProps = {
   about: string;
   knowledgeSkills: string;
