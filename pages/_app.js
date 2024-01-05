@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import Head from "next/head";
 import { Router } from "next/router";
 import { DefaultSeo } from "next-seo";
-import { TITLE, META_DESCRIPTION, META_IMAGE, URL } from "root/config";
-import * as gtag from "helpers/gtag";
-import "styles/globals.css";
+import { TITLE, META_DESCRIPTION, META_IMAGE, URL } from "@/config";
+import * as gtag from "@/helpers/gtag";
+import "@/styles/globals.css";
 
 import AppLayout from "@/layouts/AppLayout";
 

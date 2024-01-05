@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
-import { GA_TRACKING_ID } from "root/config";
+import { GA_TRACKING_ID } from "@/config";
 
 const Document = () => (
   <Html lang="en">

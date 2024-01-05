@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { submitForm } from "apihandlers/wufooApi";
+import { submitForm } from "@/apihandlers/wufooApi";
 import Notification from "@/components/ContactForm/Notification";
 
 type FormInputs = {

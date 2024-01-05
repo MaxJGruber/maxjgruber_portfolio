@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getMediumFeed } from "apihandlers/mediumApi";
+import { getMediumFeed } from "@/apihandlers/mediumApi";
 import moment from "moment";
 
 interface BlogObject {
