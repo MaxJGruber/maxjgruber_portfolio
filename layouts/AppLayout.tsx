@@ -9,14 +9,13 @@ import returnLanguageContent from "@/navbar/index";
 
 const AppLayout = ({
   children,
-  language,
+  navbarText,
 }: {
   children: JSX.Element;
-  language: "en" | "fr" | "de";
+  navbarText: NavbarProps;
 }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const navbarText: NavbarProps = returnLanguageContent(language);
-  
+
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       <Transition.Root show={sidebarOpen} as={Fragment}>

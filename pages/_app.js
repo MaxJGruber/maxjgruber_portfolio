@@ -22,10 +22,10 @@ const App = ({ Component: NextPage, pageProps }) => {
   // End of track pages with google analytics
 
   const {
-    Layout = ({ children, language }) => (
-      <AppLayout language={language}>{children}</AppLayout>
+    Layout = ({ children, navbarText }) => (
+      <AppLayout navbarText={navbarText}>{children}</AppLayout>
     ),
-    layoutProps = ({ language }) => ({ language }),
+    layoutProps = ({ navbarText }) => ({ navbarText }),
   } = NextPage;
 
   return (
