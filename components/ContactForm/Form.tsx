@@ -3,7 +3,12 @@ import { submitForm } from "apihandlers/wufooApi";
 import Notification from "@/components/ContactForm/Notification";
 
 type FormInputs = {
-  [key: string]: string;
+  Field1: string;
+  Field2: string;
+  Field3: string;
+  Field10: string;
+  Field27: string;
+  Field33: string;
 };
 
 const Form = ({
@@ -22,13 +27,18 @@ const Form = ({
     const newForm: FormInputs = { ...form };
     const value = e.target.value;
     const key = e.target.name;
-    newForm[key] = value;
+    newForm[key as keyof FormInputs] = value;
     setForm(newForm);
   };
 
   const handleSubmit = async (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ): Promise<FormInputs | undefined> => {
+  ): Promise<
+    | {
+        [key: string]: string;
+      }
+    | undefined
+  > => {
     e.preventDefault();
     const response = await submitForm(form);
     if (response.Success === 1) {
@@ -46,7 +56,7 @@ const Form = ({
   const resetForm = () => {
     const newForm: FormInputs = { ...form };
     for (const key in newForm) {
-      newForm[key] = "";
+      newForm[key as keyof FormInputs] = "";
     }
     setForm(newForm);
   };
