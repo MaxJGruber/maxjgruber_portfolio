@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProjectStatsSection = ({
   project,
   captions,
@@ -24,13 +26,13 @@ const ProjectStatsSection = ({
     </dl>
     {project.projectLink && (
       <div className="mt-10">
-        <a
+        <Link
           href={project.projectLink}
           className="text-base font-medium text-medium-logo-blue"
         >
           {captions.linkText} {project.name}{" "}
           <span aria-hidden="true">&rarr;</span>{" "}
-        </a>
+        </Link>
       </div>
     )}
   </div>

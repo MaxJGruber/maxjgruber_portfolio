@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PaperAirplaneIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,9 +24,9 @@ const SideForForm = ({ text }: { text: ContactFormProps }) => (
           className="flex-shrink-0 w-6 h-6 text-indigo-200"
           aria-hidden="true"
         />
-        <a href="tel:0698202959">
+        <Link href="tel:0698202959">
           <span className="ml-3">+33 (0) 6 98 20 29 59</span>
-        </a>
+        </Link>
       </dd>
       <dt>
         <span className="sr-only">Email</span>
@@ -35,38 +36,38 @@ const SideForForm = ({ text }: { text: ContactFormProps }) => (
           className="flex-shrink-0 w-6 h-6 text-indigo-200"
           aria-hidden="true"
         />
-        <a href="mailto:maxjgruber@gmail.com">
+        <Link href="mailto:maxjgruber@gmail.com">
           <span className="ml-3">maxjgruber@gmail.com</span>
-        </a>
+        </Link>
       </dd>
     </dl>
     <ul className="mt-8 flex space-x-12">
       <li>
-        <a
+        <Link
           className="text-indigo-200 hover:text-indigo-100"
           href="https://www.linkedin.com/in/maximilian-j-gruber/"
         >
           <span className="sr-only">Linkedin</span>
           <FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a
+        <Link
           className="text-indigo-200 hover:text-indigo-100"
           href="https://github.com/MaxJGruber"
         >
           <span className="sr-only">GitHub</span>
           <FontAwesomeIcon icon={faGithubSquare} className="text-3xl" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a
+        <Link
           className="text-indigo-200 hover:text-indigo-100"
           href="https://github.com/MaxJGruber"
         >
           <span className="sr-only">Medium</span>
           <FontAwesomeIcon icon={faMedium} className="text-3xl" />
-        </a>
+        </Link>
       </li>
     </ul>
   </div>

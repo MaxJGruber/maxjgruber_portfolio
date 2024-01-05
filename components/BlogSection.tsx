@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { getMediumFeed } from "@/apihandlers/mediumApi";
 import moment from "moment";
 
@@ -47,12 +48,12 @@ const BlogSection = () => {
                 <div className="mt-6 flex items-center justify-center">
                   <div>
                     <div className="mt-0 mb-2">
-                      <a
+                      <Link
                         href={post.link}
                         className="my-5 text-base font-semibold text-medium-logo-blue hover:text-dark-logo-blue"
                       >
                         Read full story
-                      </a>
+                      </Link>
                     </div>
                     <div className="flex space-x-1 text-sm text-gray-500">
                       <time dateTime={post.pubDate}>
