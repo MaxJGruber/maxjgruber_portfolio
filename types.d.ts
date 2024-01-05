@@ -100,7 +100,7 @@ type HeroSectionProps = {
 // TYPES RELATED TO KNOWLEDGE & SKILLS SECTION
 type KnowledgeFeatureProps = {
   name: string;
-  icon: string;
+  icon: string | HeroIconType;
   description: string;
 };
 type KnowledgeProps = {

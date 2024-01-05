@@ -16,13 +16,27 @@ const ICONS = {
   ServerIcon,
 };
 
+type IconsType = {
+  CircleStackIcon: React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>;
+  DeviceTabletIcon: React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>;
+  GlobeAltIcon: React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>;
+  UsersIcon: React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>;
+  SparklesIcon: React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>;
+  ServerIcon: React.PropsWithoutRef<React.SVGProps<SVGSVGElement>>;
+};
+
 const MissionSection = ({ text }: { text: KnowledgeProps }) => {
-  const textWithIcons = text.features.map((feature) => ({
-    ...feature,
-    icon: ICONS[feature.icon],
-  }));
+  const textWithIcons: KnowledgeFeatureProps[] = text.features.map(
+    (feature) => {
+      const newIcon = ICONS[feature.icon as keyof IconsType];
+      return {
+        ...feature,
+        icon: newIcon,
+      };
+    }
+  );
   return (
-    <div className=" bg-white py-16 sm:py-24 lg:py-16">
+    <div className="bg-white py-16 sm:py-24 lg:py-16">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-3xl font-extrabold text-gray-900">{text.title}</h2>
         <div className="mt-12">
