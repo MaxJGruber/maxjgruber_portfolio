@@ -21,12 +21,8 @@ const App = ({ Component: NextPage, pageProps }) => {
   }, []);
   // End of track pages with google analytics
 
-  const {
-    Layout = ({ children, navbarText }) => (
-      <AppLayout navbarText={navbarText}>{children}</AppLayout>
-    ),
-    layoutProps = () => {},
-  } = NextPage;
+  const { Layout = ({ children }) => <>{children}</>, layoutProps = () => {} } =
+    NextPage;
 
   return (
     <div className="App">

@@ -1,7 +1,9 @@
 import MainView from "@/components/MainView";
+import AppLayout from "@/layouts/AppLayout";
 
 const Home = ({ text }: { text: TextProps }) => <MainView text={text} />;
 
+Home.Layout = AppLayout;
 Home.layoutProps = ({ text }: { text: TextProps }) => ({
   navbarText: text.navlinks,
 });
