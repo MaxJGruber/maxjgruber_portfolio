@@ -10,23 +10,23 @@ import {
 } from "@heroicons/react/24/outline";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
-export const navlinks = {
+export const navlinksFrench = {
   navigation: [
-    { name: "Home", href: "#home", icon: HomeIcon, current: true },
+    { name: "Accueil", href: "#home", icon: HomeIcon, current: true },
     {
-      name: "About Me",
+      name: "A propos de moi",
       href: "#about",
       icon: UserIcon,
       current: false,
     },
     {
-      name: "Knowledge & Skills",
+      name: "Savoir & Compétences",
       href: "#knowledge",
       icon: ComputerDesktopIcon,
       current: false,
     },
     {
-      name: "Projects",
+      name: "Projets",
       href: "#projects",
       icon: FolderIcon,
       current: false,
@@ -39,36 +39,36 @@ export const navlinks = {
       current: false,
     },
     {
-      name: "Resources",
+      name: "Ressources",
       href: "#",
       icon: InboxIcon,
       current: false,
       children: {
         links: [
           {
-            name: "My GitHub",
+            name: "Mon GitHub",
             href: "https://github.com/MaxJGruber",
             icon: faGithubSquare,
           },
           {
-            name: "My LinkedIn",
+            name: "Mon LinkedIn",
             href: "https://www.linkedin.com/in/maximilian-j-gruber/",
             icon: faLinkedin,
           },
         ],
         documents: [
           {
-            name: "My CV (English)",
+            name: "Mon CV (Anglais)",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV.pdf",
             icon: DocumentArrowDownIcon,
           },
           {
-            name: "My CV (French)",
+            name: "Mon CV (Français)",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV-FR.pdf",
             icon: DocumentArrowDownIcon,
           },
           {
-            name: "My Certificate",
+            name: "Mon Diplôme",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/IRONHACK_CERTIFICATE.pdf",
             icon: DocumentArrowDownIcon,
           },
@@ -76,5 +76,5 @@ export const navlinks = {
       },
     },
   ],
-  contactMe: "Contact Me",
+  contactMe: "Me contacter",
 };
