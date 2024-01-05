@@ -5,7 +5,6 @@ import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import NavlinkWithoutChildren from "@/components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "@/components/Navbar/NavlinkWithChildren";
 import LanguageSelection from "@/components/Navbar/LanguageSelection";
-import returnLanguageContent from "@/navbar/index";
 
 const AppLayout = ({
   children,

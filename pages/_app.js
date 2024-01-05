@@ -25,7 +25,7 @@ const App = ({ Component: NextPage, pageProps }) => {
     Layout = ({ children, navbarText }) => (
       <AppLayout navbarText={navbarText}>{children}</AppLayout>
     ),
-    layoutProps = ({ navbarText }) => ({ navbarText }),
+    layoutProps = () => {},
   } = NextPage;
 
   return (
