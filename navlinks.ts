@@ -1,13 +1,13 @@
 import {
-  DocumentDownloadIcon,
+  DocumentArrowDownIcon,
   FolderIcon,
   HomeIcon,
-  DesktopComputerIcon,
+  ComputerDesktopIcon,
   InboxIcon,
   UserIcon,
   PaperAirplaneIcon,
-  ChatAlt2Icon,
-} from "@heroicons/react/outline";
+  ChatBubbleLeftRightIcon,
+} from "@heroicons/react/24/outline";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 export const navlinks = {
@@ -22,7 +22,7 @@ export const navlinks = {
     {
       name: "Knowledge & Skills",
       href: "#knowledge",
-      icon: DesktopComputerIcon,
+      icon: ComputerDesktopIcon,
       current: false,
     },
     {
@@ -32,7 +32,12 @@ export const navlinks = {
       current: false,
     },
     { name: "Blog", href: "#blog", icon: PaperAirplaneIcon, current: false },
-    { name: "FAQ", href: "#faq", icon: ChatAlt2Icon, current: false },
+    {
+      name: "FAQ",
+      href: "#faq",
+      icon: ChatBubbleLeftRightIcon,
+      current: false,
+    },
     {
       name: "Resources",
       href: "#",
@@ -55,17 +60,17 @@ export const navlinks = {
           {
             name: "My CV (English)",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV.pdf",
-            icon: DocumentDownloadIcon,
+            icon: DocumentArrowDownIcon,
           },
           {
             name: "My CV (French)",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV-FR.pdf",
-            icon: DocumentDownloadIcon,
+            icon: DocumentArrowDownIcon,
           },
           {
             name: "My Certificate",
             href: "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/IRONHACK_CERTIFICATE.pdf",
-            icon: DocumentDownloadIcon,
+            icon: DocumentArrowDownIcon,
           },
         ],
       },
