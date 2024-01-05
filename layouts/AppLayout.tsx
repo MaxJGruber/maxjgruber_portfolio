@@ -4,11 +4,17 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import NavlinkWithoutChildren from "@/components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "@/components/Navbar/NavlinkWithChildren";
-import { navlinks } from "@/navlinks";
+import returnLanguageContent from "@/navbar/index";
 
-const AppLayout = ({ children }: { children: JSX.Element }) => {
+const AppLayout = ({
+  children,
+  language,
+}: {
+  children: JSX.Element;
+  language: "en" | "fr";
+}) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const navbarText: NavbarProps = returnLanguageContent(language);
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -71,7 +77,7 @@ const AppLayout = ({ children }: { children: JSX.Element }) => {
                   />
                 </div>
                 <nav className="mt-5 px-2 space-y-1">
-                  {navlinks.navigation.map((item) =>
+                  {navbarText.navigation.map((item) =>
                     !item.children ? (
                       <div
                         key={item.name}
@@ -96,7 +102,7 @@ const AppLayout = ({ children }: { children: JSX.Element }) => {
                     className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                   >
                     {/* <div className="flex items-center"> */}
-                    {navlinks.contactMe}
+                    {navbarText.contactMe}
                     {/* </div> */}
                   </Link>
                 </nav>
@@ -128,7 +134,7 @@ const AppLayout = ({ children }: { children: JSX.Element }) => {
                 />
               </div>
               <nav className="mt-5 flex-1 px-2 bg-white space-y-1">
-                {navlinks.navigation.map((item) =>
+                {navbarText.navigation.map((item) =>
                   !item.children ? (
                     <div key={item.name}>
                       <NavlinkWithoutChildren item={item} />
@@ -146,7 +152,7 @@ const AppLayout = ({ children }: { children: JSX.Element }) => {
                   className="flex-shrink-0 w-full group block inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-dark-logo-blue hover:bg-medium-logo-blue"
                 >
                   {/* <div className="flex items-center"> */}
-                  {navlinks.contactMe}
+                  {navbarText.contactMe}
                   {/* </div> */}
                 </Link>
               </nav>
