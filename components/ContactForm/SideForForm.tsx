@@ -1,18 +1,15 @@
-import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
+import { PaperAirplaneIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faGithubSquare,
   faMedium,
 } from "@fortawesome/free-brands-svg-icons";
-import contentLanguage from "stores/languageContent";
 
-const SideForForm = () => (
+const SideForForm = ({ text }: { text: ContactFormProps }) => (
   <div>
-    <h3 className="text-lg font-medium text-white">
-      {contentLanguage().contactForm.title}
-    </h3>
-    {contentLanguage().contactForm.intro.map((text, i) => (
+    <h3 className="text-lg font-medium text-white">{text.title}</h3>
+    {text.intro.map((text, i) => (
       <p className="mt-6 text-base text-indigo-50 max-w-3xl" key={i}>
         {text}
       </p>
@@ -34,7 +31,7 @@ const SideForForm = () => (
         <span className="sr-only">Email</span>
       </dt>
       <dd className="flex text-base text-indigo-50 hover:text-white">
-        <MailIcon
+        <PaperAirplaneIcon
           className="flex-shrink-0 w-6 h-6 text-indigo-200"
           aria-hidden="true"
         />

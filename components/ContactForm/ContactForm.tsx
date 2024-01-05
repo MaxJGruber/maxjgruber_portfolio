@@ -1,8 +1,13 @@
-import contentLanguage from "stores/languageContent";
-import Form from "./Form";
-import SideForForm from "./SideForForm";
+import Form from "@/components/ContactForm/Form";
+import SideForForm from "@/components/ContactForm/SideForForm";
 
-const ContactForm = () => (
+const ContactForm = ({
+  text,
+  notifications,
+}: {
+  text: ContactFormProps;
+  notifications: NotificationProps;
+}) => (
   <div id="contact-form" className="bg-gray-100">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:mt-20 sm:py-10 sm:px-6 lg:px-8">
       <div className="relative bg-white shadow-xl">
@@ -110,19 +115,18 @@ const ContactForm = () => (
                 </defs>
               </svg>
             </div>
-            <SideForForm />
+            <SideForForm text={text} />
           </div>
 
           {/* Contact form */}
           <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
             <h3 className="text-lg font-medium text-gray-900">
-              {contentLanguage().contactForm.formTitle}
+              {text.formTitle}
             </h3>
             <h2 className="mt-3 text-sm font-medium text-gray-900">
-              {contentLanguage().contactForm.requiredWarning}{" "}
-              <span className="text-red-400">*</span>
+              {text.requiredWarning} <span className="text-red-400">*</span>
             </h2>
-            <Form />
+            <Form text={text} notifications={notifications} />
           </div>
         </div>
       </div>

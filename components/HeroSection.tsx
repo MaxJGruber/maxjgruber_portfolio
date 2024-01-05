@@ -1,6 +1,4 @@
-import contentLanguage from "stores/languageContent";
-
-const HeroSection = () => (
+const HeroSection = ({ text }: { text: HeroSectionProps }) => (
   <main id="home" className="">
     <div className="mx-auto max-w-7xl w-full text-center py-64 md:py-48 2xl:py-72 lg:text-left flex flex-col justify-center h-screen">
       <div className="relative z-10 flex flex-col justify-center items-center px-4 lg:w-3/5 sm:px-8 ">
@@ -8,11 +6,11 @@ const HeroSection = () => (
           <span className="block xl:inline">Maximilian Gruber,</span>
           <br />
           <span className="block text-medium-logo-blue xl:inline">
-            {contentLanguage().heroSection.profession}
+            {text.profession}
           </span>
         </h1>
         <div className="mt-3 relative z-10 max-w-md mx-auto text-lg text-gray-50 sm:text-2xl md:mt-5 md:max-w-3xl">
-          {contentLanguage().heroSection.intro.map((text, i) => (
+          {text.intro.map((text, i) => (
             <p className="my-2" key={i}>
               {text}
             </p>

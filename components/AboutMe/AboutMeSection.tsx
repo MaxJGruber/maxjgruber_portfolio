@@ -1,13 +1,11 @@
-import contentLanguage from "stores/languageContent";
-
-const AboutMeSection = () => (
+const AboutMeSection = ({ text }: { text: AboutMeProps }) => (
   <div className="bg-white overflow-hidden">
     <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
       <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
           <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            {contentLanguage().aboutMe.title}
+            {text.title}
           </h3>
         </div>
       </div>
@@ -63,7 +61,7 @@ const AboutMeSection = () => (
         <div className="mt-8 lg:mt-0">
           <div className="mt-5 prose leading-normal prose-indigo text-md text-left text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
             <p>
-              {contentLanguage().aboutMe.intro.map((paragraph, i) => (
+              {text.intro.map((paragraph, i) => (
                 <span key={i}>
                   {paragraph}
                   {paragraph && paragraph.includes("Maximilian") ? (
@@ -74,7 +72,7 @@ const AboutMeSection = () => (
                 </span>
               ))}
             </p>
-            {contentLanguage().aboutMe.text.map((paragraph, i) => (
+            {text.text.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
           </div>
