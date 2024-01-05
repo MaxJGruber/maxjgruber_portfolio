@@ -1,15 +1,8 @@
 import Link from "next/link";
-import { UserIcon } from "@heroicons/react/24/outline";
 
 const classNames = (...classes: string[]) => classes.filter(Boolean).join(" ");
 
-interface SubnavObject {
-  href: string;
-  current: boolean;
-  name: string;
-  icon: typeof UserIcon;
-}
-const NavlinkWithoutChildren = ({ item }: { item: SubnavObject }) => (
+const NavlinkWithoutChildren = ({ item }: { item: NavbarLinkProps }) => (
   <Link
     href={item.href}
     className={classNames(
