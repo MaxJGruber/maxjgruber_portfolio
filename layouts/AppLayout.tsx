@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Transition, Disclosure } from "@headlessui/react";
 import NavlinkWithoutChildren from "@/components/Navbar/NavlinkWithoutChildren";
 import NavlinkWithChildren from "@/components/Navbar/NavlinkWithChildren";
+import LanguageSelection from "@/components/Navbar/LanguageSelection";
 import returnLanguageContent from "@/navbar/index";
 
 const AppLayout = ({
@@ -11,10 +12,11 @@ const AppLayout = ({
   language,
 }: {
   children: JSX.Element;
-  language: "en" | "fr";
+  language: "en" | "fr" | "de";
 }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navbarText: NavbarProps = returnLanguageContent(language);
+  
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -108,9 +110,7 @@ const AppLayout = ({
                 </nav>
               </div>
               <div className="flex-shrink-0 border-t border-gray-200 p-4">
-                {/* <LanguageSelection
-                    handleLanguageSelect={handleLanguageSelect}
-                  /> */}
+                <LanguageSelection />
               </div>
             </div>
           </Transition.Child>
@@ -158,7 +158,7 @@ const AppLayout = ({
               </nav>
             </div>
             <div className="flex-shrink-0 border-t border-gray-200 p-4">
-              {/* <LanguageSelection handleLanguageSelect={handleLanguageSelect} /> */}
+              <LanguageSelection />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const App = ({ Component: NextPage, pageProps }) => {
     Layout = ({ children, language }) => (
       <AppLayout language={language}>{children}</AppLayout>
     ),
-    layoutProps = () => {},
+    layoutProps = ({ language }) => ({ language }),
   } = NextPage;
 
   return (
