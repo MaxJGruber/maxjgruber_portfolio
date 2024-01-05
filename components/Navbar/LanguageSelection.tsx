@@ -3,7 +3,7 @@ import Link from "next/link";
 const LanguageSelection = () => (
   <div className="text-lg flex items-center justify-center">
     <div className="mx-2 focus:outline-none">
-      <Link href="/en">
+      <Link href="/">
         <img
           src="static/assets/united-kingdom.png"
           className="h-7 w-auto cursor-pointer"
