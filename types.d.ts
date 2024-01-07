@@ -1,6 +1,5 @@
 // MAIN TYPE FOR OBJECT BEING RETURNED FROM MD FILES
 type TextProps = {
-  navlinks: NavbarProps;
   titles: TitlesProps;
   contactForm: ContactFormProps;
   aboutMe: AboutMeProps;
