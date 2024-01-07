@@ -13,18 +13,14 @@ describe("Changing Languages", () => {
   it("switches all text content to French", () => {
     cy.visit("/");
     cy.get(`[alt="French Flag"]`).click();
+    cy.url().should("include", "/fr");
     cy.get("#home p").contains("Coucou, moi c'est Max!");
     cy.get("nav a").contains("Me contacter");
   });
 
   it("switches all text content to German", () => {
     cy.get(`[alt="German Flag"]`).click();
-    cy.get("#home p").contains("Hallo, ich bin Max!");
-    cy.get("nav a").contains("Kontakt");
-  });
-
-  it("makes state persist to German after reload", () => {
-    cy.reload();
+    cy.url().should("include", "/de");
     cy.get("#home p").contains("Hallo, ich bin Max!");
     cy.get("nav a").contains("Kontakt");
   });
