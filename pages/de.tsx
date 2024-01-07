@@ -1,11 +1,12 @@
 import MainView from "@/components/MainView";
 import AppLayout from "@/layouts/AppLayout";
+import returnLanguageContent from "@/navbar/index";
 
 const Home = ({ text }: { text: TextProps }) => <MainView text={text} />;
 
 Home.Layout = AppLayout;
-Home.layoutProps = ({ text }: { text: TextProps }) => ({
-  navbarText: text.navlinks,
+Home.layoutProps = ({ language }: { language: "en" | "fr" | "de" }) => ({
+  navbarText: returnLanguageContent(language),
 });
 
 import { getAllText } from "@/helpers/getText";
@@ -13,7 +14,7 @@ import { getAllText } from "@/helpers/getText";
 export async function getStaticProps() {
   const text = getAllText("TextContentGerman");
 
-  return { props: { text } };
+  return { props: { text, language: "de" } };
 }
 
 export default Home;
