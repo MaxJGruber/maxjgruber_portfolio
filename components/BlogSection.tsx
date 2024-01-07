@@ -17,7 +17,13 @@ const BlogSection = () => {
   const [articles, setArticles] = useState<Array<BlogObject>>([]);
   useEffect(() => {
     if (!articles.length) {
-      getMediumFeed().then((response) => setArticles(response.items));
+      getMediumFeed().then((response) => {
+        response.items.forEach(
+          (item: BlogObject, i: number) =>
+            (item.thumbnail = `static/assets/blog-${i + 1}.webp`)
+        );
+        setArticles(response.items);
+      });
     }
   }, [articles.length]);
 
