@@ -53,19 +53,28 @@ describe("Links", () => {
   it("has the right path for the English CV", () => {
     cy.contains("My CV (English)")
       .should("have.attr", "href")
-      .and("include", "static/personal-documents/MaxJGruber_CV.pdf");
+      .and(
+        "include",
+        "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV.pdf"
+      );
   });
 
   it("has the right path for the French CV", () => {
     cy.contains("My CV (French)")
       .should("have.attr", "href")
-      .and("include", "static/personal-documents/MaxJGruber_CV_FR.pdf");
+      .and(
+        "include",
+        "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/Max-Gruber-CV-FR.pdf"
+      );
   });
 
   it("has the right path for the certificate", () => {
     cy.contains("My Certificate")
       .should("have.attr", "href")
-      .and("include", "static/personal-documents/IRONHACK_CERTIFICATE.pdf");
+      .and(
+        "include",
+        "https://max-gruber-cvs.s3.eu-west-3.amazonaws.com/IRONHACK_CERTIFICATE.pdf"
+      );
   });
 });
 
