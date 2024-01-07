@@ -1,5 +1,5 @@
 const HeroSection = ({ text }: { text: HeroSectionProps }) => (
-  <main id="home" className="">
+  <main id="home">
     <div className="mx-auto max-w-7xl w-full text-center py-64 md:py-48 2xl:py-72 lg:text-left flex flex-col justify-center h-screen">
       <div className="relative z-10 flex flex-col justify-center items-center px-4 lg:w-3/5 sm:px-8 ">
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-50 sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl">
