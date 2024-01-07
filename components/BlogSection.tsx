@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { getMediumFeed } from "apihandlers/mediumApi";
+import Link from "next/link";
+import { getMediumFeed } from "@/apihandlers/mediumApi";
 import moment from "moment";
 
 interface BlogObject {
@@ -16,7 +17,13 @@ const BlogSection = () => {
   const [articles, setArticles] = useState<Array<BlogObject>>([]);
   useEffect(() => {
     if (!articles.length) {
-      getMediumFeed().then((response) => setArticles(response.items));
+      getMediumFeed().then((response) => {
+        response.items.forEach(
+          (item: BlogObject, i: number) =>
+            (item.thumbnail = `static/assets/blog-${i + 1}.webp`)
+        );
+        setArticles(response.items);
+      });
     }
   }, [articles.length]);
 
@@ -47,12 +54,12 @@ const BlogSection = () => {
                 <div className="mt-6 flex items-center justify-center">
                   <div>
                     <div className="mt-0 mb-2">
-                      <a
+                      <Link
                         href={post.link}
                         className="my-5 text-base font-semibold text-medium-logo-blue hover:text-dark-logo-blue"
                       >
                         Read full story
-                      </a>
+                      </Link>
                     </div>
                     <div className="flex space-x-1 text-sm text-gray-500">
                       <time dateTime={post.pubDate}>

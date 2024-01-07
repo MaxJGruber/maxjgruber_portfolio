@@ -1,28 +1,21 @@
-import ElectricalCircuitPattern from "../ElectricalCircuitPattern";
-import contentLanguage from "stores/languageContent";
-import ComparisonComponent from "./ComparisonComponent";
-import ProjectContentArea from "./ProjectContentArea";
-import ProjectStatsSection from "./ProjectStatsSection";
+import ElectricalCircuitPattern from "@/components/ElectricalCircuitPattern";
+import ComparisonComponent from "@/components/Projects/ComparisonComponent";
+import ProjectContentArea from "@/components/Projects/ProjectContentArea";
+import ProjectStatsSection from "@/components/Projects/ProjectStatsSection";
 
-interface Project {
-  intro: string;
-  name: string;
-  type: string;
-  description: string;
-  technologies: string;
-  contain: boolean;
-  landingPagePic: string;
-  oldLandingPage?: string;
-  specialFeatures?: string;
-  projectLink?: string;
-  stats: { label: string; value: string }[];
-}
-
-export default function ProjectInfoSection(props: { project: Project }) {
+export default function ProjectInfoSection({
+  project,
+  titles,
+  captions,
+}: {
+  project: ProjectsProps;
+  titles: TitlesProps;
+  captions: ProjectsSectionProps;
+}) {
   return (
     <div
       className={`relative bg-white py-16 ${
-        props.project.name === "Aquitaine Lifestyle Solutions"
+        project.name === "Aquitaine Lifestyle Solutions"
           ? "sm:py-15"
           : "sm:py-10"
       }`}
@@ -62,39 +55,37 @@ export default function ProjectInfoSection(props: { project: Project }) {
           </div>
           <div
             className={`relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none ${
-              props.project.name === "Aquitaine Lifestyle Solutions"
+              project.name === "Aquitaine Lifestyle Solutions"
                 ? "lg:pt-20 lg:pb-10"
                 : "py-20"
             }`}
           >
             {/* Testimonial card*/}
-            {props.project.oldLandingPage && (
-              <h2>{contentLanguage().titles.after}</h2>
-            )}
+            {project.oldLandingPage && <h2>{titles.after}</h2>}
             <div
               className={`relative pt-64 rounded-2xl  overflow-hidden ${
-                props.project.name === "COSMOUSSE" ? "demo" : "shadow-xl"
+                project.name === "COSMOUSSE" ? "demo" : "shadow-xl"
               }`}
             >
               <img
                 className={`absolute inset-0 h-full w-full ${
-                  props.project.contain ? "object-contain" : "object-cover"
+                  project.contain ? "object-contain" : "object-cover"
                 }`}
-                src={props.project.landingPagePic}
+                src={project.landingPagePic}
                 alt="Landing page of project"
               />
             </div>
           </div>
-          {props.project.oldLandingPage && (
-            <ComparisonComponent project={props.project} />
+          {project.oldLandingPage && (
+            <ComparisonComponent project={project} titles={titles} />
           )}
         </div>
 
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
-          <ProjectContentArea project={props.project} />
+          <ProjectContentArea project={project} captions={captions} />
           {/* Stats section */}
-          <ProjectStatsSection project={props.project} />
+          <ProjectStatsSection project={project} captions={captions} />
         </div>
       </div>
     </div>

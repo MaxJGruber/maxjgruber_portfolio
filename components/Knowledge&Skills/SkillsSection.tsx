@@ -1,19 +1,16 @@
-import { CheckIcon, FlagIcon } from "@heroicons/react/outline";
-import contentLanguage from "stores/languageContent";
+import { CheckIcon, FlagIcon } from "@heroicons/react/24/outline";
 
-const SkillsSection = () => (
+const SkillsSection = ({ text }: { text: SkillSectionProps }) => (
   <div className="bg-white">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-10 lg:px-8">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900">
-          {contentLanguage().skillsSection.title}
-        </h2>
+        <h2 className="text-3xl font-extrabold text-gray-900">{text.title}</h2>
       </div>
       <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
-        {contentLanguage().skillsSection.features.map((feature) => (
+        {text.features.map((feature) => (
           <div key={feature.name} className="relative">
             <dt>
-              {feature.id === "currently learning" ? (
+              {feature.currentlyLearning ? (
                 <FlagIcon
                   className="absolute h-6 w-6 text-yellow-500"
                   aria-hidden="true"

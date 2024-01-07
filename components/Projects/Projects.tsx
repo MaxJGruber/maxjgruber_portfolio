@@ -1,17 +1,32 @@
-import contentLanguage from "stores/languageContent";
-import ProjectInfoSection from "./ProjectInfoSection";
+import ProjectInfoSection from "@/components/Projects/ProjectInfoSection";
 
-export default function Projects() {
-  return (
-    <div>
-      {contentLanguage().projectsList.upcomingProjects.map(
-        (project) => (
-          <ProjectInfoSection project={project} key={project.name} />
-        )
-      )}
-      {contentLanguage().projectsList.projects.map((project) => (
-        <ProjectInfoSection project={project} key={project.name} />
-      ))}
-    </div>
-  );
-}
+const Projects = ({
+  text,
+  titles,
+  captions,
+}: {
+  text: ProjectsListProps;
+  titles: TitlesProps;
+  captions: ProjectsSectionProps;
+}) => (
+  <>
+    {text.upcomingProjects.map((project) => (
+      <ProjectInfoSection
+        project={project}
+        titles={titles}
+        captions={captions}
+        key={project.name}
+      />
+    ))}
+    {text.projects.map((project) => (
+      <ProjectInfoSection
+        project={project}
+        titles={titles}
+        captions={captions}
+        key={project.name}
+      />
+    ))}
+  </>
+);
+
+export default Projects;

@@ -1,14 +1,10 @@
-import contentLanguage from "stores/languageContent";
-
-const FunFacts = () => (
+const FunFacts = ({ text }: { text: FunFactsProps }) => (
   <div className="bg-white">
     <div className="max-w-7xl mx-auto py-12 px-4 divide-y divide-gray-200 sm:px-6 lg:py-16 lg:px-8">
-      <h2 className="text-3xl font-extrabold text-gray-900">
-        {contentLanguage().funFacts.title}
-      </h2>
+      <h2 className="text-3xl font-extrabold text-gray-900">{text.title}</h2>
       <div className="mt-8">
         <dl className="divide-y divide-gray-200">
-          {contentLanguage().funFacts.features.map((feature) => (
+          {text.features.map((feature) => (
             <div
               key={feature.name}
               className="pt-6 pb-8 md:grid md:grid-cols-12 md:gap-8"

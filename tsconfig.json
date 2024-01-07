@@ -17,19 +17,13 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@root/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@apihandlers/*": ["./apihandlers/*"],
-      "@page/*": ["./pages/*"],
-      "@content/*": ["./content/*"],
-      "@static/*": ["./public/static/*"],
-      "@assets/*": ["./public/static/assets/*"],
-      "@stores/*": ["./stores/*"],
-      "@styles/*": ["./styles/*"]
-    }
+      "@/*": ["./*"]
+    },
+    "incremental": true
   },
   "include": [
     "global.d.ts",
+    "types.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

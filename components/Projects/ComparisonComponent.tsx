@@ -1,5 +1,4 @@
-import ElectricalCircuitPattern from "../ElectricalCircuitPattern";
-import contentLanguage from "stores/languageContent";
+import ElectricalCircuitPattern from "@/components/ElectricalCircuitPattern";
 
 interface comparisonData {
   name: string;
@@ -7,7 +6,13 @@ interface comparisonData {
   oldLandingPage?: string;
 }
 
-const ComparisonComponent = (props: { project: comparisonData }) => {
+const ComparisonComponent = ({
+  project,
+  titles,
+}: {
+  project: comparisonData;
+  titles: TitlesProps;
+}) => {
   return (
     <>
       <div className="relative py-16 sm:py-16 lg:py-0">
@@ -44,17 +49,17 @@ const ComparisonComponent = (props: { project: comparisonData }) => {
         </div>
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none ">
           {/* Testimonial card*/}
-          <h2>{contentLanguage().titles.before}</h2>
+          <h2>{titles.before}</h2>
           <div
             className={`relative pt-64 rounded-2xl overflow-hidden ${
-              props.project.name === "COSMOUSSE" ? "demo" : "shadow-xl"
+              project.name === "COSMOUSSE" ? "demo" : "shadow-xl"
             }`}
           >
             <img
               className={`absolute inset-0 h-full w-full ${
-                props.project.contain ? "object-contain" : "object-cover"
+                project.contain ? "object-contain" : "object-cover"
               }`}
-              src={props.project.oldLandingPage}
+              src={project.oldLandingPage}
               alt="Landing page of project"
             />
           </div>

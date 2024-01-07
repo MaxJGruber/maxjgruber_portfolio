@@ -25,7 +25,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Use HTTPS instead of SSH to install dependencies from GitHub repos
       # See: https://github.com/actions/setup-node/issues/214#issuecomment-810829250
@@ -33,27 +33,27 @@ jobs:
         run: >
           git config --global url."https://github.com/".insteadOf
           ssh://git@github.com/
-      - name: Setup Node v16
-        uses: actions/setup-node@v2
+      - name: Setup Node v20
+        uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "20"
 
       - name: Install dependencies
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v5
         with:
           # just perform install
           runTests: false
 
       - name: Build app
-        run: npm run build && npm run export
+        run: npm run build
 
       - name: Install serve
         run: npm install -g serve
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v5
         with:
           # we have already installed all dependencies above
           install: false
-          start: serve out -p 3000
+          start: serve out -p 3000 --no-request-logging
           wait-on: http://localhost:3000
