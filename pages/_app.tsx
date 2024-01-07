@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import type { AppProps } from "next/app";
 import { Router } from "next/router";
 import { DefaultSeo } from "next-seo";
 import { TITLE, META_DESCRIPTION, META_IMAGE, URL } from "@/config";
 import * as gtag from "@/helpers/gtag";
 import "@/styles/globals.css";
 
-import AppLayout from "@/layouts/AppLayout";
-
-const App = ({ Component: NextPage, pageProps }) => {
+const App = ({ Component: NextPage, pageProps }: AppProps) => {
   // Track pages with google analytics
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
     Router.events.on("routeChangeComplete", handleRouteChange);
@@ -21,9 +20,11 @@ const App = ({ Component: NextPage, pageProps }) => {
   }, []);
   // End of track pages with google analytics
 
-  const { Layout = ({ children }) => <>{children}</>, layoutProps = () => {} } =
-    NextPage;
-
+  const {
+    Layout = ({ children }: { children: JSX.Element }) => <>{children}</>,
+    layoutProps = () => {},
+  } = NextPage as any;
+  // WIP: https://stackoverflow.com/questions/62115518/persistent-layout-in-next-js-with-typescript-and-hoc
   return (
     <div className="App">
       <Head>
